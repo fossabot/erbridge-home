@@ -6,4 +6,13 @@
 .Footer {
   background-color: $darkest-grey;
   text-align: center;
+  padding: 5px;
+}
+
+.Footer__copyright {
+  margin: 10px 0;
+}
+
+.Footer__copyright-line {
+  margin: 5px 0;
 }
