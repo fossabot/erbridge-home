@@ -14,8 +14,17 @@ body {
   margin: 0;
   padding: 0;
   background-color: $dark-grey;
-  font-family: sans-serif;
+  font-family: Raleway, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
   color: $white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+  font-family: Dosis, sans-serif;
+  font-weight: 400;
+  color: $light-blue;
 }
 
 a {
