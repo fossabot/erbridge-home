@@ -1,0 +1,12 @@
+@import "styles/colours";
+@import "styles/layout";
+
+@include wrapper-with-content(Header);
+
+.Header {
+  background-color: $grey;
+}
+
+.Header__logo {
+  width: 110px;
+}

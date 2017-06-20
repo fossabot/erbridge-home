@@ -1,0 +1,9 @@
+@import "styles/colours";
+@import "styles/layout";
+
+@include wrapper-with-content(Footer);
+
+.Footer {
+  background-color: $darkest-grey;
+  text-align: center;
+}

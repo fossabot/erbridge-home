@@ -1,0 +1,11 @@
+@mixin wrapper-with-content($class) {
+  .#{$class} {
+    display: flex;
+    justify-content: center;
+  }
+
+  .#{$class}__content {
+    width: 100%;
+    max-width: 800px;
+  }
+}
