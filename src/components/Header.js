@@ -8,8 +8,8 @@ import './Header.css';
 class Header extends Component {
   static propTypes = {
     pointerPosition: PropTypes.shape({
-      x: PropTypes.number,
-      y: PropTypes.number,
+      x: PropTypes.number.isRequired,
+      y: PropTypes.number.isRequired,
     }),
   };
 

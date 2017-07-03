@@ -10,8 +10,8 @@ class LogoParticle extends Component {
       right: PropTypes.number,
     }),
     pointerPosition: PropTypes.shape({
-      x: PropTypes.number,
-      y: PropTypes.number,
+      x: PropTypes.number.isRequired,
+      y: PropTypes.number.isRequired,
     }),
     radius: PropTypes.number.isRequired,
     x: PropTypes.number.isRequired,

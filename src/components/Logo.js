@@ -18,8 +18,8 @@ class Logo extends Component {
     className: PropTypes.string,
     focused: PropTypes.bool,
     pointerPosition: PropTypes.shape({
-      x: PropTypes.number,
-      y: PropTypes.number,
+      x: PropTypes.number.isRequired,
+      y: PropTypes.number.isRequired,
     }),
   };
 
