@@ -2,12 +2,14 @@
 @import "styles/transition-timings";
 
 .Logo__text {
+  opacity: 1;
   fill: $white;
-  transition: fill $hover-transition-duration;
+  // Linear to match the logo scale.
+  transition: opacity $hover-transition-duration;
+}
 
-  .Logo:hover & {
-    fill: $red;
-  }
+.Logo__text--hidden {
+  opacity: 0;
 }
 
 .Logo__particle-left {

@@ -13,13 +13,26 @@ class Header extends Component {
     }),
   };
 
+  state = {
+    shouldFocusLogo: false,
+  };
+
   render() {
     const { pointerPosition } = this.props;
+    const { shouldFocusLogo } = this.state;
 
     return (
-      <div className="Header">
+      <div
+        className="Header"
+        onMouseEnter={() => this.setState({ shouldFocusLogo: true })}
+        onMouseLeave={() => this.setState({ shouldFocusLogo: false })}
+      >
         <div className="Header__content">
-          <Logo className="Header__logo" pointerPosition={pointerPosition} />
+          <Logo
+            className="Header__logo"
+            focused={shouldFocusLogo}
+            pointerPosition={pointerPosition}
+          />
         </div>
       </div>
     );
