@@ -4,6 +4,9 @@ import React, { Component } from 'react';
 import LogoParticle from './LogoParticle';
 
 // Magic numbers derived from the source svg.
+// FIXME: Refactor the offset values into the parent, instead.
+const PARTICLE_OFFSET_X = 266.1;
+const PARTICLE_OFFSET_Y = 41.2;
 const PARTICLE_RADIUS = 12;
 const PARTICLE_DIAMETER = 2 * PARTICLE_RADIUS;
 const PARTICLE_SEPARATION = 10.3;
@@ -125,20 +128,18 @@ class LogoParticleGroup extends Component {
           arr
             .fill(1)
             .map((_, j) => ({
-              // FIXME: Refactor these values into the parent, instead.
-              // Magic numbers derived from the source svg.
               x:
-                266.1 +
-                  (i - 1) *
-                    (PARTICLE_DIAMETER + PARTICLE_SEPARATION) *
-                    HEXAGON_RADIUS_RATIO,
+                PARTICLE_OFFSET_X +
+                (i - 1) *
+                  (PARTICLE_DIAMETER + PARTICLE_SEPARATION) *
+                  HEXAGON_RADIUS_RATIO,
               y:
-                41.2 -
-                  PARTICLE_RADIUS +
-                  (j + 0.5 * (4 - arr.length)) *
-                    (PARTICLE_DIAMETER + PARTICLE_SEPARATION),
+                PARTICLE_OFFSET_Y -
+                PARTICLE_RADIUS +
+                (j + 0.5 * (4 - arr.length)) *
+                  (PARTICLE_DIAMETER + PARTICLE_SEPARATION),
             }))
-            .map(({ x, y }, j) =>
+            .map(({ x, y }, j) => (
               <LogoParticle
                 key={100 * i + j}
                 groupBoundingRect={boundingRect}
@@ -146,8 +147,8 @@ class LogoParticleGroup extends Component {
                 radius={PARTICLE_RADIUS}
                 x={x}
                 y={y}
-              />,
-            ),
+              />
+            )),
         )}
       </g>
     );
