@@ -1,3 +1,18 @@
-@import "styles/layout";
+@import 'styles/layout';
 
 @include wrapper-with-content(Body);
+
+.Body {
+  position: relative;
+  overflow: hidden;
+}
+
+.Body__logo {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-width: 50%;
+  max-height: 50%;
+  transform: translate(-35%, 30%);
+  opacity: 0.2;
+}

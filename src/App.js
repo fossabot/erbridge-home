@@ -26,7 +26,7 @@ class App extends Component {
         onMouseMove={event => this.updatePointerPosition(event)}
       >
         <Header pointerPosition={pointerPosition} />
-        <Body className="App__body" />
+        <Body className="App__body" pointerPosition={pointerPosition} />
         <Footer />
       </div>
     );
