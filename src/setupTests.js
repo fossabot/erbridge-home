@@ -1,1 +1,1 @@
-import 'raf/polyfill';
+jest.mock('./assets');

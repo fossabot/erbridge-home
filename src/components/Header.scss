@@ -1,5 +1,5 @@
-@import "styles/colours";
-@import "styles/layout";
+@import 'styles/colours';
+@import 'styles/layout';
 
 @include wrapper-with-content(Header);
 
@@ -8,6 +8,34 @@
   padding: 5px;
 }
 
+.Header__content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
 .Header__logo {
   width: 110px;
+}
+
+.Header__nav {
+  display: flex;
+}
+
+.Header__nav-link {
+  flex: 1;
+
+  &.Header__nav-link--active {
+    &,
+    &:link,
+    a:visited {
+      color: $white;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $red;
+    }
+  }
 }

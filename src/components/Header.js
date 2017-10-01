@@ -1,5 +1,7 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import Logo from './Logo';
 
@@ -11,6 +13,15 @@ class Header extends Component {
       x: PropTypes.number.isRequired,
       y: PropTypes.number.isRequired,
     }),
+    routes: PropTypes.arrayOf(
+      PropTypes.shape({
+        exact: PropTypes.bool,
+        link: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        path: PropTypes.string.isRequired,
+        strict: PropTypes.bool,
+      }),
+    ),
   };
 
   state = {
@@ -18,7 +29,7 @@ class Header extends Component {
   };
 
   render() {
-    const { pointerPosition } = this.props;
+    const { pointerPosition, routes } = this.props;
     const { shouldFocusLogo } = this.state;
 
     return (
@@ -33,6 +44,24 @@ class Header extends Component {
             focused={shouldFocusLogo}
             pointerPosition={pointerPosition}
           />
+          <div className="Header__nav">
+            {routes &&
+              routes.map((route, index) => (
+                <NavLink
+                  key={index}
+                  activeClassName="Header__nav-link--active"
+                  className={classnames(
+                    'Header__nav-link',
+                    `Header__nav-link--${route.name}`,
+                  )}
+                  exact={route.exact}
+                  strict={route.strict}
+                  to={route.path}
+                >
+                  {route.link}
+                </NavLink>
+              ))}
+          </div>
         </div>
       </div>
     );
