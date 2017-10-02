@@ -65,7 +65,13 @@ class App extends Component {
                 />
               ))}
               {redirectedRoutes.map((route, index) => (
-                <Redirect key={`r${index}`} path={route.path} to={route.to} />
+                <Redirect
+                  key={index}
+                  path={route.path}
+                  to={route.to}
+                  exact={route.exact}
+                  strict={route.strict}
+                />
               ))}
               <Route component={ErrorPage} />
             </Switch>

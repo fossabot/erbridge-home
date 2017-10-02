@@ -13,6 +13,7 @@ export const redirectedRoutes = [
   {
     path: '/about',
     to: homeRoute.path,
+    exact: true,
   },
 ];
 
