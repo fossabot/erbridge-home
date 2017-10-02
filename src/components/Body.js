@@ -1,6 +1,8 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+// FIXME: Check this works properly with React 16.
+import ScrollArea from 'react-scrollbar';
 
 import Logo from './Logo';
 
@@ -26,7 +28,9 @@ class Body extends Component {
           focused
           pointerPosition={pointerPosition}
         />
-        <div className="Body__content">{children}</div>
+        <ScrollArea className="Body__content" smoothScrolling>
+          {children}
+        </ScrollArea>
       </div>
     );
   }
