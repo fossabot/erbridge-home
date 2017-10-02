@@ -9,10 +9,11 @@ import {
 
 import Header from './components/Header';
 import Body from './components/Body';
+import ErrorPage from './components/ErrorPage';
 import Footer from './components/Footer';
 import MarkdownPage from './components/MarkdownPage';
 
-import routes, { homeRoute, redirectedRoutes, topRoutes } from './routes';
+import routes, { redirectedRoutes, topRoutes } from './routes';
 
 import './App.css';
 
@@ -66,7 +67,7 @@ class App extends Component {
               {redirectedRoutes.map((route, index) => (
                 <Redirect key={`r${index}`} path={route.path} to={route.to} />
               ))}
-              <Route render={() => <Redirect to={homeRoute.path} />} />
+              <Route component={ErrorPage} />
             </Switch>
           </Body>
           <Footer />
