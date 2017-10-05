@@ -43,7 +43,6 @@ class App extends Component {
               key={route.name || index}
               path={route.path}
               exact={route.exact}
-              strict={route.strict}
               render={() => (
                 <Helmet>
                   <title>
@@ -65,7 +64,6 @@ class App extends Component {
                   key={route.name || index}
                   path={route.path}
                   exact={route.exact}
-                  strict={route.strict}
                   render={() => (
                     <div>
                       {route.content && (
@@ -85,7 +83,6 @@ class App extends Component {
                   path={route.path}
                   to={route.to}
                   exact={route.exact}
-                  strict={route.strict}
                 />
               ))}
               <Route component={ErrorPage} />

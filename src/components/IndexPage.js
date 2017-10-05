@@ -8,7 +8,6 @@ class IndexPage extends Component {
       PropTypes.shape({
         exact: PropTypes.bool,
         path: PropTypes.string.isRequired,
-        strict: PropTypes.bool,
         title: PropTypes.string.isRequired,
       }),
     ).isRequired,
@@ -21,7 +20,7 @@ class IndexPage extends Component {
       <div className="IndexPage">
         {routes.map((route, index) => (
           <div key={route.name || index}>
-            <NavLink to={route.path} exact={route.exact} strict={route.strict}>
+            <NavLink to={route.path} exact={route.exact}>
               {route.title}
             </NavLink>
           </div>
