@@ -8,6 +8,11 @@ import './Header.css';
 
 class Header extends Component {
   static propTypes = {
+    homeRoute: PropTypes.shape({
+      exact: PropTypes.bool,
+      path: PropTypes.string.isRequired,
+      strict: PropTypes.bool,
+    }).isRequired,
     pointerPosition: PropTypes.shape({
       x: PropTypes.number.isRequired,
       y: PropTypes.number.isRequired,
@@ -28,7 +33,7 @@ class Header extends Component {
   };
 
   render() {
-    const { pointerPosition, routes } = this.props;
+    const { homeRoute, pointerPosition, routes } = this.props;
     const { shouldFocusLogo } = this.state;
 
     return (
@@ -38,11 +43,17 @@ class Header extends Component {
         onMouseLeave={() => this.setState({ shouldFocusLogo: false })}
       >
         <div className="Header__content">
-          <Logo
-            className="Header__logo"
-            focused={shouldFocusLogo}
-            pointerPosition={pointerPosition}
-          />
+          <NavLink
+            exact={homeRoute.exact}
+            strict={homeRoute.strict}
+            to={homeRoute.path}
+          >
+            <Logo
+              className="Header__logo"
+              focused={shouldFocusLogo}
+              pointerPosition={pointerPosition}
+            />
+          </NavLink>
           <div className="Header__nav">
             {routes &&
               routes

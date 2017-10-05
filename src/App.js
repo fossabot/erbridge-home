@@ -14,7 +14,7 @@ import Footer from './components/Footer';
 import IndexPage from './components/IndexPage';
 import MarkdownPage from './components/MarkdownPage';
 
-import routes, { redirectedRoutes, topRoutes } from './routes';
+import routes, { homeRoute, redirectedRoutes, topRoutes } from './routes';
 
 import './App.css';
 
@@ -53,7 +53,11 @@ class App extends Component {
               )}
             />
           ))}
-          <Header pointerPosition={pointerPosition} routes={topRoutes} />
+          <Header
+            homeRoute={homeRoute}
+            pointerPosition={pointerPosition}
+            routes={topRoutes}
+          />
           <Body className="App__body" pointerPosition={pointerPosition}>
             <Switch>
               {routes.map((route, index) => (
