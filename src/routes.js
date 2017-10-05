@@ -15,6 +15,7 @@ export const homeRoute = {
   link: 'Home',
   path: '/',
   exact: true,
+  navExact: true,
   title: home.title,
   content: home.__content,
 };

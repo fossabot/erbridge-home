@@ -56,7 +56,7 @@ class Header extends Component {
                     key={route.name || index}
                     className="Header__nav-link"
                     activeClassName="Header__nav-link--active"
-                    exact={route.exact}
+                    exact={route.navExact}
                     to={route.path}
                   >
                     {route.link}
