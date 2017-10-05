@@ -11,6 +11,7 @@ import Header from './components/Header';
 import Body from './components/Body';
 import ErrorPage from './components/ErrorPage';
 import Footer from './components/Footer';
+import IndexPage from './components/IndexPage';
 import MarkdownPage from './components/MarkdownPage';
 
 import routes, { redirectedRoutes, topRoutes } from './routes';
@@ -61,7 +62,17 @@ class App extends Component {
                   path={route.path}
                   exact={route.exact}
                   strict={route.strict}
-                  render={() => <MarkdownPage content={route.content} />}
+                  render={() => (
+                    <div>
+                      {route.content && (
+                        <MarkdownPage content={route.content} />
+                      )}
+                      {route.routes &&
+                        route.routes.length && (
+                          <IndexPage routes={route.routes} />
+                        )}
+                    </div>
+                  )}
                 />
               ))}
               {redirectedRoutes.map((route, index) => (

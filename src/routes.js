@@ -44,8 +44,15 @@ export const redirectedRoutes = [
     })),
 ];
 
-export const topRoutes = [homeRoute];
+export const topRoutes = [
+  homeRoute,
+  {
+    name: 'blog',
+    link: 'Blog',
+    path: '/blog',
+    exact: true,
+    routes: blogRoutes,
+  },
+];
 
-export const mainRoutes = [...blogRoutes];
-
-export default [...topRoutes, ...mainRoutes];
+export default [...topRoutes, ...blogRoutes];

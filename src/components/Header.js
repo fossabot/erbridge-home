@@ -46,21 +46,33 @@ class Header extends Component {
           />
           <div className="Header__nav">
             {routes &&
-              routes.map((route, index) => (
-                <NavLink
-                  key={index}
-                  activeClassName="Header__nav-link--active"
-                  className={classnames(
-                    'Header__nav-link',
-                    `Header__nav-link--${route.name}`,
-                  )}
-                  exact={route.exact}
-                  strict={route.strict}
-                  to={route.path}
-                >
-                  {route.link}
-                </NavLink>
-              ))}
+              routes
+                .map((route, index) => (
+                  <NavLink
+                    key={2 * index - 1}
+                    activeClassName="Header__nav-link--active"
+                    className={classnames(
+                      'Header__nav-link',
+                      `Header__nav-link--${route.name}`,
+                    )}
+                    exact={route.exact}
+                    strict={route.strict}
+                    to={route.path}
+                  >
+                    {route.link}
+                  </NavLink>
+                ))
+                .reduce((elementsSoFar, link, index, links) => {
+                  const elements = [...elementsSoFar, link];
+
+                  if (index < links.length - 1) {
+                    elements.push(
+                      <div key={index} className="Header__nav-spacer" />,
+                    );
+                  }
+
+                  return elements;
+                }, [])}
           </div>
         </div>
       </div>

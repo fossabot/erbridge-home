@@ -20,22 +20,22 @@
 
 .Header__nav {
   display: flex;
+  flex: 1;
+  padding-bottom: 2px;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.Header__nav-spacer {
+  flex: 1;
+  min-width: 20px;
+  max-width: 40px;
 }
 
 .Header__nav-link {
-  flex: 1;
+  font-size: 22px;
 
   &.Header__nav-link--active {
-    &,
-    &:link,
-    a:visited {
-      color: $white;
-    }
-
-    &:active,
-    &:focus,
-    &:hover {
-      color: $red;
-    }
+    color: $red;
   }
 }
