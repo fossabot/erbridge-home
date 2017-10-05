@@ -1,4 +1,3 @@
-import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
@@ -49,12 +48,9 @@ class Header extends Component {
               routes
                 .map((route, index) => (
                   <NavLink
-                    key={2 * index - 1}
+                    key={route.name || index}
+                    className="Header__nav-link"
                     activeClassName="Header__nav-link--active"
-                    className={classnames(
-                      'Header__nav-link',
-                      `Header__nav-link--${route.name}`,
-                    )}
                     exact={route.exact}
                     strict={route.strict}
                     to={route.path}

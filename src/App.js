@@ -40,7 +40,7 @@ class App extends Component {
         >
           {routes.map((route, index) => (
             <Route
-              key={index}
+              key={route.name || index}
               path={route.path}
               exact={route.exact}
               strict={route.strict}
@@ -58,7 +58,7 @@ class App extends Component {
             <Switch>
               {routes.map((route, index) => (
                 <Route
-                  key={index}
+                  key={route.name || index}
                   path={route.path}
                   exact={route.exact}
                   strict={route.strict}
@@ -77,7 +77,7 @@ class App extends Component {
               ))}
               {redirectedRoutes.map((route, index) => (
                 <Redirect
-                  key={index}
+                  key={route.name || index}
                   path={route.path}
                   to={route.to}
                   exact={route.exact}

@@ -20,7 +20,7 @@ class IndexPage extends Component {
     return (
       <div className="IndexPage">
         {routes.map((route, index) => (
-          <div key={index}>
+          <div key={route.name || index}>
             <NavLink to={route.path} exact={route.exact} strict={route.strict}>
               {route.title}
             </NavLink>
