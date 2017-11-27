@@ -67,7 +67,10 @@ class App extends Component {
                   render={() => (
                     <div>
                       {route.content && (
-                        <MarkdownPage content={route.content} />
+                        <MarkdownPage
+                          content={route.content}
+                          styles={route.styles}
+                        />
                       )}
                       {route.routes &&
                         route.routes.length && (

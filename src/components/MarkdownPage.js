@@ -39,6 +39,7 @@ const processingInstructions = [
       return (
         <ViewableImage
           key={index}
+          className={node.attribs.class}
           src={assets[node.attribs.src] || node.attribs.src}
           alt={node.attribs.alt || ''}
         />
@@ -56,7 +57,26 @@ const processingInstructions = [
 class MarkdownPage extends Component {
   static propTypes = {
     content: PropTypes.string.isRequired,
+    styles: PropTypes.arrayOf(PropTypes.string),
   };
+
+  constructor(props) {
+    super(props);
+
+    this.loadExtraStyles(props);
+  }
+
+  loadExtraStyles(props) {
+    if (props.styles) {
+      props.styles.forEach(style => {
+        require(`../${style}.css`);
+      });
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.loadExtraStyles(nextProps);
+  }
 
   render() {
     const { content } = this.props;

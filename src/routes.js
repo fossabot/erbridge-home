@@ -17,15 +17,19 @@ export const homeRoute = {
   exact: true,
   navExact: true,
   title: home.title,
+  styles: home.styles,
   content: home.__content,
 };
 
-export const blogRoutes = blogPosts.map(({ __content, slug, title }) => ({
-  path: getBlogRoutePath(slug, title),
-  exact: true,
-  title,
-  content: __content,
-}));
+export const blogRoutes = blogPosts.map(
+  ({ __content, slug, styles, title }) => ({
+    path: getBlogRoutePath(slug, title),
+    exact: true,
+    title,
+    styles,
+    content: __content,
+  }),
+);
 
 export const redirectedRoutes = [
   {
