@@ -1,3 +1,8 @@
 .ViewableImage {
-  cursor: pointer;
+  display: flex;
+  justify-content: center;
+
+  img {
+    cursor: pointer;
+  }
 }
