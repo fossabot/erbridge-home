@@ -1,0 +1,25 @@
+@import 'styles/colours';
+
+.IndexPage__link {
+  display: flex;
+  margin: 16px 0;
+  padding: 24px;
+  background-color: $darkest-grey;
+  flex-direction: column;
+  text-align: center;
+}
+
+.IndexPage__link__title {
+  font-family: Dosis, sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+
+  &.IndexPage__link__title--has-subtitle {
+    margin-bottom: 12px;
+  }
+}
+
+.IndexPage__link__subtitle {
+  color: $white;
+  opacity: 0.5;
+}
