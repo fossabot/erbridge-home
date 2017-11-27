@@ -10,6 +10,20 @@ const sanitizePathComponent = rawComponent =>
 const getBlogRoutePath = (slug, title) =>
   `/blog/${sanitizePathComponent(slug || title)}`;
 
+const formatDate = (date, format) => {
+  if (!date) {
+    return null;
+  }
+
+  date = moment(date);
+
+  if (!date.isValid()) {
+    return null;
+  }
+
+  return date.format(format);
+};
+
 export const homeRoute = {
   name: 'home',
   link: 'Home',
@@ -22,10 +36,11 @@ export const homeRoute = {
 };
 
 export const blogRoutes = blogPosts.map(
-  ({ __content, slug, styles, title }) => ({
+  ({ __content, date, slug, styles, title }) => ({
     path: getBlogRoutePath(slug, title),
     exact: true,
     title,
+    date: formatDate(date, 'DD MMMM YYYY'),
     styles,
     content: __content,
   }),
@@ -38,12 +53,10 @@ export const redirectedRoutes = [
     exact: true,
   },
   ...blogPosts
-    .map(post => ({ ...post, date: moment(post.date) }))
-    .filter(({ date }) => date.isValid())
+    .map(post => ({ ...post, date: formatDate(post.date, 'YYYY/MM/DD') }))
+    .filter(({ date }) => date)
     .map(({ date, oldSlug, slug, title }) => ({
-      path: `/blog/${date.format('YYYY/MM/DD')}/${sanitizePathComponent(
-        oldSlug || slug || title,
-      )}`,
+      path: `/blog/${date}/${sanitizePathComponent(oldSlug || slug || title)}`,
       to: getBlogRoutePath(slug, title),
       exact: true,
     })),

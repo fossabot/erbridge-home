@@ -69,7 +69,9 @@ class App extends Component {
                       {route.content && (
                         <MarkdownPage
                           content={route.content}
+                          date={route.date}
                           styles={route.styles}
+                          title={route.title}
                         />
                       )}
                       {route.routes &&

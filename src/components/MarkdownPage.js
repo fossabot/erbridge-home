@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import { Parser, ProcessNodeDefinitions } from 'html-to-react';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
@@ -7,6 +8,8 @@ import assets from '../assets';
 
 import ExternalLink from './ExternalLink';
 import ViewableImage from './ViewableImage';
+
+import './MarkdownPage.css';
 
 const htmlParser = new Parser();
 
@@ -57,7 +60,9 @@ const processingInstructions = [
 class MarkdownPage extends Component {
   static propTypes = {
     content: PropTypes.string.isRequired,
+    date: PropTypes.string,
     styles: PropTypes.arrayOf(PropTypes.string),
+    title: PropTypes.string,
   };
 
   constructor(props) {
@@ -79,11 +84,26 @@ class MarkdownPage extends Component {
   }
 
   render() {
-    const { content } = this.props;
+    const { content, date, title } = this.props;
 
     // TODO: Only parse when the content changes.
     return (
       <div className="MarkdownPage">
+        {title && [
+          <h1
+            key="title"
+            className={classnames('MarkdownPage__title', {
+              'MarkdownPage__title--has-subtitle': date,
+            })}
+          >
+            {title}
+          </h1>,
+          date && (
+            <p key="date" className="MarkdownPage__subtitle">
+              {date}
+            </p>
+          ),
+        ]}
         {htmlParser.parseWithInstructions(
           content,
           () => true,

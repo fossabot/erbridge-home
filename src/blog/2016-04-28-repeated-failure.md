@@ -3,8 +3,6 @@ title: Repeated Failure
 date: 2016-04-28
 ---
 
-# Repeated Failure
-
 Lately I have been thinking about introductions to games, particularly learning
 to play through repeated failure. Most games make every effort to make sure the
 player is completely comfortable with how to play before they start. They go
