@@ -1,6 +1,9 @@
 ---
 title: Welcome to the Island
 date: 2015-02-23
+categories:
+  - the-island
+  - gamedev
 ---
 
 We're making a game!

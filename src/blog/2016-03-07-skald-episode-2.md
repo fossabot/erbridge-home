@@ -2,6 +2,9 @@
 title: "Skald - Episode #2: The Story Unfolds"
 slug: skald-episode-2
 date: 2016-03-07
+categories:
+  - skald
+  - gamedev
 ---
 
 Over the weekend, I began looking into the storytelling aspects of _Skald_. I

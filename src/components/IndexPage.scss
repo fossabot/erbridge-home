@@ -9,17 +9,29 @@
   text-align: center;
 }
 
-.IndexPage__link__title {
+.IndexPage__link__title,
+.IndexPage__link__subtitle {
   font-family: Dosis, sans-serif;
   font-weight: 400;
+}
+
+.IndexPage__link__title {
   font-size: 32px;
 
-  &.IndexPage__link__title--has-subtitle {
+  &.IndexPage__link__title--has-subtitle-or-date {
     margin-bottom: 12px;
   }
 }
 
 .IndexPage__link__subtitle {
-  color: $white;
-  opacity: 0.5;
+  font-size: 24px;
+  color: $dark-blue;
+
+  &.IndexPage__link__subtitle--has-date {
+    margin-bottom: 8px;
+  }
+}
+
+.IndexPage__link__date {
+  color: $light-grey;
 }

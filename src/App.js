@@ -72,6 +72,7 @@ class App extends Component {
                           date={route.date}
                           styles={route.styles}
                           title={route.title}
+                          subtitle={route.subtitle}
                         />
                       )}
                       {route.routes &&

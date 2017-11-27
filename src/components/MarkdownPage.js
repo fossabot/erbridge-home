@@ -62,6 +62,7 @@ class MarkdownPage extends Component {
     content: PropTypes.string.isRequired,
     date: PropTypes.string,
     styles: PropTypes.arrayOf(PropTypes.string),
+    subtitle: PropTypes.string,
     title: PropTypes.string,
   };
 
@@ -84,7 +85,7 @@ class MarkdownPage extends Component {
   }
 
   render() {
-    const { content, date, title } = this.props;
+    const { content, date, subtitle, title } = this.props;
 
     // TODO: Only parse when the content changes.
     return (
@@ -93,13 +94,23 @@ class MarkdownPage extends Component {
           <h1
             key="title"
             className={classnames('MarkdownPage__title', {
-              'MarkdownPage__title--has-subtitle': date,
+              'MarkdownPage__title--has-subtitle-or-date': subtitle || date,
             })}
           >
             {title}
           </h1>,
+          subtitle && (
+            <h2
+              key="subtitle"
+              className={classnames('MarkdownPage__subtitle', {
+                'MarkdownPage__subtitle--has-date': date,
+              })}
+            >
+              {subtitle}
+            </h2>
+          ),
           date && (
-            <p key="date" className="MarkdownPage__subtitle">
+            <p key="date" className="MarkdownPage__date">
               {date}
             </p>
           ),

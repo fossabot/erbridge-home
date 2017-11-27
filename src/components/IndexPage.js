@@ -9,8 +9,11 @@ class IndexPage extends Component {
   static propTypes = {
     routes: PropTypes.arrayOf(
       PropTypes.shape({
+        date: PropTypes.string,
         exact: PropTypes.bool,
+        name: PropTypes.string,
         path: PropTypes.string.isRequired,
+        subtitle: PropTypes.string,
         title: PropTypes.string.isRequired,
       }),
     ).isRequired,
@@ -30,13 +33,23 @@ class IndexPage extends Component {
           >
             <div
               className={classnames('IndexPage__link__title', {
-                'IndexPage__link__title--has-subtitle': route.date,
+                'IndexPage__link__title--has-subtitle-or-date':
+                  route.subtitle || route.date,
               })}
             >
               {route.title}
             </div>
+            {route.subtitle && (
+              <div
+                className={classnames('IndexPage__link__subtitle', {
+                  'IndexPage__link__subtitle--has-date': route.date,
+                })}
+              >
+                {route.subtitle}
+              </div>
+            )}
             {route.date && (
-              <div className="IndexPage__link__subtitle">{route.date}</div>
+              <div className="IndexPage__link__date">{route.date}</div>
             )}
           </NavLink>
         ))}

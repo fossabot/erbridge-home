@@ -2,6 +2,9 @@
 title: "The Island - Dev Log #1: Setting Sail"
 slug: the-island-dev-log-1
 date: 2015-04-03
+categories:
+  - the-island
+  - gamedev
 ---
 
 We've already decided we're going to make _The Island_ in 3D, so picking an

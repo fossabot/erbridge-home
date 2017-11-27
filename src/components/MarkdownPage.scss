@@ -1,8 +1,16 @@
-.MarkdownPage__title--has-subtitle {
+@import 'styles/colours';
+
+.MarkdownPage__title--has-subtitle-or-date,
+.MarkdownPage__subtitle--has-date {
   margin-bottom: 0;
 }
 
 .MarkdownPage__subtitle {
+  margin-top: 8px;
+  color: $dark-blue;
+}
+
+.MarkdownPage__date {
   text-align: center;
-  opacity: 0.5;
+  color: $light-grey;
 }

@@ -41,21 +41,68 @@ export const homeRoute = {
   content: home.__content,
 };
 
-export const blogRoutes = blogPosts.map(
-  ({ __content, date, slug, styles, title }) => ({
+const blogRoutes = blogPosts.map(
+  ({ __content, categories, date, slug, styles, subtitle, title }) => ({
     path: getBlogRoutePath(slug, title),
     exact: true,
     title,
+    subtitle,
     date: formatDate(date, 'DD MMMM YYYY'),
+    categories,
     styles,
     content: __content,
   }),
 );
 
+const blogCategoryRoutes = [
+  {
+    name: 'blog__all',
+    path: '/blog/all',
+    exact: true,
+    title: 'All Posts',
+    routes: blogRoutes,
+  },
+  {
+    name: 'blog__gamedev',
+    path: '/blog/gamedev',
+    exact: true,
+    title: 'Game Development',
+    routes: blogRoutes.filter(
+      ({ categories }) => categories && categories.indexOf('gamedev') !== -1,
+    ),
+  },
+  {
+    name: 'blog__journals',
+    path: '/blog/journals',
+    exact: true,
+    title: 'Roleplaying Journals',
+    routes: blogRoutes.filter(
+      ({ categories }) =>
+        categories &&
+        categories.indexOf('roleplaying') !== -1 &&
+        categories.indexOf('journal') !== -1,
+    ),
+  },
+];
+
+const blogRoute = {
+  name: 'blog',
+  link: 'Blog',
+  path: '/blog',
+  exact: true,
+  title: 'Blog',
+  routes: blogCategoryRoutes,
+};
+
 export const redirectedRoutes = [
   {
     path: '/about',
     to: homeRoute.path,
+    exact: true,
+  },
+  {
+    path: '/blog/skald',
+    to: blogRoute.path,
     exact: true,
   },
   ...blogPosts
@@ -68,15 +115,6 @@ export const redirectedRoutes = [
     })),
 ];
 
-export const topRoutes = [
-  homeRoute,
-  {
-    name: 'blog',
-    link: 'Blog',
-    path: '/blog',
-    exact: true,
-    routes: blogRoutes,
-  },
-];
+export const topRoutes = [homeRoute, blogRoute];
 
-export default [...topRoutes, ...blogRoutes];
+export default [...topRoutes, ...blogCategoryRoutes, ...blogRoutes];

@@ -1,6 +1,9 @@
 ---
 title: "Skald: A New Story"
 date: 2016-02-15
+categories:
+  - skald
+  - gamedev
 ---
 
 We're making a game!

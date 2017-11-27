@@ -1,6 +1,10 @@
 ---
 title: Repeated Failure
 date: 2016-04-28
+categories:
+  - nordic-game-jam
+  - game-jams
+  - gamedev
 ---
 
 Lately I have been thinking about introductions to games, particularly learning

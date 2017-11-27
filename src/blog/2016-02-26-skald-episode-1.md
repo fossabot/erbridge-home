@@ -2,6 +2,9 @@
 title: "Skald - Episode #1: Once Upon A Time"
 slug: skald-episode-1
 date: 2016-02-26
+categories:
+  - skald
+  - gamedev
 ---
 
 [Luke](http://www.luketovee.com/) and I spent a recent weekend jamming on
