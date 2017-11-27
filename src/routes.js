@@ -5,7 +5,13 @@ import blogPosts from './blog';
 import home from './pages/home.md';
 
 const sanitizePathComponent = rawComponent =>
-  encodeURI(rawComponent.toLowerCase().replace(/\s/g, '-'));
+  encodeURI(
+    rawComponent
+      .toLowerCase()
+      .replace(/\s/g, '-')
+      .replace(/--+/g, '-')
+      .replace(/:|#/g, ''),
+  );
 
 const getBlogRoutePath = (slug, title) =>
   `/blog/${sanitizePathComponent(slug || title)}`;
