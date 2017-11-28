@@ -1,0 +1,5 @@
+@import 'styles/colours';
+
+.Poem--interlaced span:nth-of-type(2n) {
+  color: $dark-blue;
+}
