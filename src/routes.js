@@ -41,7 +41,11 @@ export const homeRoute = {
   content: home.__content,
 };
 
-const blogRoutes = blogPosts.map(
+const sortedBlogPosts = [...blogPosts];
+
+sortedBlogPosts.sort((a, b) => moment(b.date) - moment(a.date));
+
+const blogRoutes = sortedBlogPosts.map(
   ({ __content, categories, date, slug, styles, subtitle, title }) => ({
     path: getBlogRoutePath(slug, title),
     exact: true,
@@ -105,7 +109,7 @@ export const redirectedRoutes = [
     to: blogRoute.path,
     exact: true,
   },
-  ...blogPosts
+  ...sortedBlogPosts
     .map(post => ({ ...post, date: formatDate(post.date, 'YYYY/MM/DD') }))
     .filter(({ date }) => date)
     .map(({ date, oldSlug, slug, title }) => ({

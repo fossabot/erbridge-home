@@ -1,7 +1,7 @@
 ---
 title: "Dragontorc #1"
 subtitle: Catai's Backstory
-date: 2014-04-15
+date: 2014-04-15 12:00
 categories:
   - dragontorc
   - journal

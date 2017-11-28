@@ -1,7 +1,7 @@
 ---
 title: "Dragontorc #2"
 subtitle: Catai's Journal
-date: 2014-04-15
+date: 2014-04-15 13:00
 categories:
   - dragontorc
   - journal
