@@ -17,6 +17,7 @@ body {
   font-family: Raleway, sans-serif;
   font-weight: 300;
   font-size: 18px;
+  line-height: 1.5;
   color: $white;
 }
 
@@ -57,6 +58,10 @@ a {
 blockquote {
   font-style: italic;
   color: $lightest-grey;
+
+  em {
+    font-style: normal;
+  }
 }
 
 #root {

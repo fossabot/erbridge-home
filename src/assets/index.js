@@ -1,7 +1,7 @@
 const assetsContext = require.context(
   './',
   true,
-  /\.(bmp)|(gif)|(jpe?g)|(png)$/,
+  /\.(bmp)|(gif)|(jpe?g)|(png)|(pdf)$/,
 );
 
 const assets = {};

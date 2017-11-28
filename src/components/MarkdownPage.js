@@ -51,6 +51,24 @@ const processingInstructions = [
   },
   {
     shouldProcessNode(node) {
+      return (
+        node.type && node.type === 'tag' && node.name && node.name === 'iframe'
+      );
+    },
+    processNode(node, children, index) {
+      return (
+        <iframe
+          key={index}
+          className={node.attribs.class}
+          title={node.attribs.title}
+          src={assets[node.attribs.src] || node.attribs.src}
+          frameborder="0"
+        />
+      );
+    },
+  },
+  {
+    shouldProcessNode(node) {
       return true;
     },
     processNode: processNodeDefinitions.processDefaultNode,
@@ -116,7 +134,7 @@ class MarkdownPage extends Component {
           ),
         ]}
         {htmlParser.parseWithInstructions(
-          content,
+          content.replace(/\\\n/g, '<br>'),
           () => true,
           processingInstructions,
         )}

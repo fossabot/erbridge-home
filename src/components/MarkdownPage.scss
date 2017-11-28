@@ -1,5 +1,10 @@
 @import 'styles/colours';
 
+.MarkdownPage .PDF--A4 {
+  width: 100%;
+  height: 700px;
+}
+
 .MarkdownPage__title--has-subtitle-or-date,
 .MarkdownPage__subtitle--has-date {
   margin-bottom: 0;

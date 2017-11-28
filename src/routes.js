@@ -1,6 +1,7 @@
 import moment from 'moment';
 
 import blogPosts from './blog';
+import fictionPosts from './fiction';
 
 import home from './pages/home.md';
 
@@ -10,11 +11,11 @@ const sanitizePathComponent = rawComponent =>
       .toLowerCase()
       .replace(/\s/g, '-')
       .replace(/--+/g, '-')
-      .replace(/:|#/g, ''),
+      .replace(/:|#|\(|\)/g, ''),
   );
 
-const getBlogRoutePath = (slug, title) =>
-  `/blog/${sanitizePathComponent(slug || title)}`;
+const getRoutePath = (prefix, slug, title) =>
+  `/${prefix}/${sanitizePathComponent(slug || title)}`;
 
 const formatDate = (date, format) => {
   if (!date) {
@@ -41,13 +42,37 @@ export const homeRoute = {
   content: home.__content,
 };
 
+const sortedFictionPosts = [...fictionPosts];
+
+sortedFictionPosts.sort((a, b) => b.sortOrder - a.sortOrder);
+
+const fictionRoutes = sortedFictionPosts.map(
+  ({ __content, slug, styles, subtitle, title }) => ({
+    path: getRoutePath('fiction', slug, title),
+    exact: true,
+    title,
+    subtitle,
+    styles,
+    content: __content,
+  }),
+);
+
+const fictionRoute = {
+  name: 'fiction',
+  link: 'Fiction',
+  path: '/fiction',
+  exact: true,
+  title: 'Fiction',
+  routes: fictionRoutes,
+};
+
 const sortedBlogPosts = [...blogPosts];
 
 sortedBlogPosts.sort((a, b) => moment(b.date) - moment(a.date));
 
 const blogRoutes = sortedBlogPosts.map(
   ({ __content, categories, date, slug, styles, subtitle, title }) => ({
-    path: getBlogRoutePath(slug, title),
+    path: getRoutePath('blog', slug, title),
     exact: true,
     title,
     subtitle,
@@ -109,16 +134,28 @@ export const redirectedRoutes = [
     to: blogRoute.path,
     exact: true,
   },
+  ...sortedFictionPosts
+    .filter(({ oldSlug }) => oldSlug)
+    .map(({ oldSlug, slug, title }) => ({
+      path: `/fiction/${sanitizePathComponent(oldSlug)}`,
+      to: getRoutePath('fiction', slug, title),
+      exact: true,
+    })),
   ...sortedBlogPosts
     .map(post => ({ ...post, date: formatDate(post.date, 'YYYY/MM/DD') }))
     .filter(({ date }) => date)
     .map(({ date, oldSlug, slug, title }) => ({
       path: `/blog/${date}/${sanitizePathComponent(oldSlug || slug || title)}`,
-      to: getBlogRoutePath(slug, title),
+      to: getRoutePath('blog', slug, title),
       exact: true,
     })),
 ];
 
-export const topRoutes = [homeRoute, blogRoute];
+export const topRoutes = [homeRoute, fictionRoute, blogRoute];
 
-export default [...topRoutes, ...blogCategoryRoutes, ...blogRoutes];
+export default [
+  ...topRoutes,
+  ...fictionRoutes,
+  ...blogCategoryRoutes,
+  ...blogRoutes,
+];
