@@ -1,5 +1,5 @@
-@import "styles/colours";
-@import "styles/transition-timings";
+@import 'styles/colours';
+@import 'styles/transition-timings';
 
 * {
   box-sizing: border-box;
@@ -24,7 +24,12 @@ strong {
   font-weight: 500;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-align: center;
   font-family: Dosis, sans-serif;
   font-weight: 400;
@@ -36,13 +41,22 @@ a {
   text-decoration: none;
   transition: color $hover-transition-duration;
 
-  &, &:link, &:visited {
+  &,
+  &:link,
+  &:visited {
     color: $light-blue;
   }
 
-  &:active, &:focus, &:hover {
+  &:active,
+  &:focus,
+  &:hover {
     color: $red;
   }
+}
+
+blockquote {
+  font-style: italic;
+  color: $lightest-grey;
 }
 
 #root {
