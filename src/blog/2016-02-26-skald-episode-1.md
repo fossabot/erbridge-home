@@ -8,8 +8,8 @@ categories:
 ---
 
 [Luke](http://www.luketovee.com/) and I spent a recent weekend jamming on
-[_Skald_](/blog/skald/), to give it a kick start and build some momentum. It
-went really well!
+[_Skald_](/blog/skald), to give it a kick start and build some momentum. It went
+really well!
 
 ![Landscape](/assets/blog/skald-episode-1/landscape.gif)
 
