@@ -113,10 +113,26 @@ class MarkdownPage extends Component {
     title: PropTypes.string,
   };
 
+  state = {
+    content: '',
+  };
+
   constructor(props) {
     super(props);
 
+    this.state = {
+      content: this.parseContent(props.content || ''),
+    };
+
     this.loadExtraStyles(props);
+  }
+
+  parseContent(content) {
+    return htmlParser.parseWithInstructions(
+      content.replace(/\\\n/g, '<br>'),
+      () => true,
+      processingInstructions,
+    );
   }
 
   loadExtraStyles(props) {
@@ -128,13 +144,17 @@ class MarkdownPage extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    if (nextProps.content !== this.props.content) {
+      this.setState({ content: this.parseContent(nextProps.content || '') });
+    }
+
     this.loadExtraStyles(nextProps);
   }
 
   render() {
-    const { content, date, links, subtitle, title } = this.props;
+    const { date, links, subtitle, title } = this.props;
+    const { content } = this.state;
 
-    // TODO: Only parse when the content changes.
     return (
       <div className="MarkdownPage">
         {title && [
@@ -178,11 +198,7 @@ class MarkdownPage extends Component {
               .reduce((prev, curr) => [prev, ' | ', curr])}
           </p>
         )}
-        {htmlParser.parseWithInstructions(
-          content.replace(/\\\n/g, '<br>'),
-          () => true,
-          processingInstructions,
-        )}
+        {content}
       </div>
     );
   }
