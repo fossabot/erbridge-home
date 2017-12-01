@@ -30,7 +30,7 @@ class ViewableImage extends Component {
 
     return (
       <span
-        className={classnames('ViewableImage', className)}
+        className={classnames(className, 'ViewableImage')}
         onClick={() => this.openLightbox()}
       >
         <img src={src} alt={alt} />
