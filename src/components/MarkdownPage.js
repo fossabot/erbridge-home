@@ -102,6 +102,12 @@ class MarkdownPage extends Component {
   static propTypes = {
     content: PropTypes.string.isRequired,
     date: PropTypes.string,
+    links: PropTypes.arrayOf(
+      PropTypes.shape({
+        href: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+      }),
+    ),
     styles: PropTypes.arrayOf(PropTypes.string),
     subtitle: PropTypes.string,
     title: PropTypes.string,
@@ -126,7 +132,7 @@ class MarkdownPage extends Component {
   }
 
   render() {
-    const { content, date, subtitle, title } = this.props;
+    const { content, date, links, subtitle, title } = this.props;
 
     // TODO: Only parse when the content changes.
     return (
@@ -156,6 +162,22 @@ class MarkdownPage extends Component {
             </p>
           ),
         ]}
+        {links && (
+          <p className="MarkdownPage__links">
+            {links
+              .map(({ label, href }) => {
+                const LinkComponent =
+                  href && href.startsWith('/') ? Link : ExternalLink;
+
+                return (
+                  <LinkComponent key={label} to={href}>
+                    {label}
+                  </LinkComponent>
+                );
+              })
+              .reduce((prev, curr) => [prev, ' | ', curr])}
+          </p>
+        )}
         {htmlParser.parseWithInstructions(
           content.replace(/\\\n/g, '<br>'),
           () => true,

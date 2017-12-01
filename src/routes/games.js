@@ -6,13 +6,16 @@ export const sortedPosts = [...gamesPosts];
 
 sortedPosts.sort((a, b) => b.sortOrder - a.sortOrder);
 
-export const routes = sortedPosts.map(({ __content, slug, styles, title }) => ({
-  path: getRoutePath('games', slug, title),
-  exact: true,
-  title,
-  styles,
-  content: __content,
-}));
+export const routes = sortedPosts.map(
+  ({ __content, links, slug, styles, title }) => ({
+    path: getRoutePath('games', slug, title),
+    exact: true,
+    title,
+    links,
+    styles,
+    content: __content,
+  }),
+);
 
 export const route = {
   name: 'games',
