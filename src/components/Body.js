@@ -1,8 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-// FIXME: Check this works properly with React 16.
-import ScrollArea from 'react-scrollbar';
+import ScrollArea from 'react-scrollarea';
 
 import Logo from './Logo';
 
@@ -31,6 +30,7 @@ class Body extends Component {
         <ScrollArea
           className="Body__content"
           contentClassName="Body__inner-content"
+          verticalContainerClassName="scrollbar-container vertical"
           smoothScrolling
         >
           {children}
