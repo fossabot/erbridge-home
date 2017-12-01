@@ -28,7 +28,11 @@ class Body extends Component {
           focused
           pointerPosition={pointerPosition}
         />
-        <ScrollArea className="Body__content" smoothScrolling>
+        <ScrollArea
+          className="Body__content"
+          contentClassName="Body__inner-content"
+          smoothScrolling
+        >
           {children}
         </ScrollArea>
       </div>
