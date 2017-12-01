@@ -6,7 +6,7 @@ sortOrder: 3
 A walk through [Project Gutenberg](http://www.gutenberg.org/), one paragraph at
 a time, created for [NaNoGenMo 2015](https://github.com/dariusk/NaNoGenMo-2015).
 
-<iframe class="PDF--A4" title="Seed Dispersal" src="https://cdn.rawgit.com/erbridge/seed-dispersal/master/dist/seed-dispersal-0.0.2.pdf"></iframe>
+<pdf title="Seed Dispersal" src="https://cdn.rawgit.com/erbridge/seed-dispersal/master/dist/seed-dispersal-0.0.2.pdf" papersize="A4"></pdf>
 
 It starts at a chosen book ID, finds the IDth paragraph from that book, and adds
 it to the book. It then calculates the sum of the unicode values of the

@@ -6,7 +6,7 @@ sortOrder: 4
 A cameraman, interrupted from filming a new skate video by a streak of fire in
 the sky, documents his final hours.
 
-<iframe class="PDF--A4" title="REC" src="/assets/fiction/rec.pdf"></iframe>
+<pdf title="REC" src="/assets/fiction/rec.pdf" papersize="A4"></pdf>
 
 > [The Impact:50](http://theimpact.create50.com/theimpact) was a collaborative
 > filmmaking process that selected 50 scripts and combined them to create a

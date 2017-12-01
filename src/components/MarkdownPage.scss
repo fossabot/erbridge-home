@@ -1,8 +1,21 @@
 @import 'styles/colours';
+@import 'styles/layout';
 
-.MarkdownPage .PDF--A4 {
-  width: 100%;
-  height: 700px;
+.MarkdownPage {
+  .PDF {
+    width: 100%;
+    max-height: 60vh;
+  }
+
+  .PDF--A4 {
+    @include aspect-ratio(PDF__content, 210, 297);
+  }
+
+  .YouTube {
+    @include aspect-ratio(YouTube__content, 16, 9);
+
+    width: 100%;
+  }
 }
 
 .MarkdownPage__title--has-subtitle-or-date,

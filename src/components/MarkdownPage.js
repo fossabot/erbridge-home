@@ -52,18 +52,41 @@ const processingInstructions = [
   {
     shouldProcessNode(node) {
       return (
-        node.type && node.type === 'tag' && node.name && node.name === 'iframe'
+        node.type && node.type === 'tag' && node.name && node.name === 'pdf'
       );
     },
     processNode(node, children, index) {
       return (
-        <iframe
+        <div
           key={index}
-          className={node.attribs.class}
-          title={node.attribs.title}
-          src={assets[node.attribs.src] || node.attribs.src}
-          frameborder="0"
-        />
+          className={classnames('PDF', `PDF--${node.attribs.papersize}`)}
+        >
+          <iframe
+            className="PDF__content"
+            title={node.attribs.title}
+            src={assets[node.attribs.src] || node.attribs.src}
+            frameBorder="0"
+          />
+        </div>
+      );
+    },
+  },
+  {
+    shouldProcessNode(node) {
+      return (
+        node.type && node.type === 'tag' && node.name && node.name === 'youtube'
+      );
+    },
+    processNode(node, children, index) {
+      return (
+        <div key={index} className="YouTube">
+          <iframe
+            className="YouTube__content"
+            title={node.attribs.title}
+            src={`https://www.youtube.com/embed/${node.attribs.videoid}`}
+            frameBorder="0"
+          />
+        </div>
       );
     },
   },
