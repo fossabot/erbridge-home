@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<span
+  className="ViewableImage"
+  onClick={[Function]}
+>
+  <img
+    alt="test"
+    src="/test.jpg"
+  />
+  <Lightbox
+    closeButtonTitle="Close (Esc)"
+    currentImage={0}
+    enableKeyboardInput={true}
+    imageCountSeparator=" of "
+    images={
+      Array [
+        Object {
+          "src": "/test.jpg",
+        },
+      ]
+    }
+    isOpen={false}
+    leftArrowTitle="Previous (Left arrow key)"
+    onClickShowNextImage={true}
+    onClose={[Function]}
+    preloadNextImage={true}
+    rightArrowTitle="Next (Right arrow key)"
+    showCloseButton={true}
+    showImageCount={false}
+    theme={Object {}}
+    thumbnailOffset={2}
+    width={1024}
+  />
+</span>
+`;

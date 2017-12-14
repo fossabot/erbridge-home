@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="Body"
+>
+  <Logo
+    className="Body__logo"
+    focused={true}
+  />
+  <ScrollArea
+    className="Body__content"
+    contentClassName="Body__inner-content"
+    smoothScrolling={true}
+    verticalContainerClassName="scrollbar-container vertical"
+  />
+</div>
+`;

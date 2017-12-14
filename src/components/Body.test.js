@@ -1,9 +1,10 @@
+import { shallow } from 'enzyme';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import Body from './Body';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Body />, div);
+jest.mock('react-scrollarea', () => 'ScrollArea');
+
+it('renders correctly', () => {
+  expect(shallow(<Body />)).toMatchSnapshot();
 });

@@ -1,15 +1,15 @@
+import { shallow } from 'enzyme';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { MemoryRouter } from 'react-router-dom';
 
 import Header from './Header';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(
-    <MemoryRouter>
-      <Header homeRoute={{ path: '/' }} />
-    </MemoryRouter>,
-    div,
-  );
+it('renders correctly', () => {
+  expect(
+    shallow(
+      <MemoryRouter initialEntries={[{ pathname: '/', key: '/' }]}>
+        <Header homeRoute={{ path: '/' }} />
+      </MemoryRouter>,
+    ),
+  ).toMatchSnapshot();
 });

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<g
+  className="LogoParticle"
+  transform="rotate(0, 0, 0)"
+>
+  <path
+    className="LogoParticle__top-semicircle"
+    d="M0,-1 a1,1 0 0,0 0,2"
+  />
+  <path
+    className="LogoParticle__bottom-semicircle"
+    d="M0,1 a1,1 0 0,0 0,-2"
+  />
+</g>
+`;

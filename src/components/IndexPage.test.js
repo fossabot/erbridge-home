@@ -1,9 +1,8 @@
+import { shallow } from 'enzyme';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import IndexPage from './IndexPage';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<IndexPage routes={[]} />, div);
+it('renders correctly', () => {
+  expect(shallow(<IndexPage routes={[]} />)).toMatchSnapshot();
 });

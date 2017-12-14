@@ -1,0 +1,257 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<BrowserRouter>
+  <div
+    className="App"
+    onMouseMove={[Function]}
+  >
+    <Route
+      exact={true}
+      key="home"
+      path="/"
+      render={[Function]}
+    />
+    <Route
+      exact={true}
+      key="games"
+      path="/games"
+      render={[Function]}
+    />
+    <Route
+      exact={true}
+      key="fiction"
+      path="/fiction"
+      render={[Function]}
+    />
+    <Route
+      exact={true}
+      key="blog"
+      path="/blog"
+      render={[Function]}
+    />
+    <Route
+      exact={true}
+      key="blog__all"
+      path="/blog/all"
+      render={[Function]}
+    />
+    <Route
+      exact={true}
+      key="blog__gamedev"
+      path="/blog/gamedev"
+      render={[Function]}
+    />
+    <Route
+      exact={true}
+      key="blog__journals"
+      path="/blog/journals"
+      render={[Function]}
+    />
+    <Header
+      homeRoute={
+        Object {
+          "content": "<p><img class=\\"Headshot\\" src=\\"//www.gravatar.com/avatar/904272fae938125a9ea3b545057838e9?s=240\\" alt=\\"Headshot\\"></p>
+<p>My name is <em>F</em> and I make <strong>games</strong> and <strong>web experiences</strong>. I&#39;m a mathematical
+physicist turned programmer, and an active contributor to
+<a href=\\"https://github.com/erbridge\\">open source software</a>. I also work under the
+pseudonym <em>erbridge</em>.</p>
+<p>I like to work on projects that support and cultivate the creativity of their
+users, that work towards positive social change, that provoke users into
+considering new perspectives or emotions, or that push the boundaries of what&#39;s
+possible (I&#39;m particularly interested in generative narrative and AI in games).
+Bonus points if they do more than one of those things.</p>
+<p>I&#39;m currently working on an unannounced game about living and coping with
+chronic illness and disability. <strong>Watch this space.</strong></p>
+<p><strong>Thinking about hiring me?</strong> Send me a
+<a href=\\"https://twitter.com/erbridge\\">tweet / DM</a>, or
+<a href=\\"mailto:hello@erbridge.co.uk\\">email me</a>. I&#39;m comfortable anywhere in the stack.</p>
+<p>Previous clients / employers include:</p>
+<ul>
+<li><a href=\\"http://www.harrimansteel.com/\\">Harriman Steel</a></li>
+<li>IndigoMetrics</li>
+<li>Judtho</li>
+<li><a href=\\"https://mymakie.com/\\">MakieLab</a></li>
+<li><a href=\\"http://www.pamojaeducation.com/\\">Pamoja Education</a></li>
+<li>Peekeet</li>
+<li><a href=\\"https://remichalak.com/\\">R. E. Michalak</a></li>
+<li><a href=\\"https://unmade.com/\\">UNMADE</a></li>
+</ul>
+<p>I also dabble in a bunch of other stuff, which you can mostly find on this site
+(<a href=\\"/fiction\\">short stories</a>, <a href=\\"/fiction\\">poetry</a>, art, photography, tattoos, and
+probably more things because I wish my time was infinite).</p>
+",
+          "exact": true,
+          "link": "Home",
+          "name": "home",
+          "navExact": true,
+          "path": "/",
+          "styles": Array [
+            "pages/home",
+          ],
+          "title": undefined,
+        }
+      }
+      pointerPosition={null}
+      routes={
+        Array [
+          Object {
+            "content": "<p><img class=\\"Headshot\\" src=\\"//www.gravatar.com/avatar/904272fae938125a9ea3b545057838e9?s=240\\" alt=\\"Headshot\\"></p>
+<p>My name is <em>F</em> and I make <strong>games</strong> and <strong>web experiences</strong>. I&#39;m a mathematical
+physicist turned programmer, and an active contributor to
+<a href=\\"https://github.com/erbridge\\">open source software</a>. I also work under the
+pseudonym <em>erbridge</em>.</p>
+<p>I like to work on projects that support and cultivate the creativity of their
+users, that work towards positive social change, that provoke users into
+considering new perspectives or emotions, or that push the boundaries of what&#39;s
+possible (I&#39;m particularly interested in generative narrative and AI in games).
+Bonus points if they do more than one of those things.</p>
+<p>I&#39;m currently working on an unannounced game about living and coping with
+chronic illness and disability. <strong>Watch this space.</strong></p>
+<p><strong>Thinking about hiring me?</strong> Send me a
+<a href=\\"https://twitter.com/erbridge\\">tweet / DM</a>, or
+<a href=\\"mailto:hello@erbridge.co.uk\\">email me</a>. I&#39;m comfortable anywhere in the stack.</p>
+<p>Previous clients / employers include:</p>
+<ul>
+<li><a href=\\"http://www.harrimansteel.com/\\">Harriman Steel</a></li>
+<li>IndigoMetrics</li>
+<li>Judtho</li>
+<li><a href=\\"https://mymakie.com/\\">MakieLab</a></li>
+<li><a href=\\"http://www.pamojaeducation.com/\\">Pamoja Education</a></li>
+<li>Peekeet</li>
+<li><a href=\\"https://remichalak.com/\\">R. E. Michalak</a></li>
+<li><a href=\\"https://unmade.com/\\">UNMADE</a></li>
+</ul>
+<p>I also dabble in a bunch of other stuff, which you can mostly find on this site
+(<a href=\\"/fiction\\">short stories</a>, <a href=\\"/fiction\\">poetry</a>, art, photography, tattoos, and
+probably more things because I wish my time was infinite).</p>
+",
+            "exact": true,
+            "link": "Home",
+            "name": "home",
+            "navExact": true,
+            "path": "/",
+            "styles": Array [
+              "pages/home",
+            ],
+            "title": undefined,
+          },
+          Object {
+            "exact": true,
+            "link": "Games",
+            "name": "games",
+            "path": "/games",
+            "routes": Array [],
+            "title": "Games",
+          },
+          Object {
+            "exact": true,
+            "link": "Fiction",
+            "name": "fiction",
+            "path": "/fiction",
+            "routes": Array [],
+            "title": "Fiction",
+          },
+          Object {
+            "exact": true,
+            "link": "Blog",
+            "name": "blog",
+            "path": "/blog",
+            "routes": Array [
+              Object {
+                "exact": true,
+                "name": "blog__all",
+                "path": "/blog/all",
+                "routes": Array [],
+                "title": "All Posts",
+              },
+              Object {
+                "exact": true,
+                "name": "blog__gamedev",
+                "path": "/blog/gamedev",
+                "routes": Array [],
+                "title": "Game Development",
+              },
+              Object {
+                "exact": true,
+                "name": "blog__journals",
+                "path": "/blog/journals",
+                "routes": Array [],
+                "title": "Roleplaying Journals",
+              },
+            ],
+            "title": "Blog",
+          },
+        ]
+      }
+    />
+    <Body
+      className="App__body"
+      pointerPosition={null}
+    >
+      <Switch>
+        <Route
+          exact={true}
+          key="home"
+          path="/"
+          render={[Function]}
+        />
+        <Route
+          exact={true}
+          key="games"
+          path="/games"
+          render={[Function]}
+        />
+        <Route
+          exact={true}
+          key="fiction"
+          path="/fiction"
+          render={[Function]}
+        />
+        <Route
+          exact={true}
+          key="blog"
+          path="/blog"
+          render={[Function]}
+        />
+        <Route
+          exact={true}
+          key="blog__all"
+          path="/blog/all"
+          render={[Function]}
+        />
+        <Route
+          exact={true}
+          key="blog__gamedev"
+          path="/blog/gamedev"
+          render={[Function]}
+        />
+        <Route
+          exact={true}
+          key="blog__journals"
+          path="/blog/journals"
+          render={[Function]}
+        />
+        <Redirect
+          exact={true}
+          key="0"
+          path="/about"
+          push={false}
+          to="/"
+        />
+        <Redirect
+          exact={true}
+          key="1"
+          path="/blog/skald"
+          push={false}
+          to="/blog"
+        />
+        <Route
+          component={[Function]}
+        />
+      </Switch>
+    </Body>
+    <Footer />
+  </div>
+</BrowserRouter>
+`;
