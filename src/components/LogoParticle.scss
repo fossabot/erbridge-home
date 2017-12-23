@@ -1,4 +1,10 @@
-@import "styles/colours";
+@import 'styles/colours';
+@import 'styles/transition-timings.scss';
+
+.LogoParticle__top-semicircle,
+.LogoParticle__bottom-semicircle {
+  transition: fill $hover-transition-duration;
+}
 
 .LogoParticle__top-semicircle {
   fill: $light-blue;
@@ -6,4 +12,18 @@
 
 .LogoParticle__bottom-semicircle {
   fill: $dark-blue;
+}
+
+a {
+  &:active,
+  &:focus,
+  &:hover {
+    .LogoParticle__top-semicircle {
+      fill: $red;
+    }
+
+    .LogoParticle__bottom-semicircle {
+      fill: $dark-red;
+    }
+  }
 }

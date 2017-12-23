@@ -37,6 +37,8 @@ class Header extends Component {
     return (
       <div
         className="Header"
+        onFocus={() => this.setState({ shouldFocusLogo: true })}
+        onBlur={() => this.setState({ shouldFocusLogo: false })}
         onMouseEnter={() => this.setState({ shouldFocusLogo: true })}
         onMouseLeave={() => this.setState({ shouldFocusLogo: false })}
       >
