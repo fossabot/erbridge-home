@@ -17,6 +17,10 @@
   opacity: 0.2;
 }
 
+.Body__content .scrollbar-container:hover {
+  background: none !important;
+}
+
 .Body__inner-content {
   padding: 0 18px;
 }
