@@ -8,6 +8,34 @@ exports[`renders correctly 1`] = `
     className="Footer__content"
   >
     <div
+      className="Footer__contact-links"
+    >
+      <ExternalLink
+        className="Footer__contact-link"
+        to="https://twitter.com/erbridge"
+      >
+        <TwitterIcon />
+      </ExternalLink>
+      <ExternalLink
+        className="Footer__contact-link"
+        to="https://github.com/erbridge"
+      >
+        <GitHubIcon />
+      </ExternalLink>
+      <ExternalLink
+        className="Footer__contact-link"
+        to="https://www.linkedin.com/in/erbridge"
+      >
+        <LinkedInIcon />
+      </ExternalLink>
+      <ExternalLink
+        className="Footer__contact-link"
+        to="mailto:hello@erbridge.co.uk"
+      >
+        <EmailIcon />
+      </ExternalLink>
+    </div>
+    <div
       className="Footer__copyright"
     >
       <div

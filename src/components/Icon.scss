@@ -1,0 +1,35 @@
+@import 'styles/colours';
+@import 'styles/transition-timings.scss';
+
+.Icon svg {
+  vertical-align: middle;
+  transition: transform $hover-transition-duration;
+
+  path {
+    transition: fill $hover-transition-duration;
+
+    fill: $light-blue;
+
+    &:first-child {
+      fill: $dark-blue;
+    }
+  }
+}
+
+a {
+  &:active,
+  &:focus,
+  &:hover {
+    .Icon svg {
+      transform: rotate(-360deg);
+
+      path {
+        fill: $white;
+
+        &:first-child {
+          fill: $red;
+        }
+      }
+    }
+  }
+}
