@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Helmet } from 'react-helmet';
 import {
   BrowserRouter as Router,
@@ -65,7 +65,7 @@ class App extends Component {
                   path={route.path}
                   exact={route.exact}
                   render={() => (
-                    <div>
+                    <Fragment>
                       {route.content && (
                         <MarkdownPage
                           content={route.content}
@@ -80,7 +80,7 @@ class App extends Component {
                         route.routes.length && (
                           <IndexPage routes={route.routes} />
                         )}
-                    </div>
+                    </Fragment>
                   )}
                 />
               ))}
