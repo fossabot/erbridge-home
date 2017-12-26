@@ -28,12 +28,12 @@ class Body extends Component {
           pointerPosition={pointerPosition}
         />
         <ScrollArea
-          className="Body__content"
-          contentClassName="Body__inner-content"
+          className="Body__scrollarea"
+          contentClassName="Body__scrollarea__content"
           verticalContainerClassName="scrollbar-container vertical"
           smoothScrolling
         >
-          {children}
+          <div className="Body__content">{children}</div>
         </ScrollArea>
       </div>
     );

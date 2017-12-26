@@ -1,4 +1,6 @@
+@import 'styles/colours';
 @import 'styles/layout';
+@import 'styles/transition-timings.scss';
 
 @include wrapper-with-content(Body);
 
@@ -17,10 +19,45 @@
   opacity: 0.2;
 }
 
-.Body__content .scrollbar-container:hover {
-  background: none !important;
+.Body__scrollarea {
+  width: 100%;
+
+  // react-scrollarea overrides
+  &:hover .scrollbar-container {
+    opacity: 1;
+  }
+
+  .scrollbar-container {
+    width: 12px !important;
+    opacity: 0.5;
+    transition: all 0.4s, opacity $hover-transition-duration,
+      background $hover-transition-duration;
+
+    .scrollbar {
+      transition: background $hover-transition-duration;
+    }
+
+    &:hover {
+      background: none !important;
+      opacity: 1;
+
+      .scrollbar {
+        background: $red !important;
+      }
+    }
+
+    .scrollbar {
+      width: 100% !important;
+      background: $grey !important;
+    }
+  }
 }
 
-.Body__inner-content {
+.Body__scrollarea__content {
+  display: flex;
+  justify-content: center;
+}
+
+.Body__content {
   padding: 0 18px;
 }
