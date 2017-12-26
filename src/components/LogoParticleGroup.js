@@ -40,18 +40,10 @@ class LogoParticleGroup extends Component {
   };
 
   animateFocus(shouldFocus) {
-    const { scale, translate } = this.state;
-
     this.cancelFocus();
 
     const duration = 250;
     const endTime = Date.now() + duration;
-
-    // FIXME: Derive this from the viewBox height.
-    const scaleTarget = shouldFocus ? 1.59 : 1;
-
-    // FIXME: Derive this from the particle group width (in svg space).
-    const translateTarget = shouldFocus ? -47 : 0;
 
     const runAnimation = () => {
       const now = Date.now();
@@ -59,11 +51,7 @@ class LogoParticleGroup extends Component {
       // Linear to match the text fade.
       const t = Math.min(1, 1 - (endTime - now) / duration);
 
-      // Use the current state's value as the start to match css transitions.
-      this.setState({
-        scale: scale + (scaleTarget - scale) * t,
-        translate: translate + (translateTarget - translate) * t,
-      });
+      this.setFocus(shouldFocus, t);
 
       if (t === 1) {
         return;
@@ -75,6 +63,22 @@ class LogoParticleGroup extends Component {
     };
 
     runAnimation();
+  }
+
+  setFocus(shouldFocus, t = 1) {
+    const { scale, translate } = this.state;
+
+    // FIXME: Derive this from the viewBox height.
+    const scaleTarget = shouldFocus ? 1.59 : 1;
+
+    // FIXME: Derive this from the particle group width (in svg space).
+    const translateTarget = shouldFocus ? -47 : 0;
+
+    // Use the current state's value as the start to match css transitions.
+    this.setState({
+      scale: scale + (scaleTarget - scale) * t,
+      translate: translate + (translateTarget - translate) * t,
+    });
   }
 
   cancelFocus() {
@@ -89,11 +93,7 @@ class LogoParticleGroup extends Component {
     this.saveBoundingRect();
     window.addEventListener('resize', this.saveBoundingRect);
 
-    if (focused) {
-      // FIXME: Should this jump into focus in this case,
-      //        by just setting the state?
-      this.animateFocus(focused);
-    }
+    this.setFocus(focused);
   }
 
   componentWillReceiveProps(nextProps) {
