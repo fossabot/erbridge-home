@@ -1,17 +1,17 @@
-@mixin wrapper-with-content($class) {
-  .#{$class} {
+@mixin wrapper-with-content($class-name, $content-class-name:#{$class-name}__content) {
+  .#{$class-name} {
     display: flex;
     justify-content: center;
   }
 
-  .#{$class}__content {
+  .#{$content-class-name} {
     width: 100%;
     max-width: 800px;
   }
 }
 
 // From: https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
-@mixin aspect-ratio($content-class, $width, $height) {
+@mixin aspect-ratio($content-class-name, $width, $height) {
   position: relative;
 
   &:before {
@@ -21,7 +21,7 @@
     content: '';
   }
 
-  > .#{$content-class} {
+  > .#{$content-class-name} {
     position: absolute;
     top: 0;
     left: 0;
