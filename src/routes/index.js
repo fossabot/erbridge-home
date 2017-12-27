@@ -16,6 +16,11 @@ import {
   routes as gamesRoutes,
   redirectedRoutes as redirectedGamesRoutes,
 } from './games';
+import {
+  route as webRoute,
+  routes as webRoutes,
+  redirectedRoutes as redirectedWebRoutes,
+} from './web';
 
 export const homeRoute = {
   name: 'home',
@@ -37,9 +42,16 @@ export const redirectedRoutes = [
   ...redirectedBlogRoutes,
   ...redirectedFictionRoutes,
   ...redirectedGamesRoutes,
+  ...redirectedWebRoutes,
 ];
 
-export const topRoutes = [homeRoute, gamesRoute, fictionRoute, blogRoute];
+export const topRoutes = [
+  homeRoute,
+  gamesRoute,
+  webRoute,
+  fictionRoute,
+  blogRoute,
+];
 
 export default [
   ...topRoutes,
@@ -47,4 +59,5 @@ export default [
   ...blogRoutes,
   ...fictionRoutes,
   ...gamesRoutes,
+  ...webRoutes,
 ];
