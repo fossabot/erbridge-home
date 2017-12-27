@@ -5,6 +5,7 @@ date: 2016-02-26
 categories:
   - skald
   - gamedev
+image: /assets/blog/skald-episode-1/textures.png
 ---
 
 [Luke](http://www.luketovee.com/) and I spent a recent weekend jamming on

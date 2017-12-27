@@ -1,5 +1,6 @@
 ---
 title: Makies FabLab
+image: /assets/games/makies-fablab-promo.jpg
 sortOrder: 1
 ---
 

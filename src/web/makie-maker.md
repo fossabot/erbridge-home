@@ -1,5 +1,6 @@
 ---
 title: Makie Maker
+image: /assets/web/makie-maker-screen.png
 links:
   - label: Company Details
     href: https://mymakie.com/

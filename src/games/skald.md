@@ -1,5 +1,6 @@
 ---
 title: Skald
+image: /assets/games/skald-screenshot.png
 sortOrder: 8
 ---
 

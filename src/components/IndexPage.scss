@@ -34,6 +34,18 @@
   }
 }
 
+.IndexPage__link--has-image {
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-blend-mode: soft-light;
+  }
+}
+
 .IndexPage__link__title {
   font-family: Dosis, sans-serif;
   font-weight: 400;

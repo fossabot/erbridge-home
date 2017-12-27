@@ -5,6 +5,7 @@ categories:
   - nordic-game-jam
   - game-jams
   - gamedev
+image: /assets/blog/repeated-failure/hackers-movie.jpg
 ---
 
 Lately I have been thinking about introductions to games, particularly learning

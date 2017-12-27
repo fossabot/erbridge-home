@@ -1,5 +1,6 @@
 ---
 title: Makies Fashion
+image: /assets/games/makies-fashion-promo.jpg
 links:
   - label: Google Play
     href: https://play.google.com/store/apps/details?id=com.makielab.DressUp

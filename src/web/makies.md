@@ -1,5 +1,6 @@
 ---
 title: Makies
+image: /assets/web/makies-home.png
 links:
   - label: Company Details
     href: https://mymakie.com/

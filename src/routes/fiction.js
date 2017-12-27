@@ -7,10 +7,11 @@ export const sortedPosts = [...fictionPosts];
 sortedPosts.sort((a, b) => b.sortOrder - a.sortOrder);
 
 export const routes = sortedPosts.map(
-  ({ __content, slug, styles, subtitle, title }) => ({
+  ({ __content, image, slug, styles, subtitle, title }) => ({
     path: getRoutePath('fiction', slug, title),
     exact: true,
     title,
+    image,
     subtitle,
     styles,
     content: __content,

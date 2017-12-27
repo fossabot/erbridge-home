@@ -1,5 +1,6 @@
 ---
 title: UNMADE Editors
+image: /assets/web/unmade-editors.png
 links:
   - label: Web
     href: https://umd.studio/knitwear/

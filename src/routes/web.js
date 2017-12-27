@@ -7,10 +7,11 @@ export const sortedPosts = [...webPosts];
 sortedPosts.sort((a, b) => b.sortOrder - a.sortOrder);
 
 export const routes = sortedPosts.map(
-  ({ __content, links, slug, styles, title }) => ({
+  ({ __content, image, links, slug, styles, title }) => ({
     path: getRoutePath('web', slug, title),
     exact: true,
     title,
+    image,
     links,
     styles,
     content: __content,

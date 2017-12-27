@@ -1,5 +1,6 @@
 ---
 title: Forest Walk
+image: /assets/games/forest-walk-title.png
 links:
   - label: itch.io
     href: https://erbridge.itch.io/forest-walk

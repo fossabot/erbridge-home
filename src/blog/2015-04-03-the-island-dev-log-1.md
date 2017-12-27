@@ -5,6 +5,7 @@ date: 2015-04-03
 categories:
   - the-island
   - gamedev
+image: /assets/blog/the-island-dev-log-1/godot-test-scene.png
 ---
 
 We've already decided we're going to make _The Island_ in 3D, so picking an

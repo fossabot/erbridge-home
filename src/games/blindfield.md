@@ -1,5 +1,6 @@
 ---
 title: Blindfield
+image: /assets/games/blindfield-in-play.jpg
 links:
   - label: itch.io
     href: https://silentpanda.itch.io/blindfield

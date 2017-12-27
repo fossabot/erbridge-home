@@ -1,5 +1,6 @@
 ---
 title: Midnight Rendezvous
+image: /assets/games/midnight-rendezvous-screen.png
 links:
   - label: itch.io
     href: http://squarebridges.itch.io/midnight-rendezvous

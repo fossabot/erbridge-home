@@ -1,5 +1,6 @@
 ---
 title: Beat Beat
+image: /assets/games/beat-beat-screen.png
 sortOrder: 3
 ---
 

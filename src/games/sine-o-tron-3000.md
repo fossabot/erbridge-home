@@ -1,5 +1,6 @@
 ---
 title: SINE-O-TRON 3000
+image: /assets/games/sine-o-tron-3000-disk.jpg
 links:
   - label: itch.io
     href: https://erbridge.itch.io/sine-o-tron-3000
