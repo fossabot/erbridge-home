@@ -17,7 +17,7 @@ const processNodeDefinitions = new ProcessNodeDefinitions(React);
 const processingInstructions = [
   {
     shouldProcessNode(node) {
-      return node.type && node.type === 'tag' && node.name && node.name === 'a';
+      return node.type === 'tag' && node.name === 'a';
     },
     processNode(node, children, index) {
       const LinkComponent =
@@ -34,9 +34,7 @@ const processingInstructions = [
   },
   {
     shouldProcessNode(node) {
-      return (
-        node.type && node.type === 'tag' && node.name && node.name === 'img'
-      );
+      return node.type === 'tag' && node.name === 'img';
     },
     processNode(node, children, index) {
       return (
@@ -51,9 +49,7 @@ const processingInstructions = [
   },
   {
     shouldProcessNode(node) {
-      return (
-        node.type && node.type === 'tag' && node.name && node.name === 'pdf'
-      );
+      return node.type === 'tag' && node.name === 'pdf';
     },
     processNode(node, children, index) {
       return (
@@ -73,9 +69,7 @@ const processingInstructions = [
   },
   {
     shouldProcessNode(node) {
-      return (
-        node.type && node.type === 'tag' && node.name && node.name === 'youtube'
-      );
+      return node.type === 'tag' && node.name === 'youtube';
     },
     processNode(node, children, index) {
       return (
