@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import ReactCSSTransitionReplace from 'react-css-transition-replace';
 import { Helmet } from 'react-helmet';
 import {
   BrowserRouter as Router,
@@ -16,6 +17,8 @@ import MarkdownPage from './components/MarkdownPage';
 import ScrollToTopOnMount from './components/ScrollToTopOnMount';
 
 import routes, { homeRoute, redirectedRoutes, topRoutes } from './routes';
+
+import './styles/transitions.css';
 
 import './App.css';
 
@@ -59,44 +62,56 @@ class App extends Component {
             routes={topRoutes}
           />
           <Body className="App__body" pointerPosition={pointerPosition}>
-            <Switch>
-              {routes.map((route, index) => (
-                <Route
-                  key={route.name || index}
-                  path={route.path}
-                  exact={route.exact}
-                  render={() => (
-                    <Fragment>
-                      <ScrollToTopOnMount />
-                      {route.content && (
-                        <MarkdownPage
-                          content={route.content}
-                          date={route.date}
-                          image={route.image}
-                          links={route.links}
-                          styles={route.styles}
-                          title={route.title}
-                          subtitle={route.subtitle}
+            <Route
+              render={({ location }) => (
+                <ReactCSSTransitionReplace
+                  transitionName="fade"
+                  transitionEnterTimeout={500}
+                  transitionLeaveTimeout={500}
+                >
+                  <div key={location.key}>
+                    <Switch location={location}>
+                      {routes.map((route, index) => (
+                        <Route
+                          key={route.name || index}
+                          path={route.path}
+                          exact={route.exact}
+                          render={() => (
+                            <Fragment>
+                              <ScrollToTopOnMount />
+                              {route.content && (
+                                <MarkdownPage
+                                  content={route.content}
+                                  date={route.date}
+                                  image={route.image}
+                                  links={route.links}
+                                  styles={route.styles}
+                                  title={route.title}
+                                  subtitle={route.subtitle}
+                                />
+                              )}
+                              {route.routes &&
+                                route.routes.length && (
+                                  <IndexPage routes={route.routes} />
+                                )}
+                            </Fragment>
+                          )}
                         />
-                      )}
-                      {route.routes &&
-                        route.routes.length && (
-                          <IndexPage routes={route.routes} />
-                        )}
-                    </Fragment>
-                  )}
-                />
-              ))}
-              {redirectedRoutes.map((route, index) => (
-                <Redirect
-                  key={route.name || index}
-                  path={route.path}
-                  to={route.to}
-                  exact={route.exact}
-                />
-              ))}
-              <Route component={ErrorPage} />
-            </Switch>
+                      ))}
+                      {redirectedRoutes.map((route, index) => (
+                        <Redirect
+                          key={route.name || index}
+                          path={route.path}
+                          to={route.to}
+                          exact={route.exact}
+                        />
+                      ))}
+                      <Route component={ErrorPage} />
+                    </Switch>
+                  </div>
+                </ReactCSSTransitionReplace>
+              )}
+            />
           </Body>
           <Footer />
         </div>
