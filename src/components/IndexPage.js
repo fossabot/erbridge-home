@@ -1,4 +1,3 @@
-import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
@@ -30,15 +29,20 @@ class IndexPage extends Component {
           return (
             <Link
               key={route.name || index}
-              className={classnames('IndexPage__link', {
-                'IndexPage__link--has-image': image,
-              })}
+              className="IndexPage__link"
               to={route.path}
-              style={{
-                backgroundImage: `url(${image})`,
-              }}
             >
-              <div className="IndexPage__link__title">{route.title}</div>
+              {image && (
+                <div
+                  className="IndexPage__link__image"
+                  style={{
+                    backgroundImage: `url(${image})`,
+                  }}
+                />
+              )}
+              <div className="IndexPage__link__content">
+                <div className="IndexPage__link__text">{route.title}</div>
+              </div>
             </Link>
           );
         })}

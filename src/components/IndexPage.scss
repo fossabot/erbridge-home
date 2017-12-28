@@ -1,4 +1,5 @@
 @import 'styles/colours';
+@import 'styles/transition-timings.scss';
 
 .IndexPage {
   display: flex;
@@ -7,16 +8,13 @@
 }
 
 .IndexPage__link {
-  display: flex;
+  position: relative;
   width: 234px;
   height: 270px;
   margin: 10px;
   padding: 0 8px;
   background-color: $darkest-grey;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
 
   &:nth-child(5n + 4),
   &:nth-child(5n + 5) {
@@ -32,22 +30,43 @@
   &:nth-child(5n + 4) {
     margin-left: 234px / 2 + 10px * 2;
   }
-}
-
-.IndexPage__link--has-image {
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: overlay;
 
   &:active,
   &:focus,
   &:hover {
-    background-blend-mode: soft-light;
+    .IndexPage__link__image {
+      opacity: 0.4;
+    }
   }
 }
 
-.IndexPage__link__title {
+.IndexPage__link__image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  transition: opacity $hover-transition-duration;
+}
+
+.IndexPage__link__content {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.IndexPage__link__text {
   font-family: Dosis, sans-serif;
   font-weight: 400;
   font-size: 28px;
+  text-shadow: $darkest-grey 0 0 6px;
 }
