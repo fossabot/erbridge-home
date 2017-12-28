@@ -5,7 +5,7 @@ links:
     href: https://twitter.com/BotCommentator
   - label: GitHub
     href: https://github.com/erbridge/botcommentator
-sortOrder: 1
+sortOrder: 3
 ---
 
 > Project Roles: **Programmer**\

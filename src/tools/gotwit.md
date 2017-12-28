@@ -3,7 +3,7 @@ title: gotwit
 links:
   - label: GitHub
     href: https://github.com/erbridge/gotwit
-sortOrder: 3
+sortOrder: 1
 ---
 
 > Project Roles: **Programmer**\

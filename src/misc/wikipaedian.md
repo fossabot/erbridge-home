@@ -5,7 +5,7 @@ links:
     href: https://twitter.com/wikipaedian
   - label: GitHub
     href: https://github.com/erbridge/wikipaedian
-sortOrder: 4
+sortOrder: 7
 ---
 
 > Project Roles: **Programmer**\

@@ -1,5 +1,5 @@
 ---
-title: Lime Text
+title: LimeText
 links:
   - label: GitHub
     href: https://github.com/limetext

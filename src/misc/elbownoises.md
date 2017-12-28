@@ -5,7 +5,7 @@ links:
     href: https://twitter.com/elbownoises
   - label: GitHub
     href: https://github.com/erbridge/elbownoises
-sortOrder: 2
+sortOrder: 5
 ---
 
 > Project Roles: **Programmer**\

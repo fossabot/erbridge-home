@@ -28,6 +28,21 @@ export const route = {
 };
 
 export const redirectedRoutes = [
+  {
+    path: '/tools/iris',
+    to: getRoutePath('misc', 'iris'),
+    exact: true,
+  },
+  {
+    path: '/tools/lime-text',
+    to: getRoutePath('misc', 'limetext'),
+    exact: true,
+  },
+  {
+    path: '/tools/nqr',
+    to: getRoutePath('misc', 'nqr'),
+    exact: true,
+  },
   ...sortedPosts
     .filter(({ oldSlug }) => oldSlug)
     .map(({ oldSlug, slug, title }) => ({

@@ -6,7 +6,7 @@ links:
     href: http://erbridge.itch.io/wordscape
   - label: GitHub
     href: https://github.com/erbridge/wordscape
-sortOrder: 5
+sortOrder: 8
 ---
 
 > Project Roles: **Programmer**\

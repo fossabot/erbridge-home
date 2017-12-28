@@ -5,8 +5,7 @@ links:
     href: https://github.com/erbridge/itchy-electron
   - label: NPM
     href: https://www.npmjs.com/package/itchy-electron
-permalink: /tools/itchy-electron/
-sortOrder: 5
+sortOrder: 2
 ---
 
 > Project Roles: **Programmer**\

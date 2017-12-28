@@ -3,7 +3,7 @@ title: Life Maker
 links:
   - label: GitHub
     href: https://github.com/erbridge/life-maker
-sortOrder: 3
+sortOrder: 6
 ---
 
 > Project Roles: **Programmer**\
