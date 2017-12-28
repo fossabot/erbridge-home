@@ -22,40 +22,41 @@
 .Body__scrollarea {
   width: 100%;
 
-  // react-scrollarea overrides
-  &:hover .scrollbar-container {
+  &:hover .Body__scrollarea__track {
     opacity: 1;
-  }
-
-  .scrollbar-container {
-    width: 12px !important;
-    opacity: 0.5;
-    transition: all 0.4s, opacity $hover-transition-duration,
-      background $hover-transition-duration;
-
-    .scrollbar {
-      transition: background $hover-transition-duration;
-    }
-
-    &:hover {
-      background: none !important;
-      opacity: 1;
-
-      .scrollbar {
-        background: $red !important;
-      }
-    }
-
-    .scrollbar {
-      width: 100% !important;
-      background: $grey !important;
-    }
   }
 }
 
-.Body__scrollarea__content {
+.Body__scrollarea__view {
   display: flex;
   justify-content: center;
+}
+
+.Body__scrollarea__track {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  background-color: $darkest-grey;
+  cursor: pointer;
+  transition: opacity $hover-transition-duration;
+
+  &:hover .Body__scrollarea__thumb {
+    background-color: $red;
+  }
+}
+
+.Body__scrollarea__track--horizontal {
+  height: 8px !important;
+}
+
+.Body__scrollarea__track--vertical {
+  width: 8px !important;
+}
+
+.Body__scrollarea__thumb {
+  background-color: $grey;
+  transition: background-color $hover-transition-duration;
 }
 
 .Body__content {

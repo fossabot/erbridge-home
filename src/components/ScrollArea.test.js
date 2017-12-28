@@ -1,8 +1,8 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 
-import Body from './Body';
+import ScrollArea from './ScrollArea';
 
 it('renders correctly', () => {
-  expect(shallow(<Body />)).toMatchSnapshot();
+  expect(shallow(<ScrollArea />)).toMatchSnapshot();
 });

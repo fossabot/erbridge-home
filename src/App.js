@@ -13,6 +13,7 @@ import ErrorPage from './components/ErrorPage';
 import Footer from './components/Footer';
 import IndexPage from './components/IndexPage';
 import MarkdownPage from './components/MarkdownPage';
+import ScrollToTopOnMount from './components/ScrollToTopOnMount';
 
 import routes, { homeRoute, redirectedRoutes, topRoutes } from './routes';
 
@@ -66,6 +67,7 @@ class App extends Component {
                   exact={route.exact}
                   render={() => (
                     <Fragment>
+                      <ScrollToTopOnMount />
                       {route.content && (
                         <MarkdownPage
                           content={route.content}
