@@ -20,7 +20,7 @@ export const sanitizePathComponent = rawComponent =>
       .toLowerCase()
       .replace(/\s/g, '-')
       .replace(/--+/g, '-')
-      .replace(/:|#|\(|\)/g, ''),
+      .replace(/:|#|\(|\)|@/g, ''),
   );
 
 export const getRoutePath = (prefix, slug, title) =>
