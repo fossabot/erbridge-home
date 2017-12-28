@@ -9,10 +9,14 @@ exports[`renders correctly 1`] = `
     focused={true}
   />
   <ScrollArea
-    className="Body__content"
-    contentClassName="Body__inner-content"
+    className="Body__scrollarea"
+    contentClassName="Body__scrollarea__content"
     smoothScrolling={true}
     verticalContainerClassName="scrollbar-container vertical"
-  />
+  >
+    <div
+      className="Body__content"
+    />
+  </ScrollArea>
 </div>
 `;

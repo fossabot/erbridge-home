@@ -20,6 +20,24 @@ exports[`renders correctly 1`] = `
     />
     <Route
       exact={true}
+      key="web"
+      path="/web"
+      render={[Function]}
+    />
+    <Route
+      exact={true}
+      key="tools"
+      path="/tools"
+      render={[Function]}
+    />
+    <Route
+      exact={true}
+      key="misc"
+      path="/misc"
+      render={[Function]}
+    />
+    <Route
+      exact={true}
       key="fiction"
       path="/fiction"
       render={[Function]}
@@ -146,6 +164,30 @@ probably more things because I wish my time was infinite).</p>
           },
           Object {
             "exact": true,
+            "link": "Web",
+            "name": "web",
+            "path": "/web",
+            "routes": Array [],
+            "title": "Web",
+          },
+          Object {
+            "exact": true,
+            "link": "Tools",
+            "name": "tools",
+            "path": "/tools",
+            "routes": Array [],
+            "title": "Tools",
+          },
+          Object {
+            "exact": true,
+            "link": "Misc",
+            "name": "misc",
+            "path": "/misc",
+            "routes": Array [],
+            "title": "Misc",
+          },
+          Object {
+            "exact": true,
             "link": "Fiction",
             "name": "fiction",
             "path": "/fiction",
@@ -204,6 +246,24 @@ probably more things because I wish my time was infinite).</p>
         />
         <Route
           exact={true}
+          key="web"
+          path="/web"
+          render={[Function]}
+        />
+        <Route
+          exact={true}
+          key="tools"
+          path="/tools"
+          render={[Function]}
+        />
+        <Route
+          exact={true}
+          key="misc"
+          path="/misc"
+          render={[Function]}
+        />
+        <Route
+          exact={true}
           key="fiction"
           path="/fiction"
           render={[Function]}
@@ -245,6 +305,27 @@ probably more things because I wish my time was infinite).</p>
           path="/blog/skald"
           push={false}
           to="/blog"
+        />
+        <Redirect
+          exact={true}
+          key="2"
+          path="/tools/iris"
+          push={false}
+          to="/misc/iris"
+        />
+        <Redirect
+          exact={true}
+          key="3"
+          path="/tools/lime-text"
+          push={false}
+          to="/misc/limetext"
+        />
+        <Redirect
+          exact={true}
+          key="4"
+          path="/tools/nqr"
+          push={false}
+          to="/misc/nqr"
         />
         <Route
           component={[Function]}
