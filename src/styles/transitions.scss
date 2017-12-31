@@ -1,10 +1,12 @@
+@import 'styles/transition-timings';
+
 .fade-leave {
   opacity: 1;
 }
 
 .fade-leave-active {
   opacity: 0;
-  transition: opacity 200ms ease-in;
+  transition: opacity $page-transition-duration;
 }
 
 .fade-enter {
@@ -13,9 +15,11 @@
 
 .fade-enter-active {
   opacity: 1;
-  transition: opacity 200ms ease-in 300ms;
+  transition: opacity $page-transition-duration;
 }
 
 .fade-height {
-  transition: height 50ms ease-in-out 250ms;
+  // FIXME: This is a hack to avoid height changes from animating
+  //        and could break layout.
+  min-height: 100%;
 }

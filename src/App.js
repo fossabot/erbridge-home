@@ -66,8 +66,8 @@ class App extends Component {
               render={({ location }) => (
                 <ReactCSSTransitionReplace
                   transitionName="fade"
-                  transitionEnterTimeout={500}
-                  transitionLeaveTimeout={500}
+                  transitionEnterTimeout={250}
+                  transitionLeaveTimeout={250}
                 >
                   <div key={location.key}>
                     <Switch location={location}>
