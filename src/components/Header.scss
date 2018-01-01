@@ -18,11 +18,17 @@
   width: 110px;
 }
 
+.Header__spacer {
+  min-width: 50px;
+  max-width: 100%;
+}
+
 .Header__nav {
   display: flex;
   flex: 1;
   padding-bottom: 11px;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  justify-content: center;
   text-align: right;
 }
 
@@ -33,6 +39,7 @@
 }
 
 .Header__nav-link {
+  margin-top: 10px;
   font-family: Dosis, sans-serif;
   font-weight: 400;
   font-size: 26px;

@@ -50,6 +50,7 @@ class Header extends Component {
               pointerPosition={pointerPosition}
             />
           </NavLink>
+          <div className="Header__spacer" />
           <div className="Header__nav">
             {routes &&
               routes
