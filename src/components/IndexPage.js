@@ -23,29 +23,31 @@ class IndexPage extends Component {
 
     return (
       <div className="IndexPage">
-        {routes.map((route, index) => {
-          const image = assets[route.image] || route.image;
+        <div className="IndexPage__content">
+          {routes.map((route, index) => {
+            const image = assets[route.image] || route.image;
 
-          return (
-            <Link
-              key={route.name || index}
-              className="IndexPage__link"
-              to={route.path}
-            >
-              {image && (
-                <div
-                  className="IndexPage__link__image"
-                  style={{
-                    backgroundImage: `url(${image})`,
-                  }}
-                />
-              )}
-              <div className="IndexPage__link__content">
-                <div className="IndexPage__link__text">{route.title}</div>
-              </div>
-            </Link>
-          );
-        })}
+            return (
+              <Link
+                key={route.name || index}
+                className="IndexPage__link"
+                to={route.path}
+              >
+                {image && (
+                  <div
+                    className="IndexPage__link__image"
+                    style={{
+                      backgroundImage: `url(${image})`,
+                    }}
+                  />
+                )}
+                <div className="IndexPage__link__content">
+                  <div className="IndexPage__link__text">{route.title}</div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
       </div>
     );
   }

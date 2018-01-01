@@ -1,41 +1,116 @@
 @import 'styles/colours';
+@import 'styles/layout';
 @import 'styles/transition-timings.scss';
+
+$body-padding: 18px;
+
+$link-width: 234px;
+$link-height: 270px;
+$link-default-margin: 10px;
+$link-container-width: $link-width + 2 * $link-default-margin;
+$link-short-row-vertical-margin: -1 * $link-width / 4;
+$link-short-row-horizontal-margin: $link-width / 2 + 2 * $link-default-margin;
+
+$three-column-min-device-width: 3 * $link-container-width + 2 * $body-padding;
+$two-column-min-device-width: 2 * $link-container-width + 2 * $body-padding;
+$one-half-column-min-device-width: 1.5 * $link-container-width + 2 *
+  $body-padding;
 
 .IndexPage {
   display: flex;
   padding: 8px 0;
+  justify-content: center;
+}
+
+.IndexPage__content {
+  display: flex;
   flex-wrap: wrap;
+
+  @include media-min-width($one-half-column-min-device-width) {
+    max-width: 1.5 * $link-container-width;
+  }
+
+  @include media-min-width($two-column-min-device-width) {
+    max-width: 2 * $link-container-width;
+  }
+
+  @include media-min-width($three-column-min-device-width) {
+    max-width: 3 * $link-container-width;
+  }
 }
 
 .IndexPage__link {
   position: relative;
-  width: 234px;
-  height: 270px;
-  margin: 10px;
+  width: 100%;
+  height: 120px;
+  margin: $link-default-margin;
   padding: 0 8px;
   background-color: $darkest-grey;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-
-  &:nth-child(5n + 4),
-  &:nth-child(5n + 5) {
-    $margin: 234px / -4;
-
-    margin-top: $margin;
-
-    &:not(:last-child) {
-      margin-bottom: $margin;
-    }
-  }
-
-  &:nth-child(5n + 4) {
-    margin-left: 234px / 2 + 10px * 2;
-  }
 
   &:active,
   &:focus,
   &:hover {
     .IndexPage__link__image {
       opacity: 0.4;
+    }
+  }
+
+  @include media-min-width($one-half-column-min-device-width) {
+    width: $link-width;
+    height: $link-height;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+    &:nth-child(2n + 2) {
+      margin-top: $link-short-row-vertical-margin;
+      margin-left: $link-short-row-horizontal-margin;
+
+      &:not(:last-child) {
+        margin-bottom: $link-short-row-vertical-margin;
+      }
+    }
+  }
+
+  @include media-min-width($two-column-min-device-width) {
+    &:nth-child(2n + 2) {
+      margin-top: $link-default-margin;
+      margin-left: $link-default-margin;
+
+      &:not(:last-child) {
+        margin-bottom: $link-default-margin;
+      }
+    }
+
+    &:nth-child(3n + 3) {
+      margin-top: $link-short-row-vertical-margin;
+      margin-left: $link-short-row-horizontal-margin;
+
+      &:not(:last-child) {
+        margin-bottom: $link-short-row-vertical-margin;
+      }
+    }
+  }
+
+  @include media-min-width($three-column-min-device-width) {
+    &:nth-child(3n + 3) {
+      margin-top: $link-default-margin;
+      margin-left: $link-default-margin;
+
+      &:not(:last-child) {
+        margin-bottom: $link-default-margin;
+      }
+    }
+
+    &:nth-child(5n + 4),
+    &:nth-child(5n + 5) {
+      margin-top: $link-short-row-vertical-margin;
+
+      &:not(:last-child) {
+        margin-bottom: $link-short-row-vertical-margin;
+      }
+    }
+
+    &:nth-child(5n + 4) {
+      margin-left: $link-short-row-horizontal-margin;
     }
   }
 }

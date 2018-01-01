@@ -1,3 +1,9 @@
+@mixin media-min-width($device-width) {
+  @media all and (min-width: $device-width) {
+    @content;
+  }
+}
+
 @mixin wrapper-with-content($class-name, $content-class-name:#{$class-name}__content) {
   .#{$class-name} {
     display: flex;
