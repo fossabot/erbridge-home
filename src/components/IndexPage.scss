@@ -24,6 +24,7 @@ $one-half-column-min-device-width: 1.5 * $link-container-width + 2 *
 
 .IndexPage__content {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
 
   @include media-min-width($one-half-column-min-device-width) {
