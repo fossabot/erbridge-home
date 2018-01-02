@@ -5,7 +5,7 @@
 
 .Header {
   background-color: $grey;
-  padding: 5px;
+  padding: 10px;
 }
 
 .Header__content {
@@ -15,6 +15,7 @@
 }
 
 .Header__logo {
+  display: inherit;
   width: 110px;
 }
 
@@ -26,7 +27,7 @@
 .Header__nav {
   display: flex;
   flex: 1;
-  padding-bottom: 11px;
+  padding-bottom: 4px;
   flex-wrap: wrap;
   justify-content: center;
   text-align: right;

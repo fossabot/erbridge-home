@@ -5,7 +5,7 @@
 
 .Footer {
   background-color: $darkest-grey;
-  padding: 5px;
+  padding: 10px;
 }
 
 .Footer__content {
@@ -16,7 +16,6 @@
 
 .Footer__contact-links {
   display: flex;
-  margin-top: 10px;
 }
 
 .Footer__contact-link {
@@ -25,10 +24,9 @@
 }
 
 .Footer__copyright {
-  margin: 10px 0;
+  margin-top: 5px;
 }
 
 .Footer__copyright-line {
-  margin: 5px 0;
   text-align: center;
 }
