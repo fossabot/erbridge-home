@@ -4,6 +4,12 @@
   }
 }
 
+@mixin media-min-height($device-height) {
+  @media all and (min-height: $device-height) {
+    @content;
+  }
+}
+
 @mixin wrapper-with-content($class-name, $content-class-name:#{$class-name}__content) {
   .#{$class-name} {
     display: flex;

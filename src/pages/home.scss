@@ -1,4 +1,8 @@
+@import 'styles/layout';
+
 .Headshot {
-  float: right;
-  margin-left: 15px;
+  @include media-min-width(520px) {
+    float: right;
+    margin-left: 15px;
+  }
 }
