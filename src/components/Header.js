@@ -106,6 +106,7 @@ class Header extends Component {
                   exact={route.navExact}
                   to={route.path}
                   onClick={() => this.setState({ navMenuIsOpen: false })}
+                  tabIndex={navMenuIsOpen ? 0 : -1}
                 >
                   {route.link}
                 </NavLink>
