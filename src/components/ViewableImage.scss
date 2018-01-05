@@ -1,8 +1,15 @@
+@import 'styles/colours.scss';
+
 .ViewableImage {
   display: flex;
   justify-content: center;
+}
 
-  img {
-    cursor: pointer;
-  }
+.ViewableImage__image {
+  cursor: pointer;
+}
+
+.ViewableImage__placeholder {
+  padding: 40px;
+  background-color: $darkest-grey;
 }

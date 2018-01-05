@@ -5,9 +5,19 @@ exports[`renders correctly 1`] = `
   className="ViewableImage"
   onClick={[Function]}
 >
-  <img
+  <Img
     alt="test"
+    className="ViewableImage__image"
+    decode={true}
+    loader={false}
     src="/test.jpg"
+    unloader={
+      <div
+        className="ViewableImage__placeholder"
+      >
+        test
+      </div>
+    }
   />
   <Lightbox
     closeButtonTitle="Close (Esc)"
