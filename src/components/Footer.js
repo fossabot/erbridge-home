@@ -38,7 +38,7 @@ const Footer = () => (
         </ExternalLink>
       </div>
       <div className="Footer__copyright">
-        <div className="Footer__copyright-line">© 2015 - 2017 erbridge</div>
+        <div className="Footer__copyright-line">© 2015 - 2018 erbridge</div>
         <div className="Footer__copyright-line">
           <ExternalLink to="https://raw.githubusercontent.com/erbridge/erbridge-home/master/LICENSE">
             MIT

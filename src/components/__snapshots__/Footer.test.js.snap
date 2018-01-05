@@ -41,7 +41,7 @@ exports[`renders correctly 1`] = `
       <div
         className="Footer__copyright-line"
       >
-        © 2015 - 2017 erbridge
+        © 2015 - 2018 erbridge
       </div>
       <div
         className="Footer__copyright-line"
