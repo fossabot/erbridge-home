@@ -1,5 +1,6 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import Logo from './Logo';
@@ -27,58 +28,91 @@ class Header extends Component {
   };
 
   state = {
+    navMenuIsOpen: false,
     shouldFocusLogo: false,
   };
 
   render() {
     const { homeRoute, pointerPosition, routes } = this.props;
-    const { shouldFocusLogo } = this.state;
+    const { navMenuIsOpen, shouldFocusLogo } = this.state;
 
     return (
-      <div
-        className="Header"
-        onFocus={() => this.setState({ shouldFocusLogo: true })}
-        onBlur={() => this.setState({ shouldFocusLogo: false })}
-        onMouseEnter={() => this.setState({ shouldFocusLogo: true })}
-        onMouseLeave={() => this.setState({ shouldFocusLogo: false })}
-      >
-        <div className="Header__content">
-          <NavLink exact={homeRoute.exact} to={homeRoute.path}>
-            <Logo
-              className="Header__logo"
-              focused={shouldFocusLogo}
-              pointerPosition={pointerPosition}
-            />
-          </NavLink>
-          <div className="Header__spacer" />
-          <div className="Header__nav">
-            {routes &&
-              routes
-                .map((route, index) => (
-                  <NavLink
-                    key={route.name || index}
-                    className="Header__nav-link"
-                    activeClassName="Header__nav-link--active"
-                    exact={route.navExact}
-                    to={route.path}
-                  >
-                    {route.link}
-                  </NavLink>
-                ))
-                .reduce((elementsSoFar, link, index, links) => {
-                  const elements = [...elementsSoFar, link];
+      <Fragment>
+        <div
+          className="Header"
+          onFocus={() => this.setState({ shouldFocusLogo: true })}
+          onBlur={() => this.setState({ shouldFocusLogo: false })}
+          onMouseEnter={() => this.setState({ shouldFocusLogo: true })}
+          onMouseLeave={() => this.setState({ shouldFocusLogo: false })}
+        >
+          <div className="Header__content">
+            <NavLink exact={homeRoute.exact} to={homeRoute.path}>
+              <Logo
+                className="Header__logo"
+                focused={shouldFocusLogo}
+                pointerPosition={pointerPosition}
+              />
+            </NavLink>
+            <div className="Header__spacer" />
+            <div className="Header__nav">
+              {routes &&
+                routes
+                  .map((route, index) => (
+                    <NavLink
+                      key={route.name || index}
+                      className="Header__nav-link"
+                      activeClassName="Header__nav-link--active"
+                      exact={route.navExact}
+                      to={route.path}
+                    >
+                      {route.link}
+                    </NavLink>
+                  ))
+                  .reduce((elementsSoFar, link, index, links) => {
+                    const elements = [...elementsSoFar, link];
 
-                  if (index < links.length - 1) {
-                    elements.push(
-                      <div key={index} className="Header__nav-spacer" />,
-                    );
-                  }
+                    if (index < links.length - 1) {
+                      elements.push(
+                        <div key={index} className="Header__nav-spacer" />,
+                      );
+                    }
 
-                  return elements;
-                }, [])}
+                    return elements;
+                  }, [])}
+            </div>
+            <div
+              className={classnames('Header__nav-menu-trigger', {
+                'Header__nav-menu-trigger--active': navMenuIsOpen,
+              })}
+              onClick={() => this.setState({ navMenuIsOpen: !navMenuIsOpen })}
+            >
+              Menu
+              <div className="Header__nav-menu-icon" />
+            </div>
           </div>
         </div>
-      </div>
+        <div
+          className={classnames('Header__nav-menu', {
+            'Header__nav-menu--active': navMenuIsOpen,
+          })}
+        >
+          <div className="Header__nav-menu__content">
+            {routes &&
+              routes.map((route, index) => (
+                <NavLink
+                  key={route.name || index}
+                  className="Header__nav-menu-link"
+                  activeClassName="Header__nav-menu-link--active"
+                  exact={route.navExact}
+                  to={route.path}
+                  onClick={() => this.setState({ navMenuIsOpen: false })}
+                >
+                  {route.link}
+                </NavLink>
+              ))}
+          </div>
+        </div>
+      </Fragment>
     );
   }
 }

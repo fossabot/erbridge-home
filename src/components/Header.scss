@@ -1,11 +1,13 @@
 @import 'styles/colours';
 @import 'styles/layout';
+@import 'styles/transition-timings';
 
 @include wrapper-with-content(Header);
 
 .Header {
   background-color: $grey;
   padding: 10px;
+  flex-wrap: wrap;
 }
 
 .Header__content {
@@ -25,11 +27,15 @@
 }
 
 .Header__nav {
-  display: flex;
-  padding-bottom: 4px;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: right;
+  display: none;
+
+  @include media-min-width(520px) {
+    display: flex;
+    padding-bottom: 4px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: right;
+  }
 }
 
 .Header__nav-spacer {
@@ -46,6 +52,113 @@
   line-height: 1;
 
   &.Header__nav-link--active:not(:active):not(:focus):not(:hover) {
+    color: $white;
+  }
+}
+
+.Header__nav-menu-icon {
+  $icon-size: 10px;
+  $icon-thickness: 2px;
+
+  position: relative;
+  width: 2 * $icon-size;
+  height: 2 * $icon-size;
+  margin-bottom: -1 * $icon-thickness;
+  font-family: Dosis, sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1;
+  transform: scaleY(1);
+  transform-origin: 50% 25%;
+  transition: transform $page-transition-duration;
+
+  &:before,
+  &:after {
+    position: absolute;
+    display: block;
+    content: '';
+    border: $icon-size solid transparent;
+  }
+
+  &:before {
+    top: 0;
+    border-top-color: $light-blue;
+    transition: border-top-color $hover-transition-duration;
+  }
+
+  &:after {
+    top: -1 * $icon-thickness;
+    border-top-color: $grey;
+  }
+}
+
+.Header__nav-menu-trigger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Dosis, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: $light-blue;
+  cursor: pointer;
+  transition: color $hover-transition-duration;
+
+  @include media-min-width(520px) {
+    display: none;
+  }
+
+  &.Header__nav-menu-trigger--active {
+    color: $white;
+
+    .Header__nav-menu-icon {
+      transform: scaleY(-1);
+
+      &:before {
+        border-top-color: $white;
+      }
+    }
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $red;
+
+    .Header__nav-menu-icon {
+      &:before {
+        border-top-color: $red;
+      }
+    }
+  }
+}
+
+@include wrapper-with-content(Header__nav-menu);
+
+.Header__nav-menu {
+  max-height: 100%;
+  padding: 0 10px;
+  background-color: $darkest-grey;
+  overflow: hidden;
+  transition: max-height $page-transition-duration;
+
+  &:not(.Header__nav-menu--active) {
+    max-height: 0;
+  }
+}
+
+.Header__nav-menu__content {
+  display: flex;
+  padding: 10px 0;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.Header__nav-menu-link {
+  font-family: Dosis, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+
+  &.Header__nav-menu-link--active:not(:active):not(:focus):not(:hover) {
     color: $white;
   }
 }
