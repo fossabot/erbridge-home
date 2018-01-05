@@ -20,13 +20,12 @@
 }
 
 .Header__spacer {
+  flex: 1;
   min-width: 50px;
-  max-width: 100%;
 }
 
 .Header__nav {
   display: flex;
-  flex: 1;
   padding-bottom: 4px;
   flex-wrap: wrap;
   justify-content: center;
