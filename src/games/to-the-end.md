@@ -1,6 +1,6 @@
 ---
 title: To The End
-image: /assets/games/to-the-end-title.png
+image: /assets/games/to-the-end-title.jpg
 links:
   - label: Global Game Jam
     href: http://globalgamejam.org/2016/games/end-0

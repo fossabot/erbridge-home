@@ -1,6 +1,6 @@
 ---
 title: vibrate for you
-image: /assets/games/vibrate-for-you-app-screen.png
+image: /assets/games/vibrate-for-you-app-screen.jpg
 links:
   - label: itch.io
     href: https://teamsext.itch.io/vibrate-for-you

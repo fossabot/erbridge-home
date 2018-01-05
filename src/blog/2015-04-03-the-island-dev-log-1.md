@@ -5,7 +5,7 @@ date: 2015-04-03
 categories:
   - the-island
   - gamedev
-image: /assets/blog/the-island-dev-log-1/godot-test-scene.png
+image: /assets/blog/the-island-dev-log-1/godot-test-scene.jpg
 ---
 
 We've already decided we're going to make _The Island_ in 3D, so picking an
@@ -39,7 +39,7 @@ modifications into the source scene once it's imported into another one.
 
 ### Editor
 
-![Godot test scene](/assets/blog/the-island-dev-log-1/godot-test-scene.png)
+![Godot test scene](/assets/blog/the-island-dev-log-1/godot-test-scene.jpg)
 
 Godot's editor looks a lot like that of Unity. It's well featured, with a scene
 view, a node tree graph, a property editor, etc. It also has a built in script
@@ -49,7 +49,7 @@ support for external editors is pretty lacking, particularly when it comes to
 debugging. I found myself constantly fighting files opened by Godot due to an
 error prompting about how to handle a reload after making a change in Sublime.
 
-![Do you want to revert that change?](/assets/blog/the-island-dev-log-1/godot-reload-prompt.png)
+![Do you want to revert that change?](/assets/blog/the-island-dev-log-1/godot-reload-prompt.jpg)
 
 The editor has a number of other usability issues, for example: no laptop numpad
 alternative function support (home, end, delete); no visual distinction between
@@ -103,7 +103,7 @@ couple of dependencies to get the build working: `mono` and `clang35` (and
 `dos2unix`, though I'm not convinced I actually need that). Then it was just a
 matter of running the build steps, and the editor launched!
 
-![UE4 start screen](/assets/blog/the-island-dev-log-1/ue4-start-screen.png)
+![UE4 start screen](/assets/blog/the-island-dev-log-1/ue4-start-screen.jpg)
 
 The next hurdle I hit was in getting Unreal to let me use C++. Unreal needs you
 to have an IDE set up before you can use code (which I think is a bit
@@ -116,7 +116,7 @@ which I adapted to run Sublime Text, with little problem
 
 With that set up. I created a new blank project to get going.
 
-![UE4 new project](/assets/blog/the-island-dev-log-1/ue4-new-project.png)
+![UE4 new project](/assets/blog/the-island-dev-log-1/ue4-new-project.jpg)
 
 I'm sure there will be some teething issues to come, but let's see how it goes
 from here!

@@ -9,8 +9,6 @@ links:
 sortOrder: 7
 ---
 
-![Blindfield in Play](/assets/blog/splash-jam-2016/blindfield-in-play.jpg)
-
 > Project Roles: **Programmer**\
 > Languages: **C#**\
 > Tools: **Unity**

@@ -1,6 +1,6 @@
 ---
 title: WordScape
-image: /assets/misc/wordscape-title.png
+image: /assets/misc/wordscape-title.jpg
 links:
   - label: itch.io
     href: http://erbridge.itch.io/wordscape

@@ -1,7 +1,7 @@
 ---
 title: jinteki.net
 slug: jinteki
-image: /assets/games/jinteki-cards.png
+image: /assets/games/jinteki-cards.jpg
 links:
   - label: Web
     href: https://www.jinteki.net/

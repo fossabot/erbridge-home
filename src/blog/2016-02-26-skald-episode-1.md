@@ -5,7 +5,7 @@ date: 2016-02-26
 categories:
   - skald
   - gamedev
-image: /assets/blog/skald-episode-1/textures.png
+image: /assets/blog/skald-episode-1/textures.jpg
 ---
 
 [Luke](http://www.luketovee.com/) and I spent a recent weekend jamming on
@@ -27,7 +27,7 @@ some magic with the landscape and created a material that textures it based on
 its normals. He's also modelled a character and a boat, so we slotted it all
 into a new project and set sail.
 
-![Textures](/assets/blog/skald-episode-1/textures.png)
+![Textures](/assets/blog/skald-episode-1/textures.jpg)
 
 A core feature of the game will be navigation of the world's waterways. We
 thought about what the best way to control that would be. We could make the

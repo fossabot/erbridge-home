@@ -1,7 +1,7 @@
 ---
 title: R. E. Michalak
 slug: remichalak
-image: /assets/web/remichalak-home.png
+image: /assets/web/remichalak-home.jpg
 links:
   - label: Web
     href: https://remichalak.com/

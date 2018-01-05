@@ -1,6 +1,6 @@
 ---
 title: Fatal Attraction
-image: /assets/games/fatal-attraction-title.png
+image: /assets/games/fatal-attraction-title.jpg
 links:
   - label: Web
     href: http://erbridge.co.uk/fatal-attraction/
