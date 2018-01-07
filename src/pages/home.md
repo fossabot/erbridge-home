@@ -32,6 +32,7 @@ Previous clients / employers include:
 * [Pamoja Education](http://www.pamojaeducation.com/)
 * Peekeet
 * [R. E. Michalak](https://remichalak.com/)
+* [Sensible Object](http://sensibleobject.com/)
 * [UNMADE](https://unmade.com/)
 
 I also dabble in a bunch of other stuff, which you can mostly find on this site
