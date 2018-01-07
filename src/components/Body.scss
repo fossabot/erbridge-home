@@ -41,8 +41,11 @@
   cursor: pointer;
   transition: opacity $hover-transition-duration;
 
-  &:hover .Body__scrollarea__thumb {
-    background-color: $red;
+  &:hover,
+  &.Body__scrollarea__track--active {
+    .Body__scrollarea__thumb {
+      background-color: $red;
+    }
   }
 }
 

@@ -17,8 +17,13 @@ class Body extends Component {
     }),
   };
 
+  state = {
+    isScrolling: false,
+  };
+
   render() {
     const { className, children, pointerPosition } = this.props;
+    const { isScrolling } = this.state;
 
     return (
       <div className={classnames(className, 'Body')}>
@@ -34,13 +39,21 @@ class Body extends Component {
           )}
           renderTrackHorizontal={({ ...props }) => (
             <div
-              className="Body__scrollarea__track Body__scrollarea__track--horizontal"
+              className={classnames(
+                'Body__scrollarea__track',
+                'Body__scrollarea__track--horizontal',
+                { 'Body__scrollarea__track--active': isScrolling },
+              )}
               {...props}
             />
           )}
           renderTrackVertical={({ ...props }) => (
             <div
-              className="Body__scrollarea__track Body__scrollarea__track--vertical"
+              className={classnames(
+                'Body__scrollarea__track',
+                'Body__scrollarea__track--vertical',
+                { 'Body__scrollarea__track--active': isScrolling },
+              )}
               {...props}
             />
           )}
@@ -51,6 +64,8 @@ class Body extends Component {
             <div className="Body__scrollarea__thumb" {...props} />
           )}
           hideTracksWhenNotNeeded
+          onScrollStart={() => this.setState({ isScrolling: true })}
+          onScrollStop={() => this.setState({ isScrolling: false })}
         >
           <div className="Body__content">{children}</div>
         </ScrollArea>
