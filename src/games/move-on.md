@@ -1,5 +1,6 @@
 ---
 title: move on
+image: /assets/games/move-on-title.jpg
 links:
   - label: itch.io
     href: https://erbridge.itch.io/move-on
