@@ -9,8 +9,6 @@ links:
 sortOrder: 2
 ---
 
-<youtube title="Makies Fashion Trailer" videoid="JUZpoy43kDk"></youtube>
-
 > Project Roles: **Programmer**\
 > Languages: **C#** | **JavaScript** | **Sass**\
 > Tools: **Backbone.js** | **Coherent UI** | **Unity**
@@ -21,3 +19,5 @@ product line for [MakieLab](https://mymakie.com/).
 
 In the game, the player designs and customizes outfits for their avatar, before
 taking them to the catwalk and taking photos.
+
+<youtube title="Makies Fashion Trailer" videoid="JUZpoy43kDk"></youtube>

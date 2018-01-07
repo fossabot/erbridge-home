@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import assets from '../assets';
+import { getAsset } from '../assets';
 
 import ExternalLink from './ExternalLink';
 import ViewableImage from './ViewableImage';
@@ -41,7 +41,7 @@ const processingInstructions = [
         <ViewableImage
           key={index}
           className={node.attribs.class}
-          src={assets[node.attribs.src] || node.attribs.src}
+          src={getAsset(node.attribs.src)}
           alt={node.attribs.alt || ''}
         />
       );
@@ -60,7 +60,7 @@ const processingInstructions = [
           <iframe
             className="PDF__content"
             title={node.attribs.title}
-            src={assets[node.attribs.src] || node.attribs.src}
+            src={getAsset(node.attribs.src)}
             frameBorder="0"
           />
         </div>
@@ -73,14 +73,14 @@ const processingInstructions = [
     },
     processNode(node, children, index) {
       return (
-        <div key={index} className="YouTube">
+        <p key={index} className="YouTube">
           <iframe
             className="YouTube__content"
             title={node.attribs.title}
             src={`https://www.youtube.com/embed/${node.attribs.videoid}`}
             frameBorder="0"
           />
-        </div>
+        </p>
       );
     },
   },
@@ -96,6 +96,7 @@ class MarkdownPage extends Component {
   static propTypes = {
     content: PropTypes.string.isRequired,
     date: PropTypes.string,
+    image: PropTypes.string,
     links: PropTypes.arrayOf(
       PropTypes.shape({
         href: PropTypes.string.isRequired,
@@ -146,11 +147,20 @@ class MarkdownPage extends Component {
   }
 
   render() {
-    const { date, links, subtitle, title } = this.props;
+    const { date, image, links, subtitle, title } = this.props;
     const { content } = this.state;
 
     return (
       <div className="MarkdownPage">
+        {image && (
+          <h1 className="MarkdownPage__heading-image__container">
+            <ViewableImage
+              className="MarkdownPage__heading-image"
+              src={getAsset(image)}
+              alt=""
+            />
+          </h1>
+        )}
         {title && [
           <h1
             key="title"

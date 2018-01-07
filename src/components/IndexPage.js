@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import assets from '../assets';
+import { getAsset } from '../assets';
 
 import './IndexPage.css';
 
@@ -25,7 +25,7 @@ class IndexPage extends Component {
       <div className="IndexPage">
         <div className="IndexPage__content">
           {routes.map((route, index) => {
-            const image = assets[route.image] || route.image;
+            const image = getAsset(route.image);
 
             return (
               <Link

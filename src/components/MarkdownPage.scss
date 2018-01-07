@@ -1,6 +1,8 @@
 @import 'styles/colours';
 @import 'styles/layout';
 
+$narrow-image-min-width: 520px;
+
 .MarkdownPage {
   .PDF {
     width: 100%;
@@ -36,4 +38,17 @@
 
 .MarkdownPage__links {
   font-size: 22px;
+}
+
+.MarkdownPage__heading-image__container {
+  display: flex;
+  justify-content: center;
+
+  @include media-min-width($narrow-image-min-width) {
+    padding: 0 10%;
+  }
+}
+
+.MarkdownPage__heading-image {
+  max-width: 100%;
 }

@@ -10,4 +10,6 @@ assetsContext.keys().forEach(path => {
   assets[path.replace(/^.\//, '/assets/')] = assetsContext(path);
 });
 
+export const getAsset = key => assets[key] || key;
+
 export default assets;

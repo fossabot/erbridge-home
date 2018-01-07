@@ -2,6 +2,8 @@
 @import 'styles/layout';
 @import 'styles/transition-timings';
 
+$full-nav-min-width: 520px;
+
 @include wrapper-with-content(Header);
 
 .Header {
@@ -29,7 +31,7 @@
 .Header__nav {
   display: none;
 
-  @include media-min-width(520px) {
+  @include media-min-width($full-nav-min-width) {
     display: flex;
     padding-bottom: 4px;
     flex-wrap: wrap;
@@ -103,7 +105,7 @@
   cursor: pointer;
   transition: color $hover-transition-duration;
 
-  @include media-min-width(520px) {
+  @include media-min-width($full-nav-min-width) {
     display: none;
   }
 
