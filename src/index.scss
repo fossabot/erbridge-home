@@ -67,6 +67,11 @@ a {
   }
 }
 
+code {
+  font-family: Inconsolata, monospace;
+  font-weight: 400;
+}
+
 blockquote {
   font-style: italic;
   color: $lightest-grey;
