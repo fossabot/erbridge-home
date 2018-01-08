@@ -53,7 +53,7 @@ const processingInstructions = [
     },
     processNode(node, children, index) {
       return (
-        <div
+        <p
           key={index}
           className={classnames('PDF', `PDF--${node.attribs.papersize}`)}
         >
@@ -63,7 +63,7 @@ const processingInstructions = [
             src={getAsset(node.attribs.src)}
             frameBorder="0"
           />
-        </div>
+        </p>
       );
     },
   },
