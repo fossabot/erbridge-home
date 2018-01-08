@@ -11,7 +11,7 @@ We're making a game!
 Ok, I already [said that](/blog/welcome-to-the-island), but after some thought,
 and some good advice, we shelved _The Island_. We hadn't made much progress on
 it, and we decided it was too big an idea for our small team of two. Instead,
-[Luke](http://www.luketovee.com/) and I decided to try to create something more
+[Luke](https://www.luketovee.com/) and I decided to try to create something more
 manageable.
 
 So we came up with _Skald_, an ambitious game about going on a journey and

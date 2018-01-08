@@ -42,7 +42,7 @@ to even do the thing using appropriate libraries, tutorials, etc., and then port
 it over to something client-side if necessary in the future when I understand it
 all a bit better.
 
-So after picking [Gensim](http://radimrehurek.com/gensim/) as the library to
+So after picking [Gensim](https://radimrehurek.com/gensim/) as the library to
 work with, based on some keywords that I'd come across already appeared in its
 docs (_information retrieval_, _Latent Semantic Analysis_, _Latent Dirichlet
 Allocation_ - did I mention I don't know what I'm doing?), I built a quick
@@ -51,7 +51,7 @@ Allocation_ - did I mention I don't know what I'm doing?), I built a quick
 It turns out that it's sorcery.
 
 After spending a few hours following
-[Gensim's tutorials](http://radimrehurek.com/gensim/tutorial.html), I had less
+[Gensim's tutorials](https://radimrehurek.com/gensim/tutorial.html), I had less
 than 100 (verbose) lines of code that would tell me how similar a line of text
 is to a bunch of other lines of text (documents). Using a thing called _Latent
 Semantic Analysis_, we can do this by looking at the semantic similarity between

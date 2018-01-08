@@ -5,7 +5,7 @@ links:
   - label: Web
     href: http://erbridge.co.uk/fatal-attraction/
   - label: itch.io
-    href: http://erbridge.itch.io/fatal-attraction
+    href: https://erbridge.itch.io/fatal-attraction
   - label: Ludum Dare
     href: http://ludumdare.com/compo/ludum-dare-32/?action=preview&uid=34508
   - label: GitHub

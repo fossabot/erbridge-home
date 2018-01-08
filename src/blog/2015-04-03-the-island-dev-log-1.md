@@ -18,7 +18,7 @@ few have any kind of visual IDE or editor that will run on the platform.
 
 ## Godot
 
-At first, we decided to try out [Godot](http://www.godotengine.org/), an
+At first, we decided to try out [Godot](https ://www.godotengine.org/), an
 [open source](https://github.com/okamstudio/godot) engine with 2D and 3D
 support, an integrated code editor, a wide range of build targets, and an editor
 which, while not being as sleek as Unity's, appeared to be sufficient for our
@@ -44,7 +44,7 @@ modifications into the source scene once it's imported into another one.
 Godot's editor looks a lot like that of Unity. It's well featured, with a scene
 view, a node tree graph, a property editor, etc. It also has a built in script
 editor with code completion and a built in debugger. I prefer to use
-[Sublime Text](http://www.sublimetext.com/) for editing code, but Godot's
+[Sublime Text](https://www.sublimetext.com/) for editing code, but Godot's
 support for external editors is pretty lacking, particularly when it comes to
 debugging. I found myself constantly fighting files opened by Godot due to an
 error prompting about how to handle a reload after making a change in Sublime.

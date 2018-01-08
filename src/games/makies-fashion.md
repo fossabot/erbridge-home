@@ -5,7 +5,7 @@ links:
   - label: Google Play
     href: https://play.google.com/store/apps/details?id=com.makielab.DressUp
   - label: Amazon Appstore
-    href: http://www.amazon.com/gp/product/B00O2B7T2A/ref=mas_pm_makies_fashion
+    href: https://www.amazon.com/gp/product/B00O2B7T2A/ref=mas_pm_makies_fashion
 sortOrder: 2
 ---
 

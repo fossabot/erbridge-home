@@ -29,7 +29,7 @@ Previous clients / employers include:
 * IndigoMetrics
 * Judtho
 * [MakieLab](https://mymakie.com/)
-* [Pamoja Education](http://www.pamojaeducation.com/)
+* [Pamoja Education](https://www.pamojaeducation.com/)
 * Peekeet
 * [R. E. Michalak](https://remichalak.com/)
 * [Sensible Object](http://sensibleobject.com/)

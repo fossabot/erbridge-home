@@ -46,7 +46,7 @@ const Footer = () => (
           (<ExternalLink to="https://github.com/erbridge/erbridge-home">
             code
           </ExternalLink>) |{' '}
-          <ExternalLink to="http://creativecommons.org/licenses/by/3.0/">
+          <ExternalLink to="https://creativecommons.org/licenses/by/3.0/">
             CC-BY
           </ExternalLink>{' '}
           (content)

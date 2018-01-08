@@ -3,7 +3,7 @@ title: Midnight Rendezvous
 image: /assets/games/midnight-rendezvous-screen.jpg
 links:
   - label: itch.io
-    href: http://squarebridges.itch.io/midnight-rendezvous
+    href: https://squarebridges.itch.io/midnight-rendezvous
   - label: Web (Ludum Dare Version)
     href: http://erbridge.co.uk/rendezvous/
   - label: Ludum Dare

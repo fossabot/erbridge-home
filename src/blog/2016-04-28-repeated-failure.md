@@ -26,7 +26,7 @@ drop you into a leaking spacesuit floating around a wrecked space station with
 your air leaking out into the void and no instructions, and forced you to
 experiment to survive. I haven't played it, but I doubt that's how they do it.
 
-At [Nordic Game Jam 2016](http://nordicgamejam.org/), I decided to try
+At [Nordic Game Jam 2016](https://nordicgamejam.org/), I decided to try
 experimenting with the idea of learning through hard failure. At GDC, a friend
 of mine, [Denman Rooke](http://denmanrooke.com/), showed me an adaptation he had
 made of Dark Souls as a card game, where the crawl through the game is simulated

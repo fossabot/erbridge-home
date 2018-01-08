@@ -8,7 +8,7 @@ categories:
 
 We're making a game!
 
-[Luke Tovee](http://www.luketovee.com/) and I have started working on a resource
+[Luke Tovee](https://www.luketovee.com/) and I have started working on a resource
 management sim, where you play as the leader of a fledgling town of house boats,
 moored around a desert island (that doesn't do the concept justice). We're
 calling it _The Island_.

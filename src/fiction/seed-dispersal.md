@@ -3,7 +3,7 @@ title: Seed Dispersal
 sortOrder: 3
 ---
 
-A walk through [Project Gutenberg](http://www.gutenberg.org/), one paragraph at
+A walk through [Project Gutenberg](https://www.gutenberg.org/), one paragraph at
 a time, created for [NaNoGenMo 2015](https://github.com/dariusk/NaNoGenMo-2015).
 
 <pdf title="Seed Dispersal" src="https://cdn.rawgit.com/erbridge/seed-dispersal/master/dist/seed-dispersal-0.0.2.pdf" papersize="A4"></pdf>

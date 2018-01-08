@@ -3,7 +3,7 @@ title: To The End
 image: /assets/games/to-the-end-title.jpg
 links:
   - label: Global Game Jam
-    href: http://globalgamejam.org/2016/games/end-0
+    href: https://globalgamejam.org/2016/games/end-0
   - label: GitHub
     href: https://github.com/to-the-end/to-the-end
 sortOrder: 6
@@ -19,4 +19,4 @@ player strives to escape from a nightmare, and the other manipulates the
 environment to keep them there.
 
 Initially made for
-[Global Game Jam 2016](http://globalgamejam.org/2016/games/end-0).
+[Global Game Jam 2016](https://globalgamejam.org/2016/games/end-0).

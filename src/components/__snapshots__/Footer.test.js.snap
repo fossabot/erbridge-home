@@ -61,7 +61,7 @@ exports[`renders correctly 1`] = `
         ) |
          
         <ExternalLink
-          to="http://creativecommons.org/licenses/by/3.0/"
+          to="https://creativecommons.org/licenses/by/3.0/"
         >
           CC-BY
         </ExternalLink>

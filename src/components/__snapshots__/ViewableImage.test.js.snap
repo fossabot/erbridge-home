@@ -12,11 +12,11 @@ exports[`renders correctly 1`] = `
     loader={false}
     src="/test.jpg"
     unloader={
-      <div
+      <span
         className="ViewableImage__placeholder"
       >
         test
-      </div>
+      </span>
     }
   />
   <Lightbox
