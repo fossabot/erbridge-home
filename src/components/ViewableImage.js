@@ -38,7 +38,7 @@ class ViewableImage extends Component {
           className="ViewableImage__image"
           src={src}
           alt={alt}
-          unloader={<div className="ViewableImage__placeholder">{alt}</div>}
+          unloader={<span className="ViewableImage__placeholder">{alt}</span>}
         />
         <Lightbox
           images={[{ src }]}
