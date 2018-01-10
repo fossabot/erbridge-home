@@ -1,17 +1,11 @@
-import moment from 'moment';
+import formatDateFn from 'date-fns/format';
 
 export const formatDate = (date, format) => {
   if (!date) {
     return null;
   }
 
-  date = moment(date);
-
-  if (!date.isValid()) {
-    return null;
-  }
-
-  return date.format(format);
+  return formatDateFn(date, format);
 };
 
 export const sanitizePathComponent = rawComponent =>

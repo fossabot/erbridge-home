@@ -1,4 +1,4 @@
-import moment from 'moment';
+import compareDateDesc from 'date-fns/compare_desc';
 
 import blogPosts from '../pages/blog';
 
@@ -8,7 +8,7 @@ import { formatDate, getRoutePath, sanitizePathComponent } from './helpers';
 
 const sortedPosts = [...blogPosts];
 
-sortedPosts.sort((a, b) => moment(b.date) - moment(a.date));
+sortedPosts.sort((a, b) => compareDateDesc(a.date, b.date));
 
 export const routes = sortedPosts.map(
   ({ __content, categories, date, image, slug, styles, subtitle, title }) => ({
