@@ -1,4 +1,4 @@
-import fictionPosts from '../fiction';
+import fictionPosts from '../pages/fiction';
 
 import { getRoutePath, sanitizePathComponent } from './helpers';
 

@@ -1,4 +1,4 @@
-import toolsPosts from '../tools';
+import toolsPosts from '../pages/tools';
 
 import { getRoutePath, sanitizePathComponent } from './helpers';
 

@@ -1,6 +1,6 @@
 import moment from 'moment';
 
-import blogPosts from '../blog';
+import blogPosts from '../pages/blog';
 
 import { formatDate, getRoutePath, sanitizePathComponent } from './helpers';
 

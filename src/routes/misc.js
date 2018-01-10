@@ -1,4 +1,4 @@
-import miscPosts from '../misc';
+import miscPosts from '../pages/misc';
 
 import { getRoutePath, sanitizePathComponent } from './helpers';
 

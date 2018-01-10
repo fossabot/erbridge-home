@@ -1,4 +1,4 @@
-import webPosts from '../web';
+import webPosts from '../pages/web';
 
 import { getRoutePath, sanitizePathComponent } from './helpers';
 

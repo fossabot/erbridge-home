@@ -1,4 +1,4 @@
-import gamesPosts from '../games';
+import gamesPosts from '../pages/games';
 
 import { getRoutePath, sanitizePathComponent } from './helpers';
 

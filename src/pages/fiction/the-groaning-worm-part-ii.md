@@ -1,7 +1,7 @@
 ---
 title: The Groaning Worm (Part II)
 styles:
-  - fiction/the-groaning-worm-part-ii
+  - pages/fiction/the-groaning-worm-part-ii
 sortOrder: 2
 ---
 
