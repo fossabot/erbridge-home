@@ -40,7 +40,7 @@ const processingInstructions = [
       return (
         <ViewableImage
           key={index}
-          className={node.attribs.class}
+          className={classnames(node.attribs.class, 'MarkdownPage__image')}
           src={getAsset(node.attribs.src)}
           alt={node.attribs.alt || ''}
         />

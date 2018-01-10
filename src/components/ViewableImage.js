@@ -35,7 +35,13 @@ class ViewableImage extends Component {
           className={classnames(className, 'ViewableImage')}
           src={src}
           alt={alt}
-          unloader={<span className="ViewableImage__placeholder">{alt}</span>}
+          unloader={
+            <span
+              className={classnames(className, 'ViewableImage__placeholder')}
+            >
+              {alt}
+            </span>
+          }
           onClick={() => this.openLightbox()}
         />
         <Lightbox
