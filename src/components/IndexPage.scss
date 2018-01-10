@@ -129,7 +129,9 @@ $one-half-column-min-device-width: 1.5 * $link-container-width + 2 *
   background-size: cover;
   background-position: center;
   opacity: 0.2;
-  transition: opacity $hover-transition-duration;
+  // FIXME: Disabling transition because it causes the image to break out of
+  //        the clip-path during transition on Chrome.
+  // transition: opacity $hover-transition-duration;
 }
 
 .IndexPage__link__content {
