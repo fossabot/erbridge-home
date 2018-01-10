@@ -1,11 +1,7 @@
 @import 'styles/colours';
 
 .ViewableImage {
-  display: flex;
-  justify-content: center;
-}
-
-.ViewableImage__image {
+  max-width: 100%;
   cursor: pointer;
 }
 

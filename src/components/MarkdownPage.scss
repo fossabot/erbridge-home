@@ -4,6 +4,9 @@
 $narrow-image-min-width: 520px;
 
 .MarkdownPage {
+  // FIXME: A workaround to force Chrome to consider child margins.
+  overflow: hidden;
+
   .PDF {
     width: 100%;
     max-height: 60vh;
@@ -40,15 +43,8 @@ $narrow-image-min-width: 520px;
   font-size: 22px;
 }
 
-.MarkdownPage__heading-image__container {
-  display: flex;
-  justify-content: center;
-
+.MarkdownPage__heading-image {
   @include media-min-width($narrow-image-min-width) {
     padding: 0 10%;
   }
-}
-
-.MarkdownPage__heading-image {
-  max-width: 100%;
 }

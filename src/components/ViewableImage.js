@@ -1,6 +1,6 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Img from 'react-image';
 import Lightbox from 'react-images';
 
@@ -30,15 +30,13 @@ class ViewableImage extends Component {
     const { lightboxIsOpen } = this.state;
 
     return (
-      <span
-        className={classnames(className, 'ViewableImage')}
-        onClick={() => this.openLightbox()}
-      >
+      <Fragment>
         <Img
-          className="ViewableImage__image"
+          className={classnames(className, 'ViewableImage')}
           src={src}
           alt={alt}
           unloader={<span className="ViewableImage__placeholder">{alt}</span>}
+          onClick={() => this.openLightbox()}
         />
         <Lightbox
           images={[{ src }]}
@@ -46,7 +44,7 @@ class ViewableImage extends Component {
           showImageCount={false}
           onClose={() => this.closeLightbox()}
         />
-      </span>
+      </Fragment>
     );
   }
 }

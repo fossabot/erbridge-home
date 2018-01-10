@@ -1,15 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<span
-  className="ViewableImage"
-  onClick={[Function]}
->
+<React.Fragment>
   <Img
     alt="test"
-    className="ViewableImage__image"
+    className="ViewableImage"
     decode={true}
     loader={false}
+    onClick={[Function]}
     src="/test.jpg"
     unloader={
       <span
@@ -43,5 +41,5 @@ exports[`renders correctly 1`] = `
     thumbnailOffset={2}
     width={1024}
   />
-</span>
+</React.Fragment>
 `;
