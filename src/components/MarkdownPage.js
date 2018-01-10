@@ -96,6 +96,7 @@ class MarkdownPage extends Component {
   static propTypes = {
     content: PropTypes.string.isRequired,
     date: PropTypes.string,
+    showHeadingImage: PropTypes.bool,
     image: PropTypes.string,
     links: PropTypes.arrayOf(
       PropTypes.shape({
@@ -147,16 +148,24 @@ class MarkdownPage extends Component {
   }
 
   render() {
-    const { date, image, links, subtitle, title } = this.props;
+    const {
+      date,
+      showHeadingImage,
+      image,
+      links,
+      subtitle,
+      title,
+    } = this.props;
     const { content } = this.state;
 
     return (
       <div className="MarkdownPage">
-        {image && (
-          <h1 className="MarkdownPage__heading-image">
-            <ViewableImage src={getAsset(image)} alt="" />
-          </h1>
-        )}
+        {image &&
+          showHeadingImage && (
+            <h1 className="MarkdownPage__heading-image">
+              <ViewableImage src={getAsset(image)} alt="" />
+            </h1>
+          )}
         {title && [
           <h1
             key="title"

@@ -83,6 +83,7 @@ class App extends Component {
                                 <MarkdownPage
                                   content={route.content}
                                   date={route.date}
+                                  showHeadingImage={route.showHeadingImage}
                                   image={route.image}
                                   links={route.links}
                                   styles={route.styles}

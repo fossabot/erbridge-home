@@ -39,10 +39,20 @@ export const generateRoutes = (
   sortedPosts.sort((a, b) => b.sortOrder - a.sortOrder);
 
   const routes = sortedPosts.map(
-    ({ __content, image, links, slug, styles, subtitle, title }) => ({
+    ({
+      __content,
+      image,
+      links,
+      showHeadingImage = true,
+      slug,
+      styles,
+      subtitle,
+      title,
+    }) => ({
       path: getRoutePath(basePathName, slug, title),
       exact: true,
       image,
+      showHeadingImage,
       title,
       subtitle,
       links,
