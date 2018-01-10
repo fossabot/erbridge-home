@@ -92,7 +92,10 @@ class App extends Component {
                               )}
                               {route.routes &&
                                 route.routes.length && (
-                                  <IndexPage routes={route.routes} />
+                                  <IndexPage
+                                    routes={route.routes}
+                                    title={route.title}
+                                  />
                                 )}
                             </Fragment>
                           )}

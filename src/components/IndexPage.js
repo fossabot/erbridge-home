@@ -16,37 +16,41 @@ class IndexPage extends Component {
         title: PropTypes.string.isRequired,
       }),
     ).isRequired,
+    title: PropTypes.string,
   };
 
   render() {
-    const { routes } = this.props;
+    const { routes, title } = this.props;
 
     return (
       <div className="IndexPage">
         <div className="IndexPage__content">
-          {routes.map((route, index) => {
-            const image = getAsset(route.image);
+          {title && <h1>{title}</h1>}
+          <div className="IndexPage__links">
+            {routes.map((route, index) => {
+              const image = getAsset(route.image);
 
-            return (
-              <Link
-                key={route.name || index}
-                className="IndexPage__link"
-                to={route.path}
-              >
-                {image && (
-                  <div
-                    className="IndexPage__link__image"
-                    style={{
-                      backgroundImage: `url(${image})`,
-                    }}
-                  />
-                )}
-                <div className="IndexPage__link__content">
-                  <div className="IndexPage__link__text">{route.title}</div>
-                </div>
-              </Link>
-            );
-          })}
+              return (
+                <Link
+                  key={route.name || index}
+                  className="IndexPage__link"
+                  to={route.path}
+                >
+                  {image && (
+                    <div
+                      className="IndexPage__link__image"
+                      style={{
+                        backgroundImage: `url(${image})`,
+                      }}
+                    />
+                  )}
+                  <div className="IndexPage__link__content">
+                    <div className="IndexPage__link__text">{route.title}</div>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </div>
     );

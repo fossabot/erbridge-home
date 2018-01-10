@@ -18,13 +18,13 @@ $one-half-column-min-device-width: 1.5 * $link-container-width + 2 *
 
 .IndexPage {
   display: flex;
-  padding: 8px 0;
   justify-content: center;
 }
 
-.IndexPage__content {
+.IndexPage__links {
   display: flex;
   width: 100%;
+  padding: 8px 0;
   flex-wrap: wrap;
 
   @include media-min-width($one-half-column-min-device-width) {

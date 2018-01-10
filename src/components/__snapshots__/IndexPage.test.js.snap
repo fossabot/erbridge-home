@@ -6,6 +6,10 @@ exports[`renders correctly 1`] = `
 >
   <div
     className="IndexPage__content"
-  />
+  >
+    <div
+      className="IndexPage__links"
+    />
+  </div>
 </div>
 `;
