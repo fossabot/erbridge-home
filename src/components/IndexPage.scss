@@ -56,62 +56,66 @@ $one-half-column-min-device-width: 1.5 * $link-container-width + 2 *
     }
   }
 
-  @include media-min-width($one-half-column-min-device-width) {
-    width: $link-width;
-    height: $link-height;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  $clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
-    &:nth-child(2n + 2) {
-      margin-top: $link-short-row-vertical-margin;
-      margin-left: $link-short-row-horizontal-margin;
+  @supports (clip-path: $clip-path) {
+    @include media-min-width($one-half-column-min-device-width) {
+      width: $link-width;
+      height: $link-height;
+      clip-path: $clip-path;
 
-      &:not(:last-child) {
-        margin-bottom: $link-short-row-vertical-margin;
-      }
-    }
-  }
+      &:nth-child(2n + 2) {
+        margin-top: $link-short-row-vertical-margin;
+        margin-left: $link-short-row-horizontal-margin;
 
-  @include media-min-width($two-column-min-device-width) {
-    &:nth-child(2n + 2) {
-      margin-top: $link-default-margin;
-      margin-left: $link-default-margin;
-
-      &:not(:last-child) {
-        margin-bottom: $link-default-margin;
+        &:not(:last-child) {
+          margin-bottom: $link-short-row-vertical-margin;
+        }
       }
     }
 
-    &:nth-child(3n + 3) {
-      margin-top: $link-short-row-vertical-margin;
-      margin-left: $link-short-row-horizontal-margin;
+    @include media-min-width($two-column-min-device-width) {
+      &:nth-child(2n + 2) {
+        margin-top: $link-default-margin;
+        margin-left: $link-default-margin;
 
-      &:not(:last-child) {
-        margin-bottom: $link-short-row-vertical-margin;
+        &:not(:last-child) {
+          margin-bottom: $link-default-margin;
+        }
       }
-    }
-  }
 
-  @include media-min-width($three-column-min-device-width) {
-    &:nth-child(3n + 3) {
-      margin-top: $link-default-margin;
-      margin-left: $link-default-margin;
+      &:nth-child(3n + 3) {
+        margin-top: $link-short-row-vertical-margin;
+        margin-left: $link-short-row-horizontal-margin;
 
-      &:not(:last-child) {
-        margin-bottom: $link-default-margin;
-      }
-    }
-
-    &:nth-child(5n + 4),
-    &:nth-child(5n + 5) {
-      margin-top: $link-short-row-vertical-margin;
-
-      &:not(:last-child) {
-        margin-bottom: $link-short-row-vertical-margin;
+        &:not(:last-child) {
+          margin-bottom: $link-short-row-vertical-margin;
+        }
       }
     }
 
-    &:nth-child(5n + 4) {
-      margin-left: $link-short-row-horizontal-margin;
+    @include media-min-width($three-column-min-device-width) {
+      &:nth-child(3n + 3) {
+        margin-top: $link-default-margin;
+        margin-left: $link-default-margin;
+
+        &:not(:last-child) {
+          margin-bottom: $link-default-margin;
+        }
+      }
+
+      &:nth-child(5n + 4),
+      &:nth-child(5n + 5) {
+        margin-top: $link-short-row-vertical-margin;
+
+        &:not(:last-child) {
+          margin-bottom: $link-short-row-vertical-margin;
+        }
+      }
+
+      &:nth-child(5n + 4) {
+        margin-left: $link-short-row-horizontal-margin;
+      }
     }
   }
 }
