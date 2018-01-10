@@ -1,38 +1,11 @@
 import toolsPosts from '../pages/tools';
 
-import { getRoutePath, sanitizePathComponent } from './helpers';
+import { generateRoutes } from './helpers';
 
-export const sortedPosts = [...toolsPosts];
-
-sortedPosts.sort((a, b) => b.sortOrder - a.sortOrder);
-
-export const routes = sortedPosts.map(
-  ({ __content, image, links, slug, styles, title }) => ({
-    path: getRoutePath('tools', slug, title),
-    exact: true,
-    title,
-    image,
-    links,
-    styles,
-    content: __content,
-  }),
+export const { redirectedRoutes, route, routes } = generateRoutes(
+  'tools',
+  'tools',
+  'Tools',
+  'Tools',
+  toolsPosts,
 );
-
-export const route = {
-  name: 'tools',
-  link: 'Tools',
-  path: '/tools',
-  exact: true,
-  title: 'Tools',
-  routes,
-};
-
-export const redirectedRoutes = [
-  ...sortedPosts
-    .filter(({ oldSlug }) => oldSlug)
-    .map(({ oldSlug, slug, title }) => ({
-      path: `/tools/${sanitizePathComponent(oldSlug)}`,
-      to: getRoutePath('tools', slug, title),
-      exact: true,
-    })),
-];

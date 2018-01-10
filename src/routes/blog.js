@@ -4,6 +4,8 @@ import blogPosts from '../pages/blog';
 
 import { formatDate, getRoutePath, sanitizePathComponent } from './helpers';
 
+// FIXME: Refactor this module to use the output of helper.generateRoutes.
+
 const sortedPosts = [...blogPosts];
 
 sortedPosts.sort((a, b) => moment(b.date) - moment(a.date));
@@ -12,8 +14,8 @@ export const routes = sortedPosts.map(
   ({ __content, categories, date, image, slug, styles, subtitle, title }) => ({
     path: getRoutePath('blog', slug, title),
     exact: true,
-    title,
     image,
+    title,
     subtitle,
     date: formatDate(date, 'DD MMMM YYYY'),
     categories,
