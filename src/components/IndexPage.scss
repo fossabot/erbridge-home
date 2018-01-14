@@ -16,9 +16,11 @@ $two-column-min-device-width: 2 * $link-container-width + 2 * $body-padding;
 $one-half-column-min-device-width: 1.5 * $link-container-width + 2 *
   $body-padding;
 
-.IndexPage {
+.IndexPage__content {
   display: flex;
-  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
 }
 
 .IndexPage__links {
