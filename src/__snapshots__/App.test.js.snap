@@ -69,45 +69,13 @@ exports[`renders correctly 1`] = `
     <Header
       homeRoute={
         Object {
-          "content": "<p><img class=\\"Headshot\\" src=\\"//www.gravatar.com/avatar/904272fae938125a9ea3b545057838e9?s=240\\" alt=\\"Headshot\\"></p>
-<p>My name is <em>F</em> and I make <strong>games</strong> and <strong>web experiences</strong>. I&#39;m a mathematical
-physicist turned programmer, and an active contributor to
-<a href=\\"https://github.com/erbridge\\">open source software</a>. I also work under the
-pseudonym <em>erbridge</em>.</p>
-<p>I like to work on projects that support and cultivate the creativity of their
-users, that work towards positive social change, that provoke users into
-considering new perspectives or emotions, or that push the boundaries of what&#39;s
-possible (I&#39;m particularly interested in generative narrative and AI in games).
-Bonus points if they do more than one of those things.</p>
-<p>I&#39;m currently working on an unannounced game about living and coping with
-chronic illness and disability. <strong>Watch this space.</strong></p>
-<p><strong>Thinking about hiring me?</strong> Send me a
-<a href=\\"https://twitter.com/erbridge\\">tweet / DM</a>, or
-<a href=\\"mailto:hello@erbridge.co.uk\\">email me</a>. I&#39;m comfortable anywhere in the stack.</p>
-<p>Previous clients / employers include:</p>
-<ul>
-<li><a href=\\"http://www.harrimansteel.com/\\">Harriman Steel</a></li>
-<li>IndigoMetrics</li>
-<li>Judtho</li>
-<li><a href=\\"https://mymakie.com/\\">MakieLab</a></li>
-<li><a href=\\"https://www.pamojaeducation.com/\\">Pamoja Education</a></li>
-<li>Peekeet</li>
-<li><a href=\\"https://remichalak.com/\\">R. E. Michalak</a></li>
-<li><a href=\\"http://sensibleobject.com/\\">Sensible Object</a></li>
-<li><a href=\\"https://unmade.com/\\">UNMADE</a></li>
-</ul>
-<p>I also dabble in a bunch of other stuff, which you can mostly find on this site
-(<a href=\\"/fiction\\">short stories</a>, <a href=\\"/fiction\\">poetry</a>, art, photography, tattoos, and
-probably more things because I wish my time was infinite).</p>
-",
+          "content": undefined,
           "exact": true,
           "link": "Home",
           "name": "home",
           "navExact": true,
           "path": "/",
-          "styles": Array [
-            "pages/home",
-          ],
+          "styles": undefined,
           "title": undefined,
         }
       }
@@ -115,45 +83,13 @@ probably more things because I wish my time was infinite).</p>
       routes={
         Array [
           Object {
-            "content": "<p><img class=\\"Headshot\\" src=\\"//www.gravatar.com/avatar/904272fae938125a9ea3b545057838e9?s=240\\" alt=\\"Headshot\\"></p>
-<p>My name is <em>F</em> and I make <strong>games</strong> and <strong>web experiences</strong>. I&#39;m a mathematical
-physicist turned programmer, and an active contributor to
-<a href=\\"https://github.com/erbridge\\">open source software</a>. I also work under the
-pseudonym <em>erbridge</em>.</p>
-<p>I like to work on projects that support and cultivate the creativity of their
-users, that work towards positive social change, that provoke users into
-considering new perspectives or emotions, or that push the boundaries of what&#39;s
-possible (I&#39;m particularly interested in generative narrative and AI in games).
-Bonus points if they do more than one of those things.</p>
-<p>I&#39;m currently working on an unannounced game about living and coping with
-chronic illness and disability. <strong>Watch this space.</strong></p>
-<p><strong>Thinking about hiring me?</strong> Send me a
-<a href=\\"https://twitter.com/erbridge\\">tweet / DM</a>, or
-<a href=\\"mailto:hello@erbridge.co.uk\\">email me</a>. I&#39;m comfortable anywhere in the stack.</p>
-<p>Previous clients / employers include:</p>
-<ul>
-<li><a href=\\"http://www.harrimansteel.com/\\">Harriman Steel</a></li>
-<li>IndigoMetrics</li>
-<li>Judtho</li>
-<li><a href=\\"https://mymakie.com/\\">MakieLab</a></li>
-<li><a href=\\"https://www.pamojaeducation.com/\\">Pamoja Education</a></li>
-<li>Peekeet</li>
-<li><a href=\\"https://remichalak.com/\\">R. E. Michalak</a></li>
-<li><a href=\\"http://sensibleobject.com/\\">Sensible Object</a></li>
-<li><a href=\\"https://unmade.com/\\">UNMADE</a></li>
-</ul>
-<p>I also dabble in a bunch of other stuff, which you can mostly find on this site
-(<a href=\\"/fiction\\">short stories</a>, <a href=\\"/fiction\\">poetry</a>, art, photography, tattoos, and
-probably more things because I wish my time was infinite).</p>
-",
+            "content": undefined,
             "exact": true,
             "link": "Home",
             "name": "home",
             "navExact": true,
             "path": "/",
-            "styles": Array [
-              "pages/home",
-            ],
+            "styles": undefined,
             "title": undefined,
           },
           Object {
