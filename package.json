@@ -25,16 +25,20 @@
     "source-map-explorer": "^1.5.0"
   },
   "devDependencies": {
+    "chokidar-cli": "^1.2.0",
+    "directory-metagen": "^1.6.0",
     "node-sass-chokidar": "^0.0.3",
     "npm-run-all": "^4.1.2"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "run-s build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "build-pages": "node scripts/pages.js",
+    "watch-pages": "run-s build-pages && chokidar './src/pages/**/*.md' -c 'run-s build-pages'",
     "start-js": "react-app-rewired start",
-    "start": "run-p watch-css start-js",
-    "build": "run-s build-css && react-app-rewired build",
-    "test": "run-s build-css && react-app-rewired test --env=jsdom",
+    "start": "run-p watch-css watch-pages start-js",
+    "build": "run-p build-css build-pages && react-app-rewired build",
+    "test": "run-p build-css build-pages && react-app-rewired test --env=jsdom",
     "start-styleguide": "styleguidist server",
     "build-styleguide": "styleguidist build",
     "analyze": "source-map-explorer build/static/js/main.*"
