@@ -28,7 +28,8 @@
     "chokidar-cli": "^1.2.0",
     "directory-metagen": "^1.6.0",
     "node-sass-chokidar": "^0.0.3",
-    "npm-run-all": "^4.1.2"
+    "npm-run-all": "^4.1.2",
+    "yaml-front-matter": "^3.4.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",

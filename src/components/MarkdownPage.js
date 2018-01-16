@@ -96,7 +96,6 @@ class MarkdownPage extends Component {
   static propTypes = {
     content: PropTypes.string.isRequired,
     date: PropTypes.string,
-    showHeadingImage: PropTypes.bool,
     image: PropTypes.string,
     links: PropTypes.arrayOf(
       PropTypes.shape({
@@ -104,6 +103,7 @@ class MarkdownPage extends Component {
         label: PropTypes.string.isRequired,
       }),
     ),
+    showHeadingImage: PropTypes.bool,
     styles: PropTypes.arrayOf(PropTypes.string),
     subtitle: PropTypes.string,
     title: PropTypes.string,

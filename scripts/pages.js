@@ -1,7 +1,8 @@
-const { lstatSync, readdirSync } = require('fs');
-const { extname, join } = require('path');
+const { lstatSync, readdirSync, readFileSync } = require('fs');
+const { extname, join, relative } = require('path');
 
 const metagen = require('directory-metagen');
+const yaml = require('yaml-front-matter');
 
 const isDirectory = source => lstatSync(source).isDirectory();
 
@@ -10,12 +11,24 @@ const getDirectories = source =>
     .map(name => join(source, name))
     .filter(isDirectory);
 
-const format = files => {
-  let output = 'export default [\n';
+const format = (files, { path: basePath }) => {
+  let output = 'export default ';
 
-  output += files.map(path => `  require('./${path}'),`).join('\n');
+  output += JSON.stringify(
+    files.map(path => {
+      const fullPath = `${basePath}/${path}`;
+      const source = readFileSync(fullPath, 'utf8');
+      const obj = yaml.parse(source);
 
-  output += '];\n';
+      delete obj.__content;
+
+      obj.path = relative(`${__dirname}/../src/pages`, fullPath);
+
+      return obj;
+    }),
+  );
+
+  output += ';';
 
   return output;
 };

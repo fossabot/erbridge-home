@@ -13,7 +13,8 @@ import Body from './components/Body';
 import ErrorPage from './components/ErrorPage';
 import Footer from './components/Footer';
 import IndexPage from './components/IndexPage';
-import MarkdownPage from './components/MarkdownPage';
+import LoadingPage from './components/LoadingPage';
+import MarkdownPageBundle from './components/MarkdownPageBundle';
 import ScrollToTopOnMount from './components/ScrollToTopOnMount';
 
 import routes, { homeRoute, redirectedRoutes, topRoutes } from './routes';
@@ -31,6 +32,10 @@ class App extends Component {
   // TODO: Update on keyboard navigation (such as change of focus).
   updatePointerPosition({ nativeEvent: { clientX, clientY } }) {
     this.setState({ pointerPosition: { x: clientX, y: clientY } });
+  }
+
+  componentDidMount() {
+    routes.forEach(({ loadContent }) => loadContent && loadContent());
   }
 
   render() {
@@ -79,16 +84,21 @@ class App extends Component {
                           render={() => (
                             <Fragment>
                               <ScrollToTopOnMount />
-                              {route.content && (
-                                <MarkdownPage
-                                  content={route.content}
+                              {route.loadContent && (
+                                <MarkdownPageBundle
                                   date={route.date}
-                                  showHeadingImage={route.showHeadingImage}
                                   image={route.image}
                                   links={route.links}
+                                  loadContent={route.loadContent}
+                                  placeholder={
+                                    <LoadingPage
+                                      pointerPosition={pointerPosition}
+                                    />
+                                  }
+                                  showHeadingImage={route.showHeadingImage}
                                   styles={route.styles}
-                                  title={route.title}
                                   subtitle={route.subtitle}
+                                  title={route.title}
                                 />
                               )}
                               {route.routes &&

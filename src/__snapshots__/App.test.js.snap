@@ -69,9 +69,9 @@ exports[`renders correctly 1`] = `
     <Header
       homeRoute={
         Object {
-          "content": undefined,
           "exact": true,
           "link": "Home",
+          "loadContent": [Function],
           "name": "home",
           "navExact": true,
           "path": "/",
@@ -83,9 +83,9 @@ exports[`renders correctly 1`] = `
       routes={
         Array [
           Object {
-            "content": undefined,
             "exact": true,
             "link": "Home",
+            "loadContent": [Function],
             "name": "home",
             "navExact": true,
             "path": "/",

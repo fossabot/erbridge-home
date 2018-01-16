@@ -20,6 +20,9 @@ export const sanitizePathComponent = rawComponent =>
 export const getRoutePath = (prefix, slug, title) =>
   `/${prefix}/${sanitizePathComponent(slug || title)}`;
 
+export const loadPageContent = path => () =>
+  import(`../pages/${path}`).then(({ __content }) => __content);
+
 export const generateRoutes = (
   name,
   basePathName,
@@ -34,9 +37,9 @@ export const generateRoutes = (
 
   const routes = sortedPosts.map(
     ({
-      __content,
       image,
       links,
+      path,
       showHeadingImage = true,
       slug,
       styles,
@@ -51,7 +54,7 @@ export const generateRoutes = (
       subtitle,
       links,
       styles,
-      content: __content,
+      loadContent: loadPageContent(path),
     }),
   );
 

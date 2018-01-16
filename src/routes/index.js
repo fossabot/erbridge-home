@@ -40,7 +40,7 @@ export const homeRoute = {
   navExact: true,
   title: home.title,
   styles: home.styles,
-  content: home.__content,
+  loadContent: () => home.__content,
 };
 
 export const redirectedRoutes = [

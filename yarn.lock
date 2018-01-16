@@ -8459,7 +8459,7 @@ yallist@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-2.1.2.tgz#1c11f9218f076089a47dd512f93c6699a6a81d52"
 
-yaml-front-matter@^3.2.3:
+yaml-front-matter@^3.2.3, yaml-front-matter@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/yaml-front-matter/-/yaml-front-matter-3.4.0.tgz#c4bb5c41e8797fef584b1872cc052cdc26210dca"
   dependencies:
