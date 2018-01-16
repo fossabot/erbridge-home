@@ -5,9 +5,12 @@ links:
     href: https://twitter.com/wikipaedian
   - label: GitHub
     href: https://github.com/erbridge/wikipaedian
+tags:
+  -
+    - Programmer
+  -
+    - Go
+  -
+    - gotwit
 sortOrder: 7
 ---
-
-> Project Roles: **Programmer**\
-> Languages: **Go**\
-> Tools: **[gotwit](/tools/gotwit)**

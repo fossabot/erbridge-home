@@ -10,12 +10,17 @@ links:
     href: http://ludumdare.com/compo/ludum-dare-32/?action=preview&uid=34508
   - label: GitHub
     href: https://github.com/erbridge/fatal-attraction
+tags:
+  -
+    - Programmer
+    - Artist
+    - Sound Designer
+  -
+    - JavaScript
+  -
+    - Phaser
 sortOrder: 4
 ---
-
-> Project Roles: **Programmer** | **Artist** | **Sound Designer**\
-> Languages: **JavaScript**\
-> Tools: **Phaser**
 
 Fatal Attraction is a gravity based arcade-style game. Rotate your ship and use
 your gun to change the gravity source, but try not to crash into anything.

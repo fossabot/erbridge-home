@@ -98,6 +98,7 @@ class App extends Component {
                                   showHeadingImage={route.showHeadingImage}
                                   styles={route.styles}
                                   subtitle={route.subtitle}
+                                  tags={route.tags}
                                   title={route.title}
                                 />
                               )}

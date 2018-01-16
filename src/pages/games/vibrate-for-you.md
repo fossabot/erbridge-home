@@ -6,12 +6,17 @@ links:
     href: https://teamsext.itch.io/vibrate-for-you
   - label: GitHub
     href: https://github.com/erbridge/vibrate-for-you
+tags:
+  -
+    - Programmer
+  -
+    - JavaScript
+  -
+    - Expo
+    - Ink
+    - React Native
 sortOrder: 14
 ---
-
-> Project Roles: **Programmer**\
-> Languages: **JavaScript**\
-> Tools: **Expo** | **Ink** | **React Native**
 
 vibrate for you is a game about sexting someone. or waiting for someone to sext
 you. or anxiously staring at read receipt while trying to sext someone. or none

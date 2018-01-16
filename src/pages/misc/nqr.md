@@ -3,12 +3,16 @@ title: NQr
 links:
   - label: GitHub
     href: https://github.com/erbridge/NQr
+tags:
+  -
+    - Programmer
+  -
+    - Python
+  -
+    - SQLite
+    - wxPython
 sortOrder: 1
 ---
-
-> Project Roles: **Programmer**\
-> Languages: **Python**\
-> Tools: **SQLite** | **wxPython**
 
 The app I learned to program by building.
 

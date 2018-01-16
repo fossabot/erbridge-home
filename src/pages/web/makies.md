@@ -4,11 +4,17 @@ image: /assets/web/makies-home.jpg
 links:
   - label: Company Details
     href: https://mymakie.com/
+tags:
+  -
+    - Programmer
+  -
+    - Less
+    - JavaScript
+    - Python
+  -
+    - Bootstrap
+    - Django
 sortOrder: 2
 ---
-
-> Project Roles: **Programmer**\
-> Languages: **Less** | **JavaScript** | **Python**\
-> Tools: **Bootstrap** | **Django**
 
 The product website and shop for Makies: 3D printed, customizable dolls.

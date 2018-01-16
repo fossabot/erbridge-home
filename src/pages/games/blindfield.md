@@ -6,12 +6,15 @@ links:
     href: https://silentpanda.itch.io/blindfield
   - label: GitHub
     href: https://github.com/SilentPanda/blindfield
+tags:
+  -
+    - Programmer
+  -
+    - C#
+  -
+    - Unity
 sortOrder: 7
 ---
-
-> Project Roles: **Programmer**\
-> Languages: **C#**\
-> Tools: **Unity**
 
 Blindfield is a game about two blind beachcombers searching for treasure in a
 minefield.

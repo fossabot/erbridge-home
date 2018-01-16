@@ -10,12 +10,16 @@ links:
     href: http://ludumdare.com/compo/ludum-dare-34/?action=preview&uid=66208
   - label: GitHub
     href: https://github.com/erbridge/rendezvous
+tags:
+  -
+    - Programmer
+  -
+    - JavaScript
+  -
+    - Electron
+    - Phaser
 sortOrder: 5
 ---
-
-> Project Roles: **Programmer**\
-> Languages: **JavaScript**\
-> Tools: **Phaser** | **Electron**
 
 Midnight Rendezvous is a puzzle game. In it, you are tasked with finding
 compatible romantic matches for the inhabitants of a manor house before dawn

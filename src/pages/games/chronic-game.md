@@ -1,10 +1,13 @@
 ---
 title: Chronic Game
+tags:
+  -
+    - Programmer
+  -
+    - C#
+  -
+    - Unity
 sortOrder: 16
 ---
-
-> Project Roles: **Programmer**\
-> Languages: **C#**\
-> Tools: **Unity**
 
 <center>**WIP** - _In Development_</center>

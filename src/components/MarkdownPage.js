@@ -106,6 +106,7 @@ class MarkdownPage extends Component {
     showHeadingImage: PropTypes.bool,
     styles: PropTypes.arrayOf(PropTypes.string),
     subtitle: PropTypes.string,
+    tags: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)),
     title: PropTypes.string,
   };
 
@@ -150,10 +151,11 @@ class MarkdownPage extends Component {
   render() {
     const {
       date,
-      showHeadingImage,
       image,
       links,
+      showHeadingImage,
       subtitle,
+      tags,
       title,
     } = this.props;
     const { content } = this.state;
@@ -192,7 +194,11 @@ class MarkdownPage extends Component {
           ),
         ]}
         {links && (
-          <p className="MarkdownPage__links">
+          <p
+            className={classnames('MarkdownPage__links', {
+              'MarkdownPage__links--has-tags': tags,
+            })}
+          >
             {links
               .map(({ label, href }) => {
                 const LinkComponent =
@@ -205,6 +211,21 @@ class MarkdownPage extends Component {
                 );
               })
               .reduce((prev, curr) => [prev, ' | ', curr])}
+          </p>
+        )}
+        {tags && (
+          <p className="MarkdownPage__tags">
+            {tags.map((tagSet, i) => (
+              <span key={i} className="MarkdownPage__tag-set">
+                {tagSet
+                  .map((tag, j) => (
+                    <span key={j} className="MarkdownPage__tag">
+                      {tag}
+                    </span>
+                  ))
+                  .reduce((prev, curr) => [prev, ' | ', curr])}
+              </span>
+            ))}
           </p>
         )}
         {content}

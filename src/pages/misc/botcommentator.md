@@ -5,9 +5,12 @@ links:
     href: https://twitter.com/BotCommentator
   - label: GitHub
     href: https://github.com/erbridge/botcommentator
+tags:
+  -
+    - Programmer
+  -
+    - Go
+  -
+    - gotwit
 sortOrder: 3
 ---
-
-> Project Roles: **Programmer**\
-> Languages: **Go**\
-> Tools: **[gotwit](/tools/gotwit)**

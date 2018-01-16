@@ -6,12 +6,16 @@ links:
     href: https://teamsext.itch.io/vibrate-for-you
   - label: GitHub
     href: https://github.com/erbridge/VibrateForYou
+tags:
+  -
+    - Programmer
+  -
+    - C#
+  -
+    - Twine
+    - Unity
 sortOrder: 11
 ---
-
-> Project Roles: **Programmer**\
-> Languages: **C#**\
-> Tools: **Twine** | **Unity**
 
 vibrate for you is a game about sexting someone. or waiting for someone to sext
 you. or anxiously staring at read receipt while trying to sext someone. or none

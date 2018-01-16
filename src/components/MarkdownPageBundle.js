@@ -18,6 +18,7 @@ class MarkdownPageBundle extends Component {
     showHeadingImage: PropTypes.bool,
     styles: PropTypes.arrayOf(PropTypes.string),
     subtitle: PropTypes.string,
+    tags: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)),
     title: PropTypes.string,
   };
 
@@ -49,6 +50,7 @@ class MarkdownPageBundle extends Component {
       showHeadingImage,
       styles,
       subtitle,
+      tags,
       title,
     } = this.props;
     const { content } = this.state;
@@ -62,6 +64,7 @@ class MarkdownPageBundle extends Component {
         showHeadingImage={showHeadingImage}
         styles={styles}
         title={title}
+        tags={tags}
         subtitle={subtitle}
       />
     ) : (

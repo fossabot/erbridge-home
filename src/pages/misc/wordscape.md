@@ -6,9 +6,12 @@ links:
     href: https://erbridge.itch.io/wordscape
   - label: GitHub
     href: https://github.com/erbridge/wordscape
+tags:
+  -
+    - Programmer
+  -
+    - JavaScript
+  -
+    - Electron
 sortOrder: 8
 ---
-
-> Project Roles: **Programmer**\
-> Languages: **JavaScript**\
-> Tools: **Electron**

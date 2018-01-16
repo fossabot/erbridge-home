@@ -24,7 +24,8 @@ $narrow-image-min-width: 520px;
 }
 
 .MarkdownPage__title--has-subtitle-or-date,
-.MarkdownPage__subtitle--has-date {
+.MarkdownPage__subtitle--has-date,
+.MarkdownPage__links--has-tags {
   margin-bottom: 0;
 }
 
@@ -34,13 +35,24 @@ $narrow-image-min-width: 520px;
 }
 
 .MarkdownPage__date,
-.MarkdownPage__links {
+.MarkdownPage__links,
+.MarkdownPage__tags {
   text-align: center;
   color: $light-grey;
 }
 
 .MarkdownPage__links {
   font-size: 22px;
+}
+
+.MarkdownPage__tags {
+  display: flex;
+  flex-direction: column;
+}
+
+.MarkdownPage__tag {
+  font-style: italic;
+  color: $lightest-grey;
 }
 
 .MarkdownPage__heading-image {

@@ -44,6 +44,7 @@ export const generateRoutes = (
       slug,
       styles,
       subtitle,
+      tags,
       title,
     }) => ({
       path: getRoutePath(basePathName, slug, title),
@@ -53,6 +54,7 @@ export const generateRoutes = (
       title,
       subtitle,
       links,
+      tags,
       styles,
       loadContent: loadPageContent(path),
     }),

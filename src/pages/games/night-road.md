@@ -1,10 +1,15 @@
 ---
 title: Night Road
+tags:
+  -
+    - Programmer
+    - Artist
+    - Sound Designer
+  -
+    - C#
+  -
+    - Unity
 sortOrder: 15
 ---
-
-> Project Roles: **Programmer** | **Artist** | **Sound Designer**\
-> Languages: **C#**\
-> Tools: **Unity**
 
 <center>**WIP** - _On Hold_</center>
