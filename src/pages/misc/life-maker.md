@@ -1,5 +1,7 @@
 ---
 title: Life Maker
+categories:
+  - bot
 links:
   - label: GitHub
     href: https://github.com/erbridge/life-maker

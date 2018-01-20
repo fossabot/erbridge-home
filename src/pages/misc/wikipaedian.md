@@ -1,5 +1,7 @@
 ---
 title: "@wikipaedian"
+categories:
+  - bot
 links:
   - label: Twitter
     href: https://twitter.com/wikipaedian

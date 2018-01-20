@@ -18,6 +18,7 @@ import {
   redirectedRoutes as redirectedGamesRoutes,
 } from './games';
 import {
+  categoryRoutes as miscCategoryRoutes,
   route as miscRoute,
   routes as miscRoutes,
   redirectedRoutes as redirectedMiscRoutes,
@@ -73,6 +74,7 @@ export default [
   ...fictionCategoryRoutes,
   ...fictionRoutes,
   ...gamesRoutes,
+  ...miscCategoryRoutes,
   ...miscRoutes,
   ...toolsRoutes,
   ...webRoutes,
