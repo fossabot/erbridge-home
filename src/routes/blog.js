@@ -36,6 +36,16 @@ export const {
         categories.indexOf('roleplaying') !== -1 &&
         categories.indexOf('journal') !== -1,
     },
+    {
+      name: 'uncategorized',
+      path: 'uncategorized',
+      title: 'Uncategorized',
+      routeFilter: ({ categories }) =>
+        !categories ||
+        (categories.indexOf('gamedev') === -1 &&
+          categories.indexOf('roleplaying') === -1 &&
+          categories.indexOf('journal') === -1),
+    },
   ],
   extraRedirects: [
     [

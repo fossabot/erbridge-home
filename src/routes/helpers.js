@@ -99,14 +99,22 @@ export const generateRoutes = (
     }),
   );
 
-  const categoryRoutes = categories.map(
-    ({ name: categoryName, path, routeFilter, title }) => ({
-      name: `${name}__${categoryName}`,
-      path: `${basePath}/${path}`,
-      title,
-      routes: routes.filter(routeFilter),
-    }),
-  );
+  const categoryRoutes = categories
+    .map(({ name: categoryName, path, routeFilter, title }) => {
+      const filteredRoutes = routes.filter(routeFilter);
+
+      if (!filteredRoutes.length) {
+        return null;
+      }
+
+      return {
+        name: `${name}__${categoryName}`,
+        path: `${basePath}/${path}`,
+        title,
+        routes: filteredRoutes,
+      };
+    })
+    .filter(route => route);
 
   const route = {
     name,
