@@ -12,7 +12,8 @@ export const {
     {
       name: 'all',
       path: 'all',
-      title: 'All Projects',
+      link: 'All',
+      title: 'All Misc Projects',
       routeFilter: route => route,
     },
     {
@@ -25,7 +26,8 @@ export const {
     {
       name: 'uncategorized',
       path: 'uncategorized',
-      title: 'Uncategorized',
+      link: 'Uncategorized',
+      title: 'Uncategorized Misc Projects',
       routeFilter: ({ categories }) =>
         !categories || categories.indexOf('bot') === -1,
     },

@@ -12,6 +12,7 @@ export const {
     {
       name: 'all',
       path: 'all',
+      link: 'All',
       title: 'All Fiction',
       routeFilter: route => route,
     },
@@ -32,14 +33,16 @@ export const {
     {
       name: 'generative',
       path: 'generative',
-      title: 'Generative',
+      link: 'Generative',
+      title: 'Generative Fiction',
       routeFilter: ({ categories }) =>
         categories && categories.indexOf('generative') !== -1,
     },
     {
       name: 'uncategorized',
       path: 'uncategorized',
-      title: 'Uncategorized',
+      link: 'Uncategorized',
+      title: 'Uncategorized Fiction',
       routeFilter: ({ categories }) =>
         !categories ||
         (categories.indexOf('poetry') === -1 &&

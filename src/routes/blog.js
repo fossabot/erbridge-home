@@ -17,19 +17,22 @@ export const {
     {
       name: 'all',
       path: 'all',
+      link: 'All',
       title: 'All Posts',
       routeFilter: route => route,
     },
     {
       name: 'gamedev',
       path: 'gamedev',
-      title: 'Game Development',
+      link: 'Game Development',
+      title: 'Game Development Posts',
       routeFilter: ({ categories }) =>
         categories && categories.indexOf('gamedev') !== -1,
     },
     {
       name: 'journals',
       path: 'journals',
+      link: 'Roleplaying Journals',
       title: 'Roleplaying Journals',
       routeFilter: ({ categories }) =>
         categories &&
@@ -39,7 +42,8 @@ export const {
     {
       name: 'uncategorized',
       path: 'uncategorized',
-      title: 'Uncategorized',
+      link: 'Uncategorized',
+      title: 'Uncategorized Posts',
       routeFilter: ({ categories }) =>
         !categories ||
         (categories.indexOf('gamedev') === -1 &&

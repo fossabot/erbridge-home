@@ -100,7 +100,7 @@ export const generateRoutes = (
   );
 
   const categoryRoutes = categories
-    .map(({ name: categoryName, path, routeFilter, title }) => {
+    .map(({ link, name: categoryName, path, routeFilter, title }) => {
       const filteredRoutes = routes.filter(routeFilter);
 
       if (!filteredRoutes.length) {
@@ -110,6 +110,7 @@ export const generateRoutes = (
       return {
         name: `${name}__${categoryName}`,
         path: `${basePath}/${path}`,
+        link,
         title,
         routes: filteredRoutes,
       };
@@ -118,8 +119,8 @@ export const generateRoutes = (
 
   const route = {
     name,
-    link: baseLink,
     path: basePath,
+    link: baseLink,
     title: baseTitle,
     routes: categoryRoutes.length ? categoryRoutes : routes,
   };

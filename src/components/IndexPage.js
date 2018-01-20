@@ -11,6 +11,7 @@ class IndexPage extends Component {
     routes: PropTypes.arrayOf(
       PropTypes.shape({
         image: PropTypes.string,
+        link: PropTypes.string,
         name: PropTypes.string,
         path: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
@@ -45,7 +46,9 @@ class IndexPage extends Component {
                     />
                   )}
                   <div className="IndexPage__link__content">
-                    <div className="IndexPage__link__text">{route.title}</div>
+                    <div className="IndexPage__link__text">
+                      {route.link || route.title}
+                    </div>
                   </div>
                 </Link>
               );
