@@ -55,7 +55,7 @@ class MarkdownPageBundle extends Component {
     } = this.props;
     const { content } = this.state;
 
-    return content ? (
+    return content !== null ? (
       <MarkdownPage
         content={content}
         date={date}
