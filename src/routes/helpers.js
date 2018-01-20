@@ -1,3 +1,4 @@
+import compareDateDesc from 'date-fns/compare_desc';
 import formatDateFn from 'date-fns/format';
 
 export const formatDate = (date, format) => {
@@ -18,9 +19,17 @@ export const sanitizePathComponent = rawComponent =>
   );
 
 export const getRoutePath = (prefix, slug, title) =>
-  `/${prefix}/${sanitizePathComponent(slug || title)}`;
+  `/${prefix}${
+    slug || title ? `/${sanitizePathComponent(slug || title)}` : ''
+  }`;
 
-export const loadPageContent = path => () =>
+const generateRedirectsFromOldSlugs = (posts, basePathName) =>
+  posts.filter(({ oldSlug }) => oldSlug).map(({ oldSlug, slug, title }) => ({
+    path: `/${basePathName}/${sanitizePathComponent(oldSlug)}`,
+    to: getRoutePath(basePathName, slug, title),
+  }));
+
+const loadPageContent = path => () =>
   import(`../pages/${path}`).then(({ __content }) => __content);
 
 export const generateRoutes = (
@@ -29,20 +38,47 @@ export const generateRoutes = (
   baseLink,
   baseTitle,
   posts,
-  extraRedirects = [],
+  {
+    categories = [],
+    extraRedirects = [],
+    generateRedirects = generateRedirectsFromOldSlugs,
+    routeDefaults = {},
+  } = {},
 ) => {
   const basePath = `/${basePathName}`;
 
   const sortedPosts = [...posts];
 
-  sortedPosts.sort((a, b) => b.sortOrder - a.sortOrder);
+  sortedPosts.sort((a, b) => {
+    if (a.sortOrder && b.sortOrder) {
+      return b.sortOrder - a.sortOrder;
+    }
+
+    if (a.sortOrder) {
+      return -1;
+    }
+
+    if (b.sortOrder) {
+      return 1;
+    }
+
+    if (a.date && b.date) {
+      return compareDateDesc(a.date, b.date);
+    }
+
+    return 0;
+  });
 
   const routes = sortedPosts.map(
     ({
+      categories,
+      date,
       image,
       links,
       path,
-      showHeadingImage = true,
+      showHeadingImage = routeDefaults.showHeadingImage !== undefined
+        ? routeDefaults.showHeadingImage
+        : true,
       slug,
       styles,
       subtitle,
@@ -50,14 +86,25 @@ export const generateRoutes = (
       title,
     }) => ({
       path: getRoutePath(basePathName, slug, title),
+      categories,
       image,
       showHeadingImage,
       title,
       subtitle,
+      date: formatDate(date, 'DD MMMM YYYY'),
       links,
       tags,
       styles,
       loadContent: loadPageContent(path),
+    }),
+  );
+
+  const categoryRoutes = categories.map(
+    ({ name: categoryName, path, routeFilter, title }) => ({
+      name: `${name}__${categoryName}`,
+      path: `${basePath}/${path}`,
+      title,
+      routes: routes.filter(routeFilter),
     }),
   );
 
@@ -66,18 +113,13 @@ export const generateRoutes = (
     link: baseLink,
     path: basePath,
     title: baseTitle,
-    routes,
+    routes: categoryRoutes.length ? categoryRoutes : routes,
   };
 
   const redirectedRoutes = [
     ...extraRedirects,
-    ...sortedPosts
-      .filter(({ oldSlug }) => oldSlug)
-      .map(({ oldSlug, slug, title }) => ({
-        path: `/${basePathName}/${sanitizePathComponent(oldSlug)}`,
-        to: getRoutePath(basePathName, slug, title),
-      })),
+    generateRedirects([...sortedPosts], basePathName),
   ];
 
-  return { redirectedRoutes, route, routes };
+  return { categoryRoutes, redirectedRoutes, route, routes };
 };

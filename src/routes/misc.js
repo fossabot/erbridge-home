@@ -8,18 +8,20 @@ export const { redirectedRoutes, route, routes } = generateRoutes(
   'Misc',
   'Misc',
   miscPosts,
-  [
-    {
-      path: '/tools/iris',
-      to: getRoutePath('misc', 'iris'),
-    },
-    {
-      path: '/tools/lime-text',
-      to: getRoutePath('misc', 'limetext'),
-    },
-    {
-      path: '/tools/nqr',
-      to: getRoutePath('misc', 'nqr'),
-    },
-  ],
+  {
+    extraRedirects: [
+      {
+        path: '/tools/iris',
+        to: getRoutePath('misc', 'iris'),
+      },
+      {
+        path: '/tools/lime-text',
+        to: getRoutePath('misc', 'limetext'),
+      },
+      {
+        path: '/tools/nqr',
+        to: getRoutePath('misc', 'nqr'),
+      },
+    ],
+  },
 );
