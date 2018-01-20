@@ -31,6 +31,8 @@ export const generateRoutes = (
   posts,
   extraRedirects = [],
 ) => {
+  const basePath = `/${basePathName}`;
+
   const sortedPosts = [...posts];
 
   sortedPosts.sort((a, b) => b.sortOrder - a.sortOrder);
@@ -48,7 +50,6 @@ export const generateRoutes = (
       title,
     }) => ({
       path: getRoutePath(basePathName, slug, title),
-      exact: true,
       image,
       showHeadingImage,
       title,
@@ -63,8 +64,7 @@ export const generateRoutes = (
   const route = {
     name,
     link: baseLink,
-    path: `/${basePathName}`,
-    exact: true,
+    path: basePath,
     title: baseTitle,
     routes,
   };
@@ -76,7 +76,6 @@ export const generateRoutes = (
       .map(({ oldSlug, slug, title }) => ({
         path: `/${basePathName}/${sanitizePathComponent(oldSlug)}`,
         to: getRoutePath(basePathName, slug, title),
-        exact: true,
       })),
   ];
 

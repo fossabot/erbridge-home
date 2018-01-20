@@ -10,7 +10,6 @@ import './Header.css';
 class Header extends Component {
   static propTypes = {
     homeRoute: PropTypes.shape({
-      exact: PropTypes.bool,
       path: PropTypes.string.isRequired,
     }).isRequired,
     pointerPosition: PropTypes.shape({
@@ -19,7 +18,6 @@ class Header extends Component {
     }),
     routes: PropTypes.arrayOf(
       PropTypes.shape({
-        exact: PropTypes.bool,
         link: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
         path: PropTypes.string.isRequired,
@@ -46,7 +44,7 @@ class Header extends Component {
           onMouseLeave={() => this.setState({ shouldFocusLogo: false })}
         >
           <div className="Header__content">
-            <NavLink exact={homeRoute.exact} to={homeRoute.path}>
+            <NavLink exact to={homeRoute.path}>
               <Logo
                 className="Header__logo"
                 focused={shouldFocusLogo}

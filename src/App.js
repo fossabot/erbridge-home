@@ -51,7 +51,7 @@ class App extends Component {
             <Route
               key={route.name || index}
               path={route.path}
-              exact={route.exact}
+              exact
               render={() => (
                 <Helmet>
                   <title>
@@ -80,7 +80,7 @@ class App extends Component {
                         <Route
                           key={route.name || index}
                           path={route.path}
-                          exact={route.exact}
+                          exact
                           render={() => (
                             <Fragment>
                               <ScrollToTopOnMount />
@@ -118,7 +118,7 @@ class App extends Component {
                           key={route.name || index}
                           path={route.path}
                           to={route.to}
-                          exact={route.exact}
+                          exact
                         />
                       ))}
                       <Route component={ErrorPage} />

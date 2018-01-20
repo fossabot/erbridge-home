@@ -36,7 +36,6 @@ export const homeRoute = {
   name: 'home',
   link: 'Home',
   path: '/',
-  exact: true,
   navExact: true,
   title: home.title,
   styles: home.styles,
@@ -47,7 +46,6 @@ export const redirectedRoutes = [
   {
     path: '/about',
     to: homeRoute.path,
-    exact: true,
   },
   ...redirectedBlogRoutes,
   ...redirectedFictionRoutes,

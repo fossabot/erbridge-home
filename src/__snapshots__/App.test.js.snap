@@ -69,7 +69,6 @@ exports[`renders correctly 1`] = `
     <Header
       homeRoute={
         Object {
-          "exact": true,
           "link": "Home",
           "loadContent": [Function],
           "name": "home",
@@ -83,7 +82,6 @@ exports[`renders correctly 1`] = `
       routes={
         Array [
           Object {
-            "exact": true,
             "link": "Home",
             "loadContent": [Function],
             "name": "home",
@@ -93,7 +91,6 @@ exports[`renders correctly 1`] = `
             "title": undefined,
           },
           Object {
-            "exact": true,
             "link": "Games",
             "name": "games",
             "path": "/games",
@@ -101,7 +98,6 @@ exports[`renders correctly 1`] = `
             "title": "Games",
           },
           Object {
-            "exact": true,
             "link": "Web",
             "name": "web",
             "path": "/web",
@@ -109,7 +105,6 @@ exports[`renders correctly 1`] = `
             "title": "Web",
           },
           Object {
-            "exact": true,
             "link": "Tools",
             "name": "tools",
             "path": "/tools",
@@ -117,7 +112,6 @@ exports[`renders correctly 1`] = `
             "title": "Tools",
           },
           Object {
-            "exact": true,
             "link": "Misc",
             "name": "misc",
             "path": "/misc",
@@ -125,7 +119,6 @@ exports[`renders correctly 1`] = `
             "title": "Misc",
           },
           Object {
-            "exact": true,
             "link": "Fiction",
             "name": "fiction",
             "path": "/fiction",
@@ -133,27 +126,23 @@ exports[`renders correctly 1`] = `
             "title": "Fiction",
           },
           Object {
-            "exact": true,
             "link": "Blog",
             "name": "blog",
             "path": "/blog",
             "routes": Array [
               Object {
-                "exact": true,
                 "name": "blog__all",
                 "path": "/blog/all",
                 "routes": Array [],
                 "title": "All Posts",
               },
               Object {
-                "exact": true,
                 "name": "blog__gamedev",
                 "path": "/blog/gamedev",
                 "routes": Array [],
                 "title": "Game Development",
               },
               Object {
-                "exact": true,
                 "name": "blog__journals",
                 "path": "/blog/journals",
                 "routes": Array [],

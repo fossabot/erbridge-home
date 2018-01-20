@@ -12,17 +12,14 @@ export const { redirectedRoutes, route, routes } = generateRoutes(
     {
       path: '/tools/iris',
       to: getRoutePath('misc', 'iris'),
-      exact: true,
     },
     {
       path: '/tools/lime-text',
       to: getRoutePath('misc', 'limetext'),
-      exact: true,
     },
     {
       path: '/tools/nqr',
       to: getRoutePath('misc', 'nqr'),
-      exact: true,
     },
   ],
 );
