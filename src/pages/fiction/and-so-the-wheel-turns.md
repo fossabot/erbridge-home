@@ -1,5 +1,7 @@
 ---
 title: And so the Wheel Turns
+categories:
+  - poetry
 sortOrder: 5
 ---
 

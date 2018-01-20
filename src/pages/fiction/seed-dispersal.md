@@ -1,5 +1,8 @@
 ---
 title: Seed Dispersal
+categories:
+  - generative
+  - novel
 sortOrder: 3
 ---
 

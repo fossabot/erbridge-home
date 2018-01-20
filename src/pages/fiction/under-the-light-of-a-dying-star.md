@@ -2,6 +2,8 @@
 title: Under the Light of a Dying Star
 subtitle: "Nested Worlds #1"
 oldSlug: nested-worlds/under-the-light-of-a-dying-star
+categories:
+  - short-story
 sortOrder: 6
 ---
 

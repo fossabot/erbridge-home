@@ -1,5 +1,7 @@
 ---
 title: The Tree
+categories:
+  - poetry
 sortOrder: 8
 ---
 

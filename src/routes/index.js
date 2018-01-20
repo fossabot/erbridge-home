@@ -7,6 +7,7 @@ import {
   redirectedRoutes as redirectedBlogRoutes,
 } from './blog';
 import {
+  categoryRoutes as fictionCategoryRoutes,
   route as fictionRoute,
   routes as fictionRoutes,
   redirectedRoutes as redirectedFictionRoutes,
@@ -69,6 +70,7 @@ export default [
   ...topRoutes,
   ...blogCategoryRoutes,
   ...blogRoutes,
+  ...fictionCategoryRoutes,
   ...fictionRoutes,
   ...gamesRoutes,
   ...miscRoutes,

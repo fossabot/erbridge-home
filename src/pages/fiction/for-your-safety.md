@@ -1,5 +1,7 @@
 ---
 title: For Your Safety
+categories:
+  - poetry
 sortOrder: 7
 ---
 

@@ -1,5 +1,7 @@
 ---
 title: USER ERROR
+categories:
+  - short-story
 sortOrder: 1
 ---
 

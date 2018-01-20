@@ -1,5 +1,7 @@
 ---
 title: Face
+categories:
+  - poetry
 sortOrder: 9
 ---
 
