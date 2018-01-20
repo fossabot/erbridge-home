@@ -126,7 +126,7 @@ export const generateRoutes = (
 
   const redirectedRoutes = [
     ...extraRedirects,
-    generateRedirects([...sortedPosts], basePathName),
+    ...generateRedirects([...sortedPosts], basePathName),
   ];
 
   return { categoryRoutes, redirectedRoutes, route, routes };

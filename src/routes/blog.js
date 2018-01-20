@@ -48,12 +48,10 @@ export const {
     },
   ],
   extraRedirects: [
-    [
-      {
-        path: '/blog/skald',
-        to: getRoutePath('blog'),
-      },
-    ],
+    {
+      path: '/blog/skald',
+      to: getRoutePath('blog'),
+    },
   ],
   generateRedirects: posts =>
     posts

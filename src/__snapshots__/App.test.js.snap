@@ -48,24 +48,6 @@ exports[`renders correctly 1`] = `
       path="/blog"
       render={[Function]}
     />
-    <Route
-      exact={true}
-      key="blog__all"
-      path="/blog/all"
-      render={[Function]}
-    />
-    <Route
-      exact={true}
-      key="blog__gamedev"
-      path="/blog/gamedev"
-      render={[Function]}
-    />
-    <Route
-      exact={true}
-      key="blog__journals"
-      path="/blog/journals"
-      render={[Function]}
-    />
     <Header
       homeRoute={
         Object {
@@ -129,26 +111,7 @@ exports[`renders correctly 1`] = `
             "link": "Blog",
             "name": "blog",
             "path": "/blog",
-            "routes": Array [
-              Object {
-                "name": "blog__all",
-                "path": "/blog/all",
-                "routes": Array [],
-                "title": "All Posts",
-              },
-              Object {
-                "name": "blog__gamedev",
-                "path": "/blog/gamedev",
-                "routes": Array [],
-                "title": "Game Development",
-              },
-              Object {
-                "name": "blog__journals",
-                "path": "/blog/journals",
-                "routes": Array [],
-                "title": "Roleplaying Journals",
-              },
-            ],
+            "routes": Array [],
             "title": "Blog",
           },
         ]
