@@ -6,9 +6,10 @@ styles:
 <img class="Headshot" src="//www.gravatar.com/avatar/904272fae938125a9ea3b545057838e9?s=240" alt="Headshot">
 
 My name is _F_ and I make **games** and **web experiences**. I'm a mathematical
-physicist turned programmer, and an active contributor to
-[open source software](https://github.com/erbridge). I also work under the
-pseudonym _erbridge_.
+physicist turned programmer, an active contributor to
+[open source software](https://github.com/erbridge), and part of
+[Sensible Object](http://sensibleobject.com/). I also work under the pseudonym
+_erbridge_.
 
 I like to work on projects that support and cultivate the creativity of their
 users, that work towards positive social change, that provoke users into
