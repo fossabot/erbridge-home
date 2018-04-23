@@ -16,8 +16,8 @@ considering new perspectives or emotions, or that push the boundaries of what's
 possible (I'm particularly interested in generative narrative and AI in games).
 Bonus points if they do more than one of those things.
 
-I'm currently working on an unannounced game about living and coping with
-chronic illness and disability. **Watch this space.**
+I'm currently working on an unannounced game about my personal experience with
+mental illness. **Watch this space.**
 
 **Thinking about hiring me?** Send me a
 [tweet / DM](https://twitter.com/erbridge), or
