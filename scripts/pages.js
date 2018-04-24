@@ -18,7 +18,7 @@ const format = (files, { path: basePath }) => {
     files.map(path => {
       const fullPath = `${basePath}/${path}`;
       const source = readFileSync(fullPath, 'utf8');
-      const obj = yaml.parse(source);
+      const obj = yaml.loadFront(source);
 
       delete obj.__content;
 

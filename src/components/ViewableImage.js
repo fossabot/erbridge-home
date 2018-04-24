@@ -48,6 +48,7 @@ class ViewableImage extends Component {
           images={[{ src }]}
           isOpen={lightboxIsOpen}
           showImageCount={false}
+          spinner={() => <div />}
           onClose={() => this.closeLightbox()}
         />
       </Fragment>
