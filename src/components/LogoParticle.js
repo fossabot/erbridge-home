@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 
 import './LogoParticle.css';
 
@@ -18,17 +18,26 @@ class LogoParticle extends Component {
     y: PropTypes.number.isRequired,
   };
 
-  state = {
-    rotation: 0,
-  };
+  constructor(props) {
+    super(props);
+
+    this.containerRef = createRef();
+  }
 
   // TODO: Smooth the rotation a little to make very fast movement less janky.
-  updateRotation({ groupBoundingRect, pointerPosition }) {
-    if (!this.node || (!pointerPosition && !groupBoundingRect)) {
-      return;
+  getRotation() {
+    const { groupBoundingRect, pointerPosition } = this.props;
+
+    if (!groupBoundingRect && !pointerPosition) {
+      return 0;
     }
 
-    const { x, y, width, height } = this.node.getBoundingClientRect();
+    const {
+      x,
+      y,
+      width,
+      height,
+    } = this.containerRef.current.getBoundingClientRect();
 
     const midPointPosition = { x: x + width / 2, y: y + height / 2 };
 
@@ -44,35 +53,21 @@ class LogoParticle extends Component {
       pointerY = ((groupBoundingRect.top || 0) + 5) * height / 7.2;
     }
 
-    this.setState({
-      rotation:
-        Math.atan2(
-          pointerY - midPointPosition.y,
-          pointerX - midPointPosition.x,
-        ) *
-        180 /
-        Math.PI,
-    });
-  }
-
-  componentDidMount() {
-    this.updateRotation(this.props);
-  }
-
-  componentWillReceiveProps(nextProps) {
-    this.updateRotation(nextProps);
+    return (
+      Math.atan2(pointerY - midPointPosition.y, pointerX - midPointPosition.x) *
+      180 /
+      Math.PI
+    );
   }
 
   render() {
     const { radius, x, y } = this.props;
-    const { rotation } = this.state;
+    const rotation = this.getRotation();
     const diameter = 2 * radius;
 
     return (
       <g
-        ref={node => {
-          this.node = node;
-        }}
+        ref={this.containerRef}
         className="LogoParticle"
         transform={`rotate(${rotation}, ${x}, ${y})`}
       >
