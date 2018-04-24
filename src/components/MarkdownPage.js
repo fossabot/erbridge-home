@@ -112,40 +112,32 @@ class MarkdownPage extends Component {
 
   state = {
     content: '',
+    rawContent: '',
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      content: this.parseContent(props.content || ''),
-    };
-
-    this.loadExtraStyles(props);
-  }
-
-  parseContent(content) {
-    return htmlParser.parseWithInstructions(
-      content.replace(/\\\n/g, '<br>'),
-      () => true,
-      processingInstructions,
-    );
-  }
-
-  loadExtraStyles(props) {
-    if (props.styles) {
-      props.styles.forEach(style => {
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.styles) {
+      nextProps.styles.forEach(style => {
         require(`../${style}.css`);
       });
     }
-  }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.content !== this.props.content) {
-      this.setState({ content: this.parseContent(nextProps.content || '') });
+    let nextState = null;
+
+    const rawContent = nextProps.content || '';
+
+    if (rawContent !== prevState.rawContent) {
+      nextState = {
+        content: htmlParser.parseWithInstructions(
+          rawContent.replace(/\\\n/g, '<br>'),
+          () => true,
+          processingInstructions,
+        ),
+        rawContent,
+      };
     }
 
-    this.loadExtraStyles(nextProps);
+    return nextState;
   }
 
   render() {
