@@ -76,10 +76,10 @@ $full-nav-min-width: 520px;
 
   &:before,
   &:after {
-    position: absolute;
     display: block;
-    content: '';
+    position: absolute;
     border: $icon-size solid transparent;
+    content: '';
   }
 
   &:before {

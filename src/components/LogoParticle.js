@@ -50,8 +50,8 @@ class LogoParticle extends Component {
           pointerY - midPointPosition.y,
           pointerX - midPointPosition.x,
         ) *
-          180 /
-          Math.PI,
+        180 /
+        Math.PI,
     });
   }
 
