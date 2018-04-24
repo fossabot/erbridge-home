@@ -6,63 +6,53 @@ exports[`renders correctly 1`] = `
     className="App"
     onMouseMove={[Function]}
   >
-    <Route
-      exact={true}
-      key="home"
-      path="/"
-      render={[Function]}
-    />
-    <Route
-      exact={true}
-      key="games"
-      path="/games"
-      render={[Function]}
-    />
-    <Route
-      exact={true}
-      key="web"
-      path="/web"
-      render={[Function]}
-    />
-    <Route
-      exact={true}
-      key="tools"
-      path="/tools"
-      render={[Function]}
-    />
-    <Route
-      exact={true}
-      key="misc"
-      path="/misc"
-      render={[Function]}
-    />
-    <Route
-      exact={true}
-      key="fiction"
-      path="/fiction"
-      render={[Function]}
-    />
-    <Route
-      exact={true}
-      key="blog"
-      path="/blog"
-      render={[Function]}
-    />
-    <Header
-      homeRoute={
-        Object {
-          "link": "Home",
-          "loadContent": [Function],
-          "name": "home",
-          "navExact": true,
-          "path": "/",
-          "styles": undefined,
-          "title": undefined,
-        }
-      }
-      pointerPosition={null}
-      routes={
-        Array [
+    <[object Object]
+      value={null}
+    >
+      <Route
+        exact={true}
+        key="home"
+        path="/"
+        render={[Function]}
+      />
+      <Route
+        exact={true}
+        key="games"
+        path="/games"
+        render={[Function]}
+      />
+      <Route
+        exact={true}
+        key="web"
+        path="/web"
+        render={[Function]}
+      />
+      <Route
+        exact={true}
+        key="tools"
+        path="/tools"
+        render={[Function]}
+      />
+      <Route
+        exact={true}
+        key="misc"
+        path="/misc"
+        render={[Function]}
+      />
+      <Route
+        exact={true}
+        key="fiction"
+        path="/fiction"
+        render={[Function]}
+      />
+      <Route
+        exact={true}
+        key="blog"
+        path="/blog"
+        render={[Function]}
+      />
+      <Header
+        homeRoute={
           Object {
             "link": "Home",
             "loadContent": [Function],
@@ -71,61 +61,73 @@ exports[`renders correctly 1`] = `
             "path": "/",
             "styles": undefined,
             "title": undefined,
-          },
-          Object {
-            "link": "Games",
-            "name": "games",
-            "path": "/games",
-            "routes": Array [],
-            "title": "Games",
-          },
-          Object {
-            "link": "Web",
-            "name": "web",
-            "path": "/web",
-            "routes": Array [],
-            "title": "Web",
-          },
-          Object {
-            "link": "Tools",
-            "name": "tools",
-            "path": "/tools",
-            "routes": Array [],
-            "title": "Tools",
-          },
-          Object {
-            "link": "Misc",
-            "name": "misc",
-            "path": "/misc",
-            "routes": Array [],
-            "title": "Misc",
-          },
-          Object {
-            "link": "Fiction",
-            "name": "fiction",
-            "path": "/fiction",
-            "routes": Array [],
-            "title": "Fiction",
-          },
-          Object {
-            "link": "Blog",
-            "name": "blog",
-            "path": "/blog",
-            "routes": Array [],
-            "title": "Blog",
-          },
-        ]
-      }
-    />
-    <Body
-      className="App__body"
-      pointerPosition={null}
-    >
-      <Route
-        render={[Function]}
+          }
+        }
+        routes={
+          Array [
+            Object {
+              "link": "Home",
+              "loadContent": [Function],
+              "name": "home",
+              "navExact": true,
+              "path": "/",
+              "styles": undefined,
+              "title": undefined,
+            },
+            Object {
+              "link": "Games",
+              "name": "games",
+              "path": "/games",
+              "routes": Array [],
+              "title": "Games",
+            },
+            Object {
+              "link": "Web",
+              "name": "web",
+              "path": "/web",
+              "routes": Array [],
+              "title": "Web",
+            },
+            Object {
+              "link": "Tools",
+              "name": "tools",
+              "path": "/tools",
+              "routes": Array [],
+              "title": "Tools",
+            },
+            Object {
+              "link": "Misc",
+              "name": "misc",
+              "path": "/misc",
+              "routes": Array [],
+              "title": "Misc",
+            },
+            Object {
+              "link": "Fiction",
+              "name": "fiction",
+              "path": "/fiction",
+              "routes": Array [],
+              "title": "Fiction",
+            },
+            Object {
+              "link": "Blog",
+              "name": "blog",
+              "path": "/blog",
+              "routes": Array [],
+              "title": "Blog",
+            },
+          ]
+        }
       />
-    </Body>
-    <Footer />
+      <Body
+        className="App__body"
+      >
+        <Route
+          render={[Function]}
+        />
+      </Body>
+      <Footer />
+    </[object Object]>
   </div>
 </BrowserRouter>
 `;

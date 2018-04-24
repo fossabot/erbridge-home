@@ -11,10 +11,6 @@ class Body extends Component {
   static propTypes = {
     className: PropTypes.string,
     children: PropTypes.node,
-    pointerPosition: PropTypes.shape({
-      x: PropTypes.number.isRequired,
-      y: PropTypes.number.isRequired,
-    }),
   };
 
   state = {
@@ -22,16 +18,12 @@ class Body extends Component {
   };
 
   render() {
-    const { className, children, pointerPosition } = this.props;
+    const { className, children } = this.props;
     const { isScrolling } = this.state;
 
     return (
       <div className={classnames(className, 'Body')}>
-        <Logo
-          className="Body__logo"
-          focused
-          pointerPosition={pointerPosition}
-        />
+        <Logo className="Body__logo" focused />
         <ScrollArea
           className="Body__scrollarea"
           renderView={({ ...props }) => (

@@ -12,10 +12,6 @@ class Header extends Component {
     homeRoute: PropTypes.shape({
       path: PropTypes.string.isRequired,
     }).isRequired,
-    pointerPosition: PropTypes.shape({
-      x: PropTypes.number.isRequired,
-      y: PropTypes.number.isRequired,
-    }),
     routes: PropTypes.arrayOf(
       PropTypes.shape({
         link: PropTypes.string.isRequired,
@@ -31,7 +27,7 @@ class Header extends Component {
   };
 
   render() {
-    const { homeRoute, pointerPosition, routes } = this.props;
+    const { homeRoute, routes } = this.props;
     const { navMenuIsOpen, shouldFocusLogo } = this.state;
 
     return (
@@ -45,11 +41,7 @@ class Header extends Component {
         >
           <div className="Header__content">
             <NavLink exact to={homeRoute.path}>
-              <Logo
-                className="Header__logo"
-                focused={shouldFocusLogo}
-                pointerPosition={pointerPosition}
-              />
+              <Logo className="Header__logo" focused={shouldFocusLogo} />
             </NavLink>
             <div className="Header__spacer" />
             <div className="Header__nav">

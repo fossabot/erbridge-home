@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
 import LogoParticleGroup from './LogoParticleGroup';
+import PointerContext from './PointerContext';
 
 import './Logo.css';
 
@@ -14,14 +15,10 @@ class Logo extends Component {
   static propTypes = {
     className: PropTypes.string,
     focused: PropTypes.bool,
-    pointerPosition: PropTypes.shape({
-      x: PropTypes.number.isRequired,
-      y: PropTypes.number.isRequired,
-    }),
   };
 
   render() {
-    const { className, focused, pointerPosition } = this.props;
+    const { className, focused } = this.props;
 
     return (
       <svg
@@ -42,11 +39,15 @@ class Logo extends Component {
           <path d="M261.2,217.4c-1.7,0.9-3.4,2-3.4,4.3c0,9.9,34.2-0.3,34.2,19.7c0,10.3-9,15.6-21.6,15.6c-12.9,0-22.3-5.5-22.3-14.6c0-6.4,4.6-10.1,9.3-12c-3.5-1.2-6-3.2-6-7.6c0-4.1,2.3-6.2,5.6-7.9c-3.9-3.2-6-8.1-6-13.9v-4.2c0-10.6,7.4-18,18.8-18c5.2,0,9.6,1.8,12.8,4.6c2.2-4.4,5.3-6.9,7.8-6.9c2.2,0,3.3,1.5,3.3,2.9c0,1.3-0.9,2.2-1.9,2.4c-1.8,0.3-4.1,1.3-6.1,4.7c2.1,2.7,3.2,6.5,3.2,10.3v4.2c0,10.4-8,18.3-19.2,18.3C266.7,219.3,263.7,218.6,261.2,217.4zM264.8,231.9c-5.2,1.6-9.8,4.5-9.8,9.8c0,5.9,5.8,10,15.3,10c9.2,0,14.7-4,14.7-10.1C285,232.5,271.7,232.9,264.8,231.9zM282,196.8c0-7.1-4.4-12.6-12-12.6c-7.6,0-12,5.5-12,12.6v4.1c0,7.4,4.5,13,12.1,13c7.4,0,11.9-5.5,11.9-12.9V196.8z" />
           <path d="M341.6,198.7c0,8.5-4.7,8.7-9.6,8.7h-25v4.2c0,8.8,7.1,14.3,16.8,14.3c8.7,0,10.8-4.4,13.2-4.4c1.8,0,3.1,2.1,3.1,3.4c0,2.6-6.3,7.3-16.5,7.3c-13.9,0-23.6-8.4-23.6-20.9V199c0-11,9.5-20.3,21-20.3C331.9,178.8,341.6,187.1,341.6,198.7zM329.1,202.5c4.4,0,5.5-0.7,5.5-3.8c0-7-5.7-13.9-13.8-13.9c-7.6,0-13.8,6-13.8,13.4v4.3 H329.1z" />
         </g>
-        <LogoParticleGroup
-          focused={focused}
-          pointerPosition={pointerPosition}
-          viewBox={{ width: VIEW_BOX_WIDTH, height: VIEW_BOX_HEIGHT }}
-        />
+        <PointerContext.Consumer>
+          {pointerPosition => (
+            <LogoParticleGroup
+              focused={focused}
+              pointerPosition={pointerPosition}
+              viewBox={{ width: VIEW_BOX_WIDTH, height: VIEW_BOX_HEIGHT }}
+            />
+          )}
+        </PointerContext.Consumer>
       </svg>
     );
   }
