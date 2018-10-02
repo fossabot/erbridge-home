@@ -9,7 +9,7 @@ import { getAsset } from '../assets';
 import ExternalLink from './ExternalLink';
 import ViewableImage from './ViewableImage';
 
-import './MarkdownPage.css';
+import './MarkdownPage.scss';
 
 const htmlParser = new Parser();
 
@@ -118,7 +118,7 @@ class MarkdownPage extends Component {
   static getDerivedStateFromProps(nextProps, prevState) {
     if (nextProps.styles) {
       nextProps.styles.forEach(style => {
-        require(`../${style}.css`);
+        require(`../${style}.scss`);
       });
     }
 

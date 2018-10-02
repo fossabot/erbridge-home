@@ -1,5 +1,5 @@
-@import 'styles/colours';
-@import 'styles/layout';
+@import '../styles/_colours.scss';
+@import '../styles/_layout.scss';
 
 @include wrapper-with-content(Footer);
 

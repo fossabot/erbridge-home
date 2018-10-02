@@ -20,9 +20,9 @@ import ScrollToTopOnMount from './components/ScrollToTopOnMount';
 
 import routes, { homeRoute, redirectedRoutes, topRoutes } from './routes';
 
-import './styles/transitions.css';
+import './styles/transitions.scss';
 
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   state = {
@@ -57,7 +57,8 @@ class App extends Component {
                 render={() => (
                   <Helmet>
                     <title>
-                      {route.title ? `${route.title} | ` : ''}erbridge
+                      {route.title ? `${route.title} | ` : ''}
+                      erbridge
                     </title>
                   </Helmet>
                 )}

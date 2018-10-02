@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component, createRef } from 'react';
 
-import './LogoParticle.css';
+import './LogoParticle.scss';
 
 class LogoParticle extends Component {
   static propTypes = {
@@ -49,13 +49,16 @@ class LogoParticle extends Component {
       pointerY = pointerPosition.y || 0;
     } else if (groupBoundingRect) {
       // Magic numbers estimated from the source svg.
-      pointerX = ((groupBoundingRect.right || 0) + 15) * width / 7.2;
-      pointerY = ((groupBoundingRect.top || 0) + 5) * height / 7.2;
+      pointerX = (((groupBoundingRect.right || 0) + 15) * width) / 7.2;
+      pointerY = (((groupBoundingRect.top || 0) + 5) * height) / 7.2;
     }
 
     return (
-      Math.atan2(pointerY - midPointPosition.y, pointerX - midPointPosition.x) *
-      180 /
+      (Math.atan2(
+        pointerY - midPointPosition.y,
+        pointerX - midPointPosition.x,
+      ) *
+        180) /
       Math.PI
     );
   }

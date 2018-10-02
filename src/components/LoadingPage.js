@@ -2,7 +2,7 @@ import React from 'react';
 
 import Logo from './Logo';
 
-import './LoadingPage.css';
+import './LoadingPage.scss';
 
 const LoadingPage = () => (
   <div className="LoadingPage">

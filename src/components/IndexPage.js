@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { getAsset } from '../assets';
 
-import './IndexPage.css';
+import './IndexPage.scss';
 
 class IndexPage extends Component {
   static propTypes = {

@@ -10,7 +10,6 @@
 /build
 
 # build artefacts
-/src/**/*.css
 /src/pages/**/index.js
 
 # misc

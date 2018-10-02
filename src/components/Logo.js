@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import LogoParticleGroup from './LogoParticleGroup';
 import PointerContext from './PointerContext';
 
-import './Logo.css';
+import './Logo.scss';
 
 // Magic numbers derived from the source svg.
 const VIEW_BOX_WIDTH = 368;

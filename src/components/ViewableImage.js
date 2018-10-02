@@ -4,7 +4,7 @@ import React, { Component, Fragment } from 'react';
 import Img from 'react-image';
 import Lightbox from 'react-images';
 
-import './ViewableImage.css';
+import './ViewableImage.scss';
 
 class ViewableImage extends Component {
   static propTypes = {

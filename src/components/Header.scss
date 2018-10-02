@@ -1,6 +1,6 @@
-@import 'styles/colours';
-@import 'styles/layout';
-@import 'styles/transition-timings';
+@import '../styles/_colours.scss';
+@import '../styles/_layout.scss';
+@import '../styles/_transition-timings.scss';
 
 $full-nav-min-width: 520px;
 

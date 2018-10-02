@@ -6,7 +6,7 @@ import GitHubIcon from './GitHubIcon';
 import LinkedInIcon from './LinkedInIcon';
 import TwitterIcon from './TwitterIcon';
 
-import './Footer.css';
+import './Footer.scss';
 
 const Footer = () => (
   <div className="Footer">
@@ -43,9 +43,11 @@ const Footer = () => (
           <ExternalLink to="https://raw.githubusercontent.com/erbridge/erbridge-home/master/LICENSE">
             MIT
           </ExternalLink>{' '}
-          (<ExternalLink to="https://github.com/erbridge/erbridge-home">
+          (
+          <ExternalLink to="https://github.com/erbridge/erbridge-home">
             code
-          </ExternalLink>) |{' '}
+          </ExternalLink>
+          ) |{' '}
           <ExternalLink to="https://creativecommons.org/licenses/by/3.0/">
             CC-BY
           </ExternalLink>{' '}

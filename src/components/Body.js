@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import Logo from './Logo';
 import ScrollArea from './ScrollArea';
 
-import './Body.css';
+import './Body.scss';
 
 class Body extends Component {
   static propTypes = {

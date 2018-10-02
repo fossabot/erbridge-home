@@ -6,7 +6,7 @@ exports[`renders correctly 1`] = `
     className="App"
     onMouseMove={[Function]}
   >
-    <[object Object]
+    <ContextProvider
       value={null}
     >
       <Route
@@ -127,7 +127,7 @@ exports[`renders correctly 1`] = `
         />
       </Body>
       <Footer />
-    </[object Object]>
+    </ContextProvider>
   </div>
 </BrowserRouter>
 `;

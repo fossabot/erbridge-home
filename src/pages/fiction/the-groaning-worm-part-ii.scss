@@ -1,4 +1,4 @@
-@import 'styles/colours';
+@import '../../styles/_colours.scss';
 
 .Poem--interlaced span:nth-of-type(2n) {
   color: $dark-blue;

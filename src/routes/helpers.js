@@ -29,8 +29,11 @@ const generateRedirectsFromOldSlugs = (posts, basePathName) =>
     to: getRoutePath(basePathName, slug, title),
   }));
 
-const loadPageContent = path => () =>
-  import(`../pages/${path}`).then(({ __content }) => __content);
+const loadPageContent = path => async () => {
+  const page = await import(`../pages/${path}`);
+
+  return page.default.__content;
+};
 
 export const generateRoutes = (
   name,
