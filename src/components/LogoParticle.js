@@ -32,6 +32,10 @@ class LogoParticle extends Component {
       return 0;
     }
 
+    if (!this.containerRef.current) {
+      return 0;
+    }
+
     const {
       x,
       y,
