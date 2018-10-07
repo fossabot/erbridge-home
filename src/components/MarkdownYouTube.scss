@@ -1,0 +1,7 @@
+@import '../styles/_layout.scss';
+
+.MarkdownYouTube {
+  @include aspect-ratio(MarkdownYouTube__content, 16, 9);
+
+  width: 100%;
+}

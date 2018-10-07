@@ -1,4 +1,4 @@
-import home from '../pages/home.md';
+import home, { meta as homeMeta } from '../pages/home.mdx';
 
 import {
   categoryRoutes as blogCategoryRoutes,
@@ -39,9 +39,9 @@ export const homeRoute = {
   link: 'Home',
   path: '/',
   navExact: true,
-  title: home.title,
-  styles: home.styles,
-  loadContent: () => home.__content,
+  title: homeMeta.title,
+  styles: homeMeta.styles,
+  loadContent: () => home,
 };
 
 export const redirectedRoutes = [

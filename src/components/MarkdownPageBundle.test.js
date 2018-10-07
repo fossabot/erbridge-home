@@ -5,6 +5,8 @@ import MarkdownPageBundle from './MarkdownPageBundle';
 
 it('renders correctly', () => {
   expect(
-    shallow(<MarkdownPageBundle loadContent={() => 'content'} />),
+    shallow(
+      <MarkdownPageBundle loadContent={async () => () => <p>content</p>} />,
+    ),
   ).toMatchSnapshot();
 });

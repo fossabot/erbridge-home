@@ -6,21 +6,6 @@ $narrow-image-min-width: 520px;
 .MarkdownPage {
   // FIXME: A workaround to force Chrome to consider child margins.
   overflow: hidden;
-
-  .PDF {
-    width: 100%;
-    max-height: 60vh;
-  }
-
-  .PDF--A4 {
-    @include aspect-ratio(PDF__content, 210, 297);
-  }
-
-  .YouTube {
-    @include aspect-ratio(YouTube__content, 16, 9);
-
-    width: 100%;
-  }
 }
 
 .MarkdownPage__title--has-subtitle-or-date,

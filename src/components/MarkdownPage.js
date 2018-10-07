@@ -1,5 +1,4 @@
 import classnames from 'classnames';
-import { Parser, ProcessNodeDefinitions } from 'html-to-react';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
@@ -11,90 +10,27 @@ import ViewableImage from './ViewableImage';
 
 import './MarkdownPage.scss';
 
-const htmlParser = new Parser();
+const markdownComponents = {
+  a({ href, children }) {
+    const LinkComponent = href && href.startsWith('/') ? Link : ExternalLink;
 
-const processNodeDefinitions = new ProcessNodeDefinitions(React);
-const processingInstructions = [
-  {
-    shouldProcessNode(node) {
-      return node.type === 'tag' && node.name === 'a';
-    },
-    processNode(node, children, index) {
-      const LinkComponent =
-        node.attribs && node.attribs.href && node.attribs.href.startsWith('/')
-          ? Link
-          : ExternalLink;
+    return <LinkComponent to={href}>{children}</LinkComponent>;
+  },
 
-      return (
-        <LinkComponent key={index} to={node.attribs.href}>
-          {children}
-        </LinkComponent>
-      );
-    },
+  img({ alt, className, src }) {
+    return (
+      <ViewableImage
+        className={classnames(className, 'MarkdownPage__image')}
+        src={getAsset(src)}
+        alt={alt || ''}
+      />
+    );
   },
-  {
-    shouldProcessNode(node) {
-      return node.type === 'tag' && node.name === 'img';
-    },
-    processNode(node, children, index) {
-      return (
-        <ViewableImage
-          key={index}
-          className={classnames(node.attribs.class, 'MarkdownPage__image')}
-          src={getAsset(node.attribs.src)}
-          alt={node.attribs.alt || ''}
-        />
-      );
-    },
-  },
-  {
-    shouldProcessNode(node) {
-      return node.type === 'tag' && node.name === 'pdf';
-    },
-    processNode(node, children, index) {
-      return (
-        <p
-          key={index}
-          className={classnames('PDF', `PDF--${node.attribs.papersize}`)}
-        >
-          <iframe
-            className="PDF__content"
-            title={node.attribs.title}
-            src={getAsset(node.attribs.src)}
-            frameBorder="0"
-          />
-        </p>
-      );
-    },
-  },
-  {
-    shouldProcessNode(node) {
-      return node.type === 'tag' && node.name === 'youtube';
-    },
-    processNode(node, children, index) {
-      return (
-        <p key={index} className="YouTube">
-          <iframe
-            className="YouTube__content"
-            title={node.attribs.title}
-            src={`https://www.youtube.com/embed/${node.attribs.videoid}`}
-            frameBorder="0"
-          />
-        </p>
-      );
-    },
-  },
-  {
-    shouldProcessNode(node) {
-      return true;
-    },
-    processNode: processNodeDefinitions.processDefaultNode,
-  },
-];
+};
 
 class MarkdownPage extends Component {
   static propTypes = {
-    content: PropTypes.string.isRequired,
+    content: PropTypes.func.isRequired,
     date: PropTypes.string,
     image: PropTypes.string,
     links: PropTypes.arrayOf(
@@ -111,30 +47,21 @@ class MarkdownPage extends Component {
   };
 
   state = {
-    content: '',
-    rawContent: '',
+    loadedStyles: [],
   };
 
-  static getDerivedStateFromProps(nextProps, prevState) {
+  static async getDerivedStateFromProps(nextProps, prevState) {
+    const nextState = { ...prevState };
+
     if (nextProps.styles) {
-      nextProps.styles.forEach(style => {
-        require(`../${style}.scss`);
-      });
-    }
+      for (const style of nextProps.styles) {
+        if (!prevState.loadedStyles.includes(style)) {
+          // FIXME: Is this the right place to be doing this?
+          require(`../${style}.scss`);
 
-    let nextState = null;
-
-    const rawContent = nextProps.content || '';
-
-    if (rawContent !== prevState.rawContent) {
-      nextState = {
-        content: htmlParser.parseWithInstructions(
-          rawContent.replace(/\\\n/g, '<br>'),
-          () => true,
-          processingInstructions,
-        ),
-        rawContent,
-      };
+          nextState.loadedStyles.push(style);
+        }
+      }
     }
 
     return nextState;
@@ -142,6 +69,7 @@ class MarkdownPage extends Component {
 
   render() {
     const {
+      content,
       date,
       image,
       links,
@@ -150,7 +78,6 @@ class MarkdownPage extends Component {
       tags,
       title,
     } = this.props;
-    const { content } = this.state;
 
     return (
       <div className="MarkdownPage">
@@ -220,7 +147,7 @@ class MarkdownPage extends Component {
             ))}
           </p>
         )}
-        {content}
+        {content({ components: markdownComponents })}
       </div>
     );
   }

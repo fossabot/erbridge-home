@@ -10,7 +10,10 @@
   }
 }
 
-@mixin wrapper-with-content($class-name, $content-class-name:#{$class-name}__content) {
+@mixin wrapper-with-content(
+  $class-name,
+  $content-class-name: #{$class-name}__content
+) {
   .#{$class-name} {
     display: flex;
     justify-content: center;

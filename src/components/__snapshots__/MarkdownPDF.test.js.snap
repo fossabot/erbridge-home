@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<p
+  className="MarkdownPDF MarkdownPDF--A4"
+>
+  <iframe
+    className="MarkdownPDF__content"
+    frameBorder="0"
+    src="/assets/example.pdf"
+    title="Example"
+  />
+</p>
+`;

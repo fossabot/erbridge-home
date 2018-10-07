@@ -1,0 +1,10 @@
+@import '../styles/_layout.scss';
+
+.MarkdownPDF {
+  width: 100%;
+  max-height: 60vh;
+}
+
+.MarkdownPDF--A4 {
+  @include aspect-ratio(MarkdownPDF__content, 210, 297);
+}

@@ -1,8 +1,12 @@
 const { lstatSync, readdirSync, readFileSync } = require('fs');
 const { extname, join, relative } = require('path');
 
+const babel = require('@babel/core'); // Inherited from react-scripts.
+const mdx = require('@mdx-js/mdx');
 const metagen = require('directory-metagen');
-const yaml = require('yaml-front-matter');
+const requireFromString = require('require-from-string');
+
+process.env.BABEL_ENV = 'production';
 
 const isDirectory = source => lstatSync(source).isDirectory();
 
@@ -17,14 +21,30 @@ const format = (files, { path: basePath }) => {
   output += JSON.stringify(
     files.map(path => {
       const fullPath = `${basePath}/${path}`;
-      const source = readFileSync(fullPath, 'utf8');
-      const obj = yaml.loadFront(source);
+      const text = readFileSync(fullPath, 'utf8');
+      const jsx = mdx.sync(text);
+      const obj = requireFromString(
+        babel
+          .transformSync(jsx, {
+            presets: [
+              [
+                require.resolve('babel-preset-env'),
+                { targets: { node: '10' } },
+              ],
+            ],
+            plugins: [
+              require.resolve('@babel/plugin-proposal-object-rest-spread'), // Inherited from react-scripts.
+              require.resolve('@babel/plugin-transform-react-jsx'), // Inherited from react-scripts.
+            ],
+          })
+          .code.replace(/require\(.+\)/g, '"removed"'), // Strip out require calls, since we only care about the metadata.
+        fullPath,
+      );
 
-      delete obj.__content;
-
-      obj.path = relative(`${__dirname}/../src/pages`, fullPath);
-
-      return obj;
+      return {
+        ...(obj.meta || {}),
+        path: relative(`${__dirname}/../src/pages`, fullPath),
+      };
     }),
   );
 
@@ -37,7 +57,7 @@ getDirectories(`${__dirname}/../src/pages`)
   .map(path => ({
     path,
     format,
-    filter: files => files.filter(path => extname(path) === '.md'),
+    filter: files => files.filter(path => extname(path) === '.mdx'),
     output: 'index.js',
   }))
   .forEach(metagen);
