@@ -102,7 +102,24 @@ export const generateRoutes = (
     }),
   );
 
-  const categoryRoutes = categories
+  const sortedCategories = [...categories];
+
+  sortedCategories.sort((a, b) => {
+    const aLink = a.link || a.title;
+    const bLink = b.link || b.title;
+
+    if (aLink === 'All' || bLink === 'Uncategorized') {
+      return -1;
+    }
+
+    if (bLink === 'All' || aLink === 'Uncategorized') {
+      return 1;
+    }
+
+    return aLink > bLink ? 1 : -1;
+  });
+
+  const categoryRoutes = sortedCategories
     .map(({ link, name: categoryName, path, routeFilter, title }) => {
       const filteredRoutes = routes.filter(routeFilter);
 

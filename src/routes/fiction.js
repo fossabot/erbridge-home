@@ -24,6 +24,13 @@ export const {
         categories && categories.indexOf('poetry') !== -1,
     },
     {
+      name: 'screenplays',
+      path: 'screenplays',
+      title: 'Screenplays',
+      routeFilter: ({ categories }) =>
+        categories && categories.indexOf('screenplay') !== -1,
+    },
+    {
       name: 'short-stories',
       path: 'short-stories',
       title: 'Short Stories',
@@ -46,6 +53,7 @@ export const {
       routeFilter: ({ categories }) =>
         !categories ||
         (categories.indexOf('poetry') === -1 &&
+          categories.indexOf('screenplay') === -1 &&
           categories.indexOf('short-story') === -1 &&
           categories.indexOf('generative') === -1),
     },
