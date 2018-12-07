@@ -81,12 +81,11 @@ class MarkdownPage extends Component {
 
     return (
       <div className="MarkdownPage">
-        {image &&
-          showHeadingImage && (
-            <h1 className="MarkdownPage__heading-image">
-              <ViewableImage src={getAsset(image)} alt="" />
-            </h1>
-          )}
+        {image && showHeadingImage && (
+          <h1 className="MarkdownPage__heading-image">
+            <ViewableImage src={getAsset(image)} alt="" />
+          </h1>
+        )}
         {title && [
           <h1
             key="title"

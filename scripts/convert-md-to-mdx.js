@@ -14,8 +14,8 @@ const { loadFront } = require('yaml-front-matter');
 const getMarkdownFiles = source =>
   readdirSync(source)
     .map(name => join(source, name))
-    .map(
-      path => (lstatSync(path).isDirectory() ? getMarkdownFiles(path) : [path]),
+    .map(path =>
+      lstatSync(path).isDirectory() ? getMarkdownFiles(path) : [path],
     )
     .reduce((acc, curr) => [...acc, ...curr], [])
     .filter(path => extname(path) === '.md');

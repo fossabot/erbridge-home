@@ -37,14 +37,15 @@
   },
   "scripts": {
     "build-pages": "node scripts/convert-md-to-mdx.js && node scripts/pages.js",
-    "watch-pages": "chokidar './src/pages/**/*.mdx' -c 'run-s build-pages' --initial --verbose",
+    "watch-pages": "chokidar 'src/pages/**/*.mdx' -c 'run-s build-pages' --initial --verbose",
     "start-js": "react-app-rewired start",
     "start": "run-p watch-pages start-js",
     "build": "run-p build-pages && react-app-rewired build",
     "test": "run-p build-pages && react-app-rewired test",
     "start-styleguide": "styleguidist server",
     "build-styleguide": "styleguidist build",
-    "analyze": "source-map-explorer build/static/js/main.*"
+    "analyze": "source-map-explorer build/static/js/main.*",
+    "format": "prettier --write '{public,scripts,src}/**/*'"
   },
   "eslintConfig": {
     "extends": "react-app"

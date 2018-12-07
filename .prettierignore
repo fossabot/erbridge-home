@@ -1,0 +1,8 @@
+/src/pages/**/index.js
+/src/pages/**/*.md
+
+*.gif
+*.ico
+*.jpg
+*.pdf
+*.snap

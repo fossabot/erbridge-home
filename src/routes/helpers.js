@@ -24,10 +24,12 @@ export const getRoutePath = (prefix, slug, title) =>
   }`;
 
 const generateRedirectsFromOldSlugs = (posts, basePathName) =>
-  posts.filter(({ oldSlug }) => oldSlug).map(({ oldSlug, slug, title }) => ({
-    path: `/${basePathName}/${sanitizePathComponent(oldSlug)}`,
-    to: getRoutePath(basePathName, slug, title),
-  }));
+  posts
+    .filter(({ oldSlug }) => oldSlug)
+    .map(({ oldSlug, slug, title }) => ({
+      path: `/${basePathName}/${sanitizePathComponent(oldSlug)}`,
+      to: getRoutePath(basePathName, slug, title),
+    }));
 
 const loadPageContent = path => async () => {
   const page = await import(`../pages/${path}`);
