@@ -1,0 +1,30 @@
+@import '../../styles/_colours.scss';
+
+.PoemWithSquare {
+  margin: 1em 0;
+
+  // FIXME: This is here to work around line wrapping on small screens.
+  //        Probably better to wrap the contents of all the poetry in this
+  //        sort of thing, but beware of making summaries long lines.
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.PoemWithSquare__square-container {
+  display: flex;
+}
+
+.PoemWithSquare__before-square {
+  text-align: justify;
+  text-align-last: justify;
+  text-justify: distribute;
+}
+
+.PoemWithSquare__square {
+  margin: 0 14px; // Measured in relation to font size and line spacing.
+  text-align: justify;
+  text-align-last: justify;
+  text-justify: distribute;
+  font-style: italic;
+  color: $dark-blue;
+}

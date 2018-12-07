@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="PoemWithSquare"
+>
+  <div
+    key="0"
+  >
+    this
+  </div>
+  <div
+    className="PoemWithSquare__square-container"
+  >
+    <div
+      className="PoemWithSquare__before-square"
+    >
+      <div
+        key="0"
+      >
+        i
+      </div>
+      <div
+        key="1"
+      >
+        a
+      </div>
+    </div>
+    <div
+      className="PoemWithSquare__square"
+      style={
+        Object {
+          "width": 54,
+        }
+      }
+    >
+      <div
+        key="0"
+      >
+        a
+      </div>
+      <div
+        key="1"
+      >
+        square
+      </div>
+    </div>
+    <div
+      className="PoemWithSquare__after-square"
+    >
+      <div
+        key="0"
+      >
+        s
+      </div>
+      <div
+        key="1"
+      />
+    </div>
+  </div>
+  <div
+    key="0"
+  >
+    test
+  </div>
+</div>
+`;
