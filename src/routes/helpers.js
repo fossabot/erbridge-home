@@ -1,5 +1,6 @@
 import compareDateDesc from 'date-fns/compare_desc';
 import formatDateFn from 'date-fns/format';
+import React from 'react';
 
 export const formatDate = (date, format) => {
   if (!date) {
@@ -33,8 +34,9 @@ const generateRedirectsFromOldSlugs = (posts, basePathName) =>
 
 const loadPageContent = path => async () => {
   const page = await import(`../pages/${path}`);
+  const Page = page.default;
 
-  return page.default;
+  return props => <Page {...props} />;
 };
 
 export const generateRoutes = (

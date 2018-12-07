@@ -6,7 +6,9 @@ import MarkdownPageBundle from './MarkdownPageBundle';
 it('renders correctly', () => {
   expect(
     shallow(
-      <MarkdownPageBundle loadContent={async () => () => <p>content</p>} />,
+      <MarkdownPageBundle
+        loadContent={async () => props => <div {...props}>content</div>}
+      />,
     ),
   ).toMatchSnapshot();
 });

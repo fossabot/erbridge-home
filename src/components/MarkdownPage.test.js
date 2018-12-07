@@ -5,6 +5,6 @@ import MarkdownPage from './MarkdownPage';
 
 it('renders correctly', () => {
   expect(
-    shallow(<MarkdownPage content={() => <p>content</p>} />),
+    shallow(<MarkdownPage content={props => <div {...props}>content</div>} />),
   ).toMatchSnapshot();
 });

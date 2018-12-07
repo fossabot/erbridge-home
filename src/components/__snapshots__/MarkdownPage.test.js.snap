@@ -4,8 +4,15 @@ exports[`renders correctly 1`] = `
 <div
   className="MarkdownPage"
 >
-  <p>
+  <div
+    components={
+      Object {
+        "a": [Function],
+        "img": [Function],
+      }
+    }
+  >
     content
-  </p>
+  </div>
 </div>
 `;

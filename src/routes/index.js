@@ -1,4 +1,6 @@
-import home, { meta as homeMeta } from '../pages/home.mdx';
+import React from 'react';
+
+import Home, { meta as homeMeta } from '../pages/home.mdx';
 
 import {
   categoryRoutes as blogCategoryRoutes,
@@ -41,7 +43,7 @@ export const homeRoute = {
   navExact: true,
   title: homeMeta.title,
   styles: homeMeta.styles,
-  loadContent: () => home,
+  loadContent: () => props => <Home {...props} />,
 };
 
 export const redirectedRoutes = [
