@@ -1,26 +1,27 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import ReactPlayer from 'react-player';
 
 import './MarkdownYouTube.scss';
 
 class MarkdownYouTube extends Component {
   static propTypes = {
-    title: PropTypes.string.isRequired,
     videoId: PropTypes.string.isRequired,
   };
 
   render() {
-    const { title, videoId } = this.props;
+    const { videoId } = this.props;
 
     return (
-      <p className="MarkdownYouTube">
-        <iframe
+      <div className="MarkdownYouTube">
+        <ReactPlayer
           className="MarkdownYouTube__content"
-          title={title}
-          src={`https://www.youtube.com/embed/${videoId}`}
-          frameBorder="0"
+          url={`https://www.youtube.com/embed/${videoId}`}
+          controls
+          width="100%"
+          height="100%"
         />
-      </p>
+      </div>
     );
   }
 }

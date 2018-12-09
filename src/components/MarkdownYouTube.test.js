@@ -4,7 +4,5 @@ import React from 'react';
 import MarkdownYouTube from './MarkdownYouTube';
 
 it('renders correctly', () => {
-  expect(
-    shallow(<MarkdownYouTube title="Example" videoId="test-id" />),
-  ).toMatchSnapshot();
+  expect(shallow(<MarkdownYouTube videoId="test-id" />)).toMatchSnapshot();
 });
