@@ -19,7 +19,7 @@ const parseMeta = (files, { path: basePath }) => {
 
   output += JSON.stringify(
     files.map(path => {
-      const fullPath = `${basePath}/${path}`;
+      const fullPath = join(basePath, path);
       const text = readFileSync(fullPath, 'utf8');
       const jsx = mdx.sync(text);
 
@@ -42,7 +42,7 @@ const parseMeta = (files, { path: basePath }) => {
 
       return {
         ...meta,
-        path: relative(`${__dirname}/../src/pages`, fullPath),
+        path: relative(join(__dirname, '..', 'src', 'pages'), fullPath),
       };
     }),
   );
@@ -52,7 +52,7 @@ const parseMeta = (files, { path: basePath }) => {
   return output;
 };
 
-getDirectories(`${__dirname}/../src/pages`)
+getDirectories(join(__dirname, '..', 'src', 'pages'))
   .map(path => ({
     path,
     format: parseMeta,
