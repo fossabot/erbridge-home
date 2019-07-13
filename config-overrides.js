@@ -1,6 +1,37 @@
-const { getBabelLoader } = require('react-app-rewired');
+const path = require('path');
 
-module.exports = (config, env) => {
+const babelLoaderMatcher = rule => {
+  const loaderName = 'babel-loader';
+
+  return (
+    rule &&
+    rule.loader &&
+    typeof rule.loader === 'string' &&
+    (rule.loader.indexOf(`${path.sep}${loaderName}${path.sep}`) !== -1 ||
+      rule.loader.indexOf(`@${loaderName}${path.sep}`) !== -1)
+  );
+};
+
+const getBabelLoader = rules => {
+  let loader;
+
+  rules.some(rule => {
+    loader = babelLoaderMatcher(rule)
+      ? rule
+      : getBabelLoader(
+          rule.use ||
+            rule.oneOf ||
+            (Array.isArray(rule.loader) && rule.loader) ||
+            [],
+        );
+
+    return loader;
+  });
+
+  return loader;
+};
+
+module.exports = (config, _env) => {
   const babelLoader = getBabelLoader(config.module.rules);
 
   config.module.rules.map(rule => {
