@@ -17,6 +17,13 @@ export const {
       routeFilter: route => route,
     },
     {
+      name: 'apps',
+      path: 'apps',
+      title: 'Apps',
+      routeFilter: ({ categories }) =>
+        categories && categories.indexOf('app') !== -1,
+    },
+    {
       name: 'bots',
       path: 'bots',
       title: 'Bots',
@@ -29,7 +36,8 @@ export const {
       link: 'Uncategorized',
       title: 'Uncategorized Misc Projects',
       routeFilter: ({ categories }) =>
-        !categories || categories.indexOf('bot') === -1,
+        !categories ||
+        (categories.indexOf('app') === -1 && categories.indexOf('bot') === -1),
     },
   ],
   extraRedirects: [
