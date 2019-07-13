@@ -29,12 +29,6 @@ exports[`renders correctly 1`] = `
       />
       <Route
         exact={true}
-        key="tools"
-        path="/tools"
-        render={[Function]}
-      />
-      <Route
-        exact={true}
         key="misc"
         path="/misc"
         render={[Function]}
@@ -87,13 +81,6 @@ exports[`renders correctly 1`] = `
               "path": "/web",
               "routes": Array [],
               "title": "Web",
-            },
-            Object {
-              "link": "Tools",
-              "name": "tools",
-              "path": "/tools",
-              "routes": Array [],
-              "title": "Tools",
             },
             Object {
               "link": "Misc",

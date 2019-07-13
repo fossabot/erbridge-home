@@ -8,5 +8,4 @@ jest.mock('./pages/blog');
 jest.mock('./pages/fiction');
 jest.mock('./pages/games');
 jest.mock('./pages/misc');
-jest.mock('./pages/tools');
 jest.mock('./pages/web');

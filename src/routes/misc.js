@@ -34,8 +34,16 @@ export const {
   ],
   extraRedirects: [
     {
+      path: '/tools/gotwit',
+      to: getRoutePath('misc', 'gotwit'),
+    },
+    {
       path: '/tools/iris',
       to: getRoutePath('misc', 'iris'),
+    },
+    {
+      path: '/tools/itchy-electron',
+      to: getRoutePath('misc', 'itchy-electron'),
     },
     {
       path: '/tools/lime-text',
