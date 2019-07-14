@@ -2,7 +2,8 @@
 @import '../styles/_layout.scss';
 @import '../styles/_transition-timings.scss';
 
-$full-nav-min-width: 520px;
+// This is measured so that we never have a line break in the nav.
+$full-nav-min-width: 610px;
 
 @include wrapper-with-content(Header);
 
