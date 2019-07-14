@@ -42,7 +42,7 @@
     "start": "run-p watch-pages start-js",
     "build": "run-p build-pages && react-app-rewired build",
     "test": "run-p build-pages && react-app-rewired test",
-    "analyze": "source-map-explorer build/static/js/main.*",
+    "analyze": "run-p build && source-map-explorer build/static/js/main.*",
     "format": "prettier --write '{public,scripts,src}/**/*'"
   },
   "eslintConfig": {
