@@ -14,6 +14,10 @@ export const { redirectedRoutes, route, routes } = generateRoutes(
         path: '/fatal-attraction',
         to: getRoutePath('games', 'fatal-attraction'),
       },
+      {
+        path: '/rendezvous',
+        to: getRoutePath('games', 'midnight-rendezvous'),
+      },
     ],
   },
 );
