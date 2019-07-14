@@ -35,8 +35,10 @@ class App extends Component {
     this.setState({ pointerPosition: { x: clientX, y: clientY } });
   }
 
-  componentDidMount() {
-    routes.forEach(({ loadContent }) => loadContent && loadContent());
+  async componentDidMount() {
+    await Promise.all(
+      routes.map(({ loadContent }) => loadContent && loadContent()),
+    );
   }
 
   render() {

@@ -31,13 +31,13 @@ class MarkdownPageBundle extends Component {
     this.setState({ content: await props.loadContent() });
   }
 
-  componentDidMount() {
-    this.loadContent(this.props);
+  async componentDidMount() {
+    await this.loadContent(this.props);
   }
 
-  componentWillReceiveProps(nextProps) {
+  async componentWillReceiveProps(nextProps) {
     if (nextProps.loadContent !== this.props.loadContent) {
-      this.loadContent(nextProps);
+      await this.loadContent(nextProps);
     }
   }
 
