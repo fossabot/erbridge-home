@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<p>
+  <strong>
+    Test Title
+  </strong>
+  : 
+  <em>
+    Test Subtitle
+  </em>
+   
+  by 
+  <strong>
+    Test Author, Another Author
+  </strong>
+   (
+  <ExternalLink
+    to="http://example.com"
+  >
+    Open Library
+  </ExternalLink>
+  )
+</p>
+`;

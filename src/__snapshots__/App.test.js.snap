@@ -45,6 +45,12 @@ exports[`renders correctly 1`] = `
         path="/blog"
         render={[Function]}
       />
+      <Route
+        exact={true}
+        key="books"
+        path="/books"
+        render={[Function]}
+      />
       <Header
         homeRoute={
           Object {

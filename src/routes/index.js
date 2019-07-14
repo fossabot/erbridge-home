@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Books from '../pages/books.mdx';
 import Home, { meta as homeMeta } from '../pages/home.mdx';
 
 import {
@@ -41,6 +42,12 @@ export const homeRoute = {
   loadContent: () => props => <Home {...props} />,
 };
 
+export const booksRoute = {
+  name: 'books',
+  path: '/books',
+  loadContent: () => props => <Books {...props} />,
+};
+
 export const redirectedRoutes = [
   {
     path: '/about',
@@ -72,4 +79,5 @@ export default [
   ...miscCategoryRoutes,
   ...miscRoutes,
   ...webRoutes,
+  booksRoute,
 ];

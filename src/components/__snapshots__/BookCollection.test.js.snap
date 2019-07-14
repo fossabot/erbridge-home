@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="BookCollection"
+>
+  <Book
+    authors={
+      Array [
+        Object {
+          "name": "Author A for 0123456789",
+        },
+        Object {
+          "name": "Author B for 0123456789",
+        },
+      ]
+    }
+    identifiers={
+      Object {
+        "isbn_10": "0123456789",
+        "isbn_13": undefined,
+        "openlibrary": "OL0123456789",
+      }
+    }
+    key="OL0123456789"
+    subtitle="Subtitle for 0123456789"
+    title="Title for 0123456789"
+    url="http://example.com/0123456789"
+  />
+  <Book
+    authors={
+      Array [
+        Object {
+          "name": "Author A for 0123456789ABC",
+        },
+        Object {
+          "name": "Author B for 0123456789ABC",
+        },
+      ]
+    }
+    identifiers={
+      Object {
+        "isbn_10": undefined,
+        "isbn_13": "0123456789ABC",
+        "openlibrary": "OL0123456789ABC",
+      }
+    }
+    key="OL0123456789ABC"
+    subtitle="Subtitle for 0123456789ABC"
+    title="Title for 0123456789ABC"
+    url="http://example.com/0123456789ABC"
+  />
+</div>
+`;
