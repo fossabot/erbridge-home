@@ -17,6 +17,13 @@ class MarkdownYouTube extends Component {
         <ReactPlayer
           className="MarkdownYouTube__content"
           url={`https://www.youtube.com/embed/${videoId}`}
+          config={{
+            youtube: {
+              embedOptions: {
+                host: 'https://www.youtube-nocookie.com',
+              },
+            },
+          }}
           controls
           width="100%"
           height="100%"
