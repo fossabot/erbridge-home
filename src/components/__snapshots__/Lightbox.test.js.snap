@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<ModalGateway
+  target={<body />}
+>
+  <Modal
+    allowFullscreen={false}
+    closeOnBackdropClick={true}
+    closeOnEsc={true}
+    styles={Object {}}
+  >
+    <Carousel
+      components={
+        Object {
+          "FooterCount": [Function],
+        }
+      }
+      currentIndex={0}
+      formatters={
+        Object {
+          "getAltText": [Function],
+          "getCloseLabel": [Function],
+          "getFullscreenLabel": [Function],
+          "getNextLabel": [Function],
+          "getNextTitle": [Function],
+          "getPrevLabel": [Function],
+          "getPrevTitle": [Function],
+        }
+      }
+      hideControlsWhenIdle={3000}
+      styles={Object {}}
+      trackProps={
+        Object {
+          "instant": false,
+          "swipe": "touch",
+        }
+      }
+      views={
+        Array [
+          Object {
+            "src": "/test.jpg",
+          },
+        ]
+      }
+    />
+  </Modal>
+</ModalGateway>
+`;

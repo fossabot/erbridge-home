@@ -2,7 +2,8 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component, Fragment } from 'react';
 import Img from 'react-image';
-import Lightbox from 'react-images';
+
+import Lightbox from './Lightbox';
 
 import './ViewableImage.scss';
 
@@ -45,10 +46,8 @@ class ViewableImage extends Component {
           onClick={() => this.openLightbox()}
         />
         <Lightbox
-          images={[{ src }]}
+          src={src}
           isOpen={lightboxIsOpen}
-          showImageCount={false}
-          spinner={() => <div />}
           onClose={() => this.closeLightbox()}
         />
       </Fragment>

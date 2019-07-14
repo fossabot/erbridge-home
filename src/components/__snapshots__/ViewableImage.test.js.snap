@@ -19,32 +19,9 @@ exports[`renders correctly 1`] = `
     }
   />
   <Lightbox
-    closeButtonTitle="Close (Esc)"
-    currentImage={0}
-    enableKeyboardInput={true}
-    imageCountSeparator=" of "
-    images={
-      Array [
-        Object {
-          "src": "/test.jpg",
-        },
-      ]
-    }
     isOpen={false}
-    leftArrowTitle="Previous (Left arrow key)"
-    onClickShowNextImage={true}
     onClose={[Function]}
-    preloadNextImage={true}
-    preventScroll={true}
-    rightArrowTitle="Next (Right arrow key)"
-    showCloseButton={true}
-    showImageCount={false}
-    spinner={[Function]}
-    spinnerColor="white"
-    spinnerSize={100}
-    theme={Object {}}
-    thumbnailOffset={2}
-    width={1024}
+    src="/test.jpg"
   />
 </Fragment>
 `;
