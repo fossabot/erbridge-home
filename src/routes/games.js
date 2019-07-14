@@ -1,6 +1,6 @@
 import gamesPosts from '../pages/games';
 
-import { generateRoutes } from './helpers';
+import { generateRoutes, getRoutePath } from './helpers';
 
 export const { redirectedRoutes, route, routes } = generateRoutes(
   'games',
@@ -8,4 +8,12 @@ export const { redirectedRoutes, route, routes } = generateRoutes(
   'Games',
   'Games',
   gamesPosts,
+  {
+    extraRedirects: [
+      {
+        path: '/fatal-attraction',
+        to: getRoutePath('games', 'fatal-attraction'),
+      },
+    ],
+  },
 );
