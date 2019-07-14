@@ -31,6 +31,9 @@ exports[`renders correctly 1`] = `
     <div
       className="Body__content"
     />
+    <Footer
+      className="Body__footer"
+    />
   </ScrollArea>
 </div>
 `;

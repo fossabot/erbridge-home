@@ -11,7 +11,6 @@ import {
 import Header from './components/Header';
 import Body from './components/Body';
 import ErrorPage from './components/ErrorPage';
-import Footer from './components/Footer';
 import IndexPage from './components/IndexPage';
 import LoadingPage from './components/LoadingPage';
 import MarkdownPageBundle from './components/MarkdownPageBundle';
@@ -124,7 +123,6 @@ class App extends Component {
                 )}
               />
             </Body>
-            <Footer />
           </PointerContext.Provider>
         </div>
       </Router>

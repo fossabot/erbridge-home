@@ -29,7 +29,9 @@
 
 .Body__scrollarea__view {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .Body__scrollarea__track {
@@ -64,4 +66,8 @@
 
 .Body__content {
   padding: 0 18px;
+}
+
+.Body__footer {
+  width: 100%;
 }

@@ -2,6 +2,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
+import Footer from './Footer';
 import Logo from './Logo';
 import ScrollArea from './ScrollArea';
 
@@ -60,6 +61,7 @@ class Body extends Component {
           onScrollStop={() => this.setState({ isScrolling: false })}
         >
           <div className="Body__content">{children}</div>
+          <Footer className="Body__footer" />
         </ScrollArea>
       </div>
     );
