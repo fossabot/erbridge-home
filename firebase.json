@@ -1,15 +1,23 @@
 {
   "hosting": {
     "public": "build",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
-        "source": "**",
+        "source": "!/@(fatal-attraction|rendezvous)/**",
         "destination": "/index.html"
+      }
+    ],
+    "redirects": [
+      {
+        "source": "/fatal-attraction",
+        "destination": "https://erbridge.github.io/fatal-attraction/",
+        "type": 302
+      },
+      {
+        "source": "/rendezvous",
+        "destination": "https://erbridge.github.io/rendezvous/",
+        "type": 302
       }
     ]
   }
