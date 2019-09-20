@@ -5,7 +5,7 @@ class ExternalLink extends Component {
   static propTypes = {
     to: PropTypes.string.isRequired,
     className: PropTypes.string,
-    children: PropTypes.node,
+    children: PropTypes.node.isRequired,
   };
 
   render() {

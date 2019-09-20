@@ -1,44 +1,209 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
-<Router
-  history={
-    Object {
-      "action": "POP",
-      "block": [Function],
-      "canGo": [Function],
-      "createHref": [Function],
-      "entries": Array [
-        Object {
-          "hash": "",
-          "key": "/",
-          "pathname": "/",
-          "search": "",
-        },
-      ],
-      "go": [Function],
-      "goBack": [Function],
-      "goForward": [Function],
-      "index": 0,
-      "length": 1,
-      "listen": [Function],
-      "location": Object {
-        "hash": "",
-        "key": "/",
-        "pathname": "/",
-        "search": "",
-      },
-      "push": [Function],
-      "replace": [Function],
-    }
-  }
->
-  <Header
-    homeRoute={
-      Object {
-        "path": "/",
-      }
-    }
-  />
-</Router>
+exports[`renders correctly with all props 1`] = `
+<Fragment>
+  <div
+    className="Header"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="Header__content"
+    >
+      <NavLink
+        exact={true}
+        to="/"
+      >
+        <Logo
+          className="Header__logo"
+          focused={false}
+        />
+      </NavLink>
+      <div
+        className="Header__spacer"
+      />
+      <div
+        className="Header__nav"
+      >
+        <NavLink
+          activeClassName="Header__nav-link--active"
+          className="Header__nav-link"
+          key="a"
+          to="/a"
+        >
+          A
+        </NavLink>
+        <div
+          className="Header__nav-spacer"
+          key="0"
+        />
+        <NavLink
+          activeClassName="Header__nav-link--active"
+          className="Header__nav-link"
+          key="b"
+          to="/b"
+        >
+          B
+        </NavLink>
+        <div
+          className="Header__nav-spacer"
+          key="1"
+        />
+        <NavLink
+          activeClassName="Header__nav-link--active"
+          className="Header__nav-link"
+          key="c"
+          to="/c"
+        >
+          C
+        </NavLink>
+      </div>
+      <div
+        className="Header__nav-menu-trigger"
+        onClick={[Function]}
+      >
+        Menu
+        <div
+          className="Header__nav-menu-icon"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="Header__nav-menu"
+  >
+    <div
+      className="Header__nav-menu__content"
+    >
+      <NavLink
+        activeClassName="Header__nav-menu-link--active"
+        className="Header__nav-menu-link"
+        key="a"
+        onClick={[Function]}
+        tabIndex={-1}
+        to="/a"
+      >
+        A
+      </NavLink>
+      <NavLink
+        activeClassName="Header__nav-menu-link--active"
+        className="Header__nav-menu-link"
+        key="b"
+        onClick={[Function]}
+        tabIndex={-1}
+        to="/b"
+      >
+        B
+      </NavLink>
+      <NavLink
+        activeClassName="Header__nav-menu-link--active"
+        className="Header__nav-menu-link"
+        key="c"
+        onClick={[Function]}
+        tabIndex={-1}
+        to="/c"
+      >
+        C
+      </NavLink>
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`renders correctly with empty routes 1`] = `
+<Fragment>
+  <div
+    className="Header"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="Header__content"
+    >
+      <NavLink
+        exact={true}
+        to="/"
+      >
+        <Logo
+          className="Header__logo"
+          focused={false}
+        />
+      </NavLink>
+      <div
+        className="Header__spacer"
+      />
+      <div
+        className="Header__nav"
+      />
+      <div
+        className="Header__nav-menu-trigger"
+        onClick={[Function]}
+      >
+        Menu
+        <div
+          className="Header__nav-menu-icon"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="Header__nav-menu"
+  >
+    <div
+      className="Header__nav-menu__content"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`renders correctly without optional props 1`] = `
+<Fragment>
+  <div
+    className="Header"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="Header__content"
+    >
+      <NavLink
+        exact={true}
+        to="/"
+      >
+        <Logo
+          className="Header__logo"
+          focused={false}
+        />
+      </NavLink>
+      <div
+        className="Header__spacer"
+      />
+      <div
+        className="Header__nav"
+      />
+      <div
+        className="Header__nav-menu-trigger"
+        onClick={[Function]}
+      >
+        Menu
+        <div
+          className="Header__nav-menu-icon"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="Header__nav-menu"
+  >
+    <div
+      className="Header__nav-menu__content"
+    />
+  </div>
+</Fragment>
 `;

@@ -1,6 +1,516 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`renders correctly when not focused 1`] = `
+<g
+  className="LogoParticleGroup"
+  transform="translate(100) scale(1) translate(-100)"
+>
+  <LogoParticle
+    groupBoundingRect={null}
+    key="0"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={236.3953286501938}
+    y={46.35}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="1"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={236.3953286501938}
+    y={80.65}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="2"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={236.3953286501938}
+    y={114.95}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="100"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={266.1}
+    y={29.200000000000003}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="101"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={266.1}
+    y={63.5}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="102"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={266.1}
+    y={97.8}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="103"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={266.1}
+    y={132.1}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="200"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={295.80467134980626}
+    y={12.050000000000004}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="201"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={295.80467134980626}
+    y={46.35}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="202"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={295.80467134980626}
+    y={80.65}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="203"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={295.80467134980626}
+    y={114.95}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="204"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={295.80467134980626}
+    y={149.25}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="300"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={325.5093426996125}
+    y={29.200000000000003}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="301"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={325.5093426996125}
+    y={63.5}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="302"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={325.5093426996125}
+    y={97.8}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="303"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={325.5093426996125}
+    y={132.1}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="400"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={355.2140140494188}
+    y={46.35}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="401"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={355.2140140494188}
+    y={80.65}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="402"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={355.2140140494188}
+    y={114.95}
+  />
+</g>
+`;
+
+exports[`renders correctly with all props 1`] = `
+<g
+  className="LogoParticleGroup"
+  transform="translate(100) scale(1.59) translate(-147)"
+>
+  <LogoParticle
+    groupBoundingRect={null}
+    key="0"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={236.3953286501938}
+    y={46.35}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="1"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={236.3953286501938}
+    y={80.65}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="2"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={236.3953286501938}
+    y={114.95}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="100"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={266.1}
+    y={29.200000000000003}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="101"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={266.1}
+    y={63.5}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="102"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={266.1}
+    y={97.8}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="103"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={266.1}
+    y={132.1}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="200"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={295.80467134980626}
+    y={12.050000000000004}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="201"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={295.80467134980626}
+    y={46.35}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="202"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={295.80467134980626}
+    y={80.65}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="203"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={295.80467134980626}
+    y={114.95}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="204"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={295.80467134980626}
+    y={149.25}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="300"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={325.5093426996125}
+    y={29.200000000000003}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="301"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={325.5093426996125}
+    y={63.5}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="302"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={325.5093426996125}
+    y={97.8}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="303"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={325.5093426996125}
+    y={132.1}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="400"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={355.2140140494188}
+    y={46.35}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="401"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={355.2140140494188}
+    y={80.65}
+  />
+  <LogoParticle
+    groupBoundingRect={null}
+    key="402"
+    pointerPosition={
+      Object {
+        "x": 15,
+        "y": 25,
+      }
+    }
+    radius={12}
+    x={355.2140140494188}
+    y={114.95}
+  />
+</g>
+`;
+
+exports[`renders correctly without optional props 1`] = `
 <g
   className="LogoParticleGroup"
   transform="translate(100) scale(1) translate(-100)"

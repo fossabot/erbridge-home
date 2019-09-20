@@ -5,6 +5,8 @@ import ViewableImage from './ViewableImage';
 
 it('renders correctly', () => {
   expect(
-    shallow(<ViewableImage src="/test.jpg" alt="test" />),
+    shallow(
+      <ViewableImage className="Test__image" src="/test.jpg" alt="test" />,
+    ),
   ).toMatchSnapshot();
 });

@@ -1,6 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`renders correctly when not open 1`] = `
+<ModalGateway
+  target={<body />}
+/>
+`;
+
+exports[`renders correctly with all props 1`] = `
 <ModalGateway
   target={<body />}
 >
@@ -8,6 +14,7 @@ exports[`renders correctly 1`] = `
     allowFullscreen={false}
     closeOnBackdropClick={true}
     closeOnEsc={true}
+    onClose={[Function]}
     styles={Object {}}
   >
     <Carousel
@@ -46,4 +53,10 @@ exports[`renders correctly 1`] = `
     />
   </Modal>
 </ModalGateway>
+`;
+
+exports[`renders correctly without optional props 1`] = `
+<ModalGateway
+  target={<body />}
+/>
 `;

@@ -111,7 +111,7 @@ class MarkdownPage extends Component {
             </p>
           ),
         ]}
-        {links && (
+        {links && links.length > 0 && (
           <p
             className={classnames('MarkdownPage__links', {
               'MarkdownPage__links--has-tags': tags,
@@ -131,19 +131,23 @@ class MarkdownPage extends Component {
               .reduce((prev, curr) => [prev, ' | ', curr])}
           </p>
         )}
-        {tags && (
+        {tags && tags.length > 0 && (
           <p className="MarkdownPage__tags">
-            {tags.map((tagSet, i) => (
-              <span key={i} className="MarkdownPage__tag-set">
-                {tagSet
-                  .map((tag, j) => (
-                    <span key={j} className="MarkdownPage__tag">
-                      {tag}
-                    </span>
-                  ))
-                  .reduce((prev, curr) => [prev, ' | ', curr])}
-              </span>
-            ))}
+            {tags.map(
+              (tagSet, i) =>
+                tagSet &&
+                tagSet.length > 0 && (
+                  <span key={i} className="MarkdownPage__tag-set">
+                    {tagSet
+                      .map((tag, j) => (
+                        <span key={j} className="MarkdownPage__tag">
+                          {tag}
+                        </span>
+                      ))
+                      .reduce((prev, curr) => [prev, ' | ', curr])}
+                  </span>
+                ),
+            )}
           </p>
         )}
         {content({ components: markdownComponents })}

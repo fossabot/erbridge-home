@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`renders correctly with all props 1`] = `
 <p>
   <strong>
     Test Title
@@ -9,6 +9,26 @@ exports[`renders correctly 1`] = `
   <em>
     Test Subtitle
   </em>
+   
+  by 
+  <strong>
+    Test Author, Another Author
+  </strong>
+   (
+  <ExternalLink
+    to="http://example.com"
+  >
+    Open Library
+  </ExternalLink>
+  )
+</p>
+`;
+
+exports[`renders correctly without optional props 1`] = `
+<p>
+  <strong>
+    Test Title
+  </strong>
    
   by 
   <strong>

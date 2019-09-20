@@ -1,6 +1,100 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`renders correctly with all props 1`] = `
+<div
+  className="IndexPage"
+>
+  <div
+    className="IndexPage__content"
+  >
+    <h1>
+      Test
+    </h1>
+    <div
+      className="IndexPage__links"
+    >
+      <Link
+        className="IndexPage__link"
+        key="0"
+        to="/a"
+      >
+        <div
+          className="IndexPage__link__content"
+        >
+          <div
+            className="IndexPage__link__text"
+          >
+            A
+          </div>
+        </div>
+      </Link>
+      <Link
+        className="IndexPage__link"
+        key="1"
+        to="/b"
+      >
+        <div
+          className="IndexPage__link__content"
+        >
+          <div
+            className="IndexPage__link__text"
+          >
+            Link to B
+          </div>
+        </div>
+      </Link>
+      <Link
+        className="IndexPage__link"
+        key="2"
+        to="/c"
+      >
+        <div
+          className="IndexPage__link__image"
+          style={
+            Object {
+              "backgroundImage": "url(/path/to/c.jpg)",
+            }
+          }
+        />
+        <div
+          className="IndexPage__link__content"
+        >
+          <div
+            className="IndexPage__link__text"
+          >
+            Link to C
+          </div>
+        </div>
+      </Link>
+      <Link
+        className="IndexPage__link"
+        key="d_name"
+        to="/d"
+      >
+        <div
+          className="IndexPage__link__image"
+          style={
+            Object {
+              "backgroundImage": "url(/path/to/d.jpg)",
+            }
+          }
+        />
+        <div
+          className="IndexPage__link__content"
+        >
+          <div
+            className="IndexPage__link__text"
+          >
+            Link to D
+          </div>
+        </div>
+      </Link>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly with empty routes 1`] = `
 <div
   className="IndexPage"
 >
@@ -10,6 +104,97 @@ exports[`renders correctly 1`] = `
     <div
       className="IndexPage__links"
     />
+  </div>
+</div>
+`;
+
+exports[`renders correctly without optional props 1`] = `
+<div
+  className="IndexPage"
+>
+  <div
+    className="IndexPage__content"
+  >
+    <div
+      className="IndexPage__links"
+    >
+      <Link
+        className="IndexPage__link"
+        key="0"
+        to="/a"
+      >
+        <div
+          className="IndexPage__link__content"
+        >
+          <div
+            className="IndexPage__link__text"
+          >
+            A
+          </div>
+        </div>
+      </Link>
+      <Link
+        className="IndexPage__link"
+        key="1"
+        to="/b"
+      >
+        <div
+          className="IndexPage__link__content"
+        >
+          <div
+            className="IndexPage__link__text"
+          >
+            Link to B
+          </div>
+        </div>
+      </Link>
+      <Link
+        className="IndexPage__link"
+        key="2"
+        to="/c"
+      >
+        <div
+          className="IndexPage__link__image"
+          style={
+            Object {
+              "backgroundImage": "url(/path/to/c.jpg)",
+            }
+          }
+        />
+        <div
+          className="IndexPage__link__content"
+        >
+          <div
+            className="IndexPage__link__text"
+          >
+            Link to C
+          </div>
+        </div>
+      </Link>
+      <Link
+        className="IndexPage__link"
+        key="d_name"
+        to="/d"
+      >
+        <div
+          className="IndexPage__link__image"
+          style={
+            Object {
+              "backgroundImage": "url(/path/to/d.jpg)",
+            }
+          }
+        />
+        <div
+          className="IndexPage__link__content"
+        >
+          <div
+            className="IndexPage__link__text"
+          >
+            Link to D
+          </div>
+        </div>
+      </Link>
+    </div>
   </div>
 </div>
 `;

@@ -1,6 +1,523 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`renders correctly when not showing the heading image 1`] = `
+<div
+  className="MarkdownPage"
+>
+  <h1
+    className="MarkdownPage__title MarkdownPage__title--has-subtitle-or-date"
+    key="title"
+  >
+    Test Title
+  </h1>
+  <h2
+    className="MarkdownPage__subtitle MarkdownPage__subtitle--has-date"
+    key="subtitle"
+  >
+    Test Subtitle
+  </h2>
+  <p
+    className="MarkdownPage__date"
+    key="date"
+  >
+    1 January 2019
+  </p>
+  <p
+    className="MarkdownPage__links MarkdownPage__links--has-tags"
+  >
+    <Link
+      key="A"
+      to="/a"
+    >
+      A
+    </Link>
+     | 
+    <Link
+      key="B"
+      to="/b"
+    >
+      B
+    </Link>
+  </p>
+  <p
+    className="MarkdownPage__tags"
+  >
+    <span
+      className="MarkdownPage__tag-set"
+      key="0"
+    >
+      <span
+        className="MarkdownPage__tag"
+        key="0"
+      >
+        Developer
+      </span>
+       | 
+      <span
+        className="MarkdownPage__tag"
+        key="1"
+      >
+        Designer
+      </span>
+    </span>
+    <span
+      className="MarkdownPage__tag-set"
+      key="1"
+    >
+      <span
+        className="MarkdownPage__tag"
+        key="0"
+      >
+        JavaScript
+      </span>
+       | 
+      <span
+        className="MarkdownPage__tag"
+        key="1"
+      >
+        HTML
+      </span>
+    </span>
+  </p>
+  <div
+    components={
+      Object {
+        "a": [Function],
+        "img": [Function],
+      }
+    }
+  >
+    content
+  </div>
+</div>
+`;
+
+exports[`renders correctly with all props 1`] = `
+<div
+  className="MarkdownPage"
+>
+  <h1
+    className="MarkdownPage__heading-image"
+  >
+    <ViewableImage
+      alt=""
+      src="/assets/test.jpg"
+    />
+  </h1>
+  <h1
+    className="MarkdownPage__title MarkdownPage__title--has-subtitle-or-date"
+    key="title"
+  >
+    Test Title
+  </h1>
+  <h2
+    className="MarkdownPage__subtitle MarkdownPage__subtitle--has-date"
+    key="subtitle"
+  >
+    Test Subtitle
+  </h2>
+  <p
+    className="MarkdownPage__date"
+    key="date"
+  >
+    1 January 2019
+  </p>
+  <p
+    className="MarkdownPage__links MarkdownPage__links--has-tags"
+  >
+    <Link
+      key="A"
+      to="/a"
+    >
+      A
+    </Link>
+     | 
+    <Link
+      key="B"
+      to="/b"
+    >
+      B
+    </Link>
+  </p>
+  <p
+    className="MarkdownPage__tags"
+  >
+    <span
+      className="MarkdownPage__tag-set"
+      key="0"
+    >
+      <span
+        className="MarkdownPage__tag"
+        key="0"
+      >
+        Developer
+      </span>
+       | 
+      <span
+        className="MarkdownPage__tag"
+        key="1"
+      >
+        Designer
+      </span>
+    </span>
+    <span
+      className="MarkdownPage__tag-set"
+      key="1"
+    >
+      <span
+        className="MarkdownPage__tag"
+        key="0"
+      >
+        JavaScript
+      </span>
+       | 
+      <span
+        className="MarkdownPage__tag"
+        key="1"
+      >
+        HTML
+      </span>
+    </span>
+  </p>
+  <div
+    components={
+      Object {
+        "a": [Function],
+        "img": [Function],
+      }
+    }
+  >
+    content
+  </div>
+</div>
+`;
+
+exports[`renders correctly with empty links 1`] = `
+<div
+  className="MarkdownPage"
+>
+  <h1
+    className="MarkdownPage__heading-image"
+  >
+    <ViewableImage
+      alt=""
+      src="/assets/test.jpg"
+    />
+  </h1>
+  <h1
+    className="MarkdownPage__title MarkdownPage__title--has-subtitle-or-date"
+    key="title"
+  >
+    Test Title
+  </h1>
+  <h2
+    className="MarkdownPage__subtitle MarkdownPage__subtitle--has-date"
+    key="subtitle"
+  >
+    Test Subtitle
+  </h2>
+  <p
+    className="MarkdownPage__date"
+    key="date"
+  >
+    1 January 2019
+  </p>
+  <p
+    className="MarkdownPage__tags"
+  >
+    <span
+      className="MarkdownPage__tag-set"
+      key="0"
+    >
+      <span
+        className="MarkdownPage__tag"
+        key="0"
+      >
+        Developer
+      </span>
+       | 
+      <span
+        className="MarkdownPage__tag"
+        key="1"
+      >
+        Designer
+      </span>
+    </span>
+    <span
+      className="MarkdownPage__tag-set"
+      key="1"
+    >
+      <span
+        className="MarkdownPage__tag"
+        key="0"
+      >
+        JavaScript
+      </span>
+       | 
+      <span
+        className="MarkdownPage__tag"
+        key="1"
+      >
+        HTML
+      </span>
+    </span>
+  </p>
+  <div
+    components={
+      Object {
+        "a": [Function],
+        "img": [Function],
+      }
+    }
+  >
+    content
+  </div>
+</div>
+`;
+
+exports[`renders correctly with empty styles 1`] = `
+<div
+  className="MarkdownPage"
+>
+  <h1
+    className="MarkdownPage__heading-image"
+  >
+    <ViewableImage
+      alt=""
+      src="/assets/test.jpg"
+    />
+  </h1>
+  <h1
+    className="MarkdownPage__title MarkdownPage__title--has-subtitle-or-date"
+    key="title"
+  >
+    Test Title
+  </h1>
+  <h2
+    className="MarkdownPage__subtitle MarkdownPage__subtitle--has-date"
+    key="subtitle"
+  >
+    Test Subtitle
+  </h2>
+  <p
+    className="MarkdownPage__date"
+    key="date"
+  >
+    1 January 2019
+  </p>
+  <p
+    className="MarkdownPage__links MarkdownPage__links--has-tags"
+  >
+    <Link
+      key="A"
+      to="/a"
+    >
+      A
+    </Link>
+     | 
+    <Link
+      key="B"
+      to="/b"
+    >
+      B
+    </Link>
+  </p>
+  <p
+    className="MarkdownPage__tags"
+  >
+    <span
+      className="MarkdownPage__tag-set"
+      key="0"
+    >
+      <span
+        className="MarkdownPage__tag"
+        key="0"
+      >
+        Developer
+      </span>
+       | 
+      <span
+        className="MarkdownPage__tag"
+        key="1"
+      >
+        Designer
+      </span>
+    </span>
+    <span
+      className="MarkdownPage__tag-set"
+      key="1"
+    >
+      <span
+        className="MarkdownPage__tag"
+        key="0"
+      >
+        JavaScript
+      </span>
+       | 
+      <span
+        className="MarkdownPage__tag"
+        key="1"
+      >
+        HTML
+      </span>
+    </span>
+  </p>
+  <div
+    components={
+      Object {
+        "a": [Function],
+        "img": [Function],
+      }
+    }
+  >
+    content
+  </div>
+</div>
+`;
+
+exports[`renders correctly with empty tag groups 1`] = `
+<div
+  className="MarkdownPage"
+>
+  <h1
+    className="MarkdownPage__heading-image"
+  >
+    <ViewableImage
+      alt=""
+      src="/assets/test.jpg"
+    />
+  </h1>
+  <h1
+    className="MarkdownPage__title MarkdownPage__title--has-subtitle-or-date"
+    key="title"
+  >
+    Test Title
+  </h1>
+  <h2
+    className="MarkdownPage__subtitle MarkdownPage__subtitle--has-date"
+    key="subtitle"
+  >
+    Test Subtitle
+  </h2>
+  <p
+    className="MarkdownPage__date"
+    key="date"
+  >
+    1 January 2019
+  </p>
+  <p
+    className="MarkdownPage__links MarkdownPage__links--has-tags"
+  >
+    <Link
+      key="A"
+      to="/a"
+    >
+      A
+    </Link>
+     | 
+    <Link
+      key="B"
+      to="/b"
+    >
+      B
+    </Link>
+  </p>
+  <p
+    className="MarkdownPage__tags"
+  >
+    <span
+      className="MarkdownPage__tag-set"
+      key="0"
+    >
+      <span
+        className="MarkdownPage__tag"
+        key="0"
+      >
+        Developer
+      </span>
+       | 
+      <span
+        className="MarkdownPage__tag"
+        key="1"
+      >
+        Designer
+      </span>
+    </span>
+  </p>
+  <div
+    components={
+      Object {
+        "a": [Function],
+        "img": [Function],
+      }
+    }
+  >
+    content
+  </div>
+</div>
+`;
+
+exports[`renders correctly with empty tags 1`] = `
+<div
+  className="MarkdownPage"
+>
+  <h1
+    className="MarkdownPage__heading-image"
+  >
+    <ViewableImage
+      alt=""
+      src="/assets/test.jpg"
+    />
+  </h1>
+  <h1
+    className="MarkdownPage__title MarkdownPage__title--has-subtitle-or-date"
+    key="title"
+  >
+    Test Title
+  </h1>
+  <h2
+    className="MarkdownPage__subtitle MarkdownPage__subtitle--has-date"
+    key="subtitle"
+  >
+    Test Subtitle
+  </h2>
+  <p
+    className="MarkdownPage__date"
+    key="date"
+  >
+    1 January 2019
+  </p>
+  <p
+    className="MarkdownPage__links MarkdownPage__links--has-tags"
+  >
+    <Link
+      key="A"
+      to="/a"
+    >
+      A
+    </Link>
+     | 
+    <Link
+      key="B"
+      to="/b"
+    >
+      B
+    </Link>
+  </p>
+  <div
+    components={
+      Object {
+        "a": [Function],
+        "img": [Function],
+      }
+    }
+  >
+    content
+  </div>
+</div>
+`;
+
+exports[`renders correctly without optional props 1`] = `
 <div
   className="MarkdownPage"
 >

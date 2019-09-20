@@ -2,6 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <a
+  className="Test__link"
   href="http://example.com/"
   rel="noopener noreferrer"
   target="_blank"

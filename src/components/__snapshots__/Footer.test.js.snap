@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="Footer"
+  className="Test__footer Footer"
 >
   <div
     className="Footer__content"

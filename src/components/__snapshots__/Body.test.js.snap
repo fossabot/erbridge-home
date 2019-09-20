@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="Body"
+  className="Test__body Body"
 >
   <Logo
     className="Body__logo"
@@ -30,7 +30,11 @@ exports[`renders correctly 1`] = `
   >
     <div
       className="Body__content"
-    />
+    >
+      <p>
+        Test content
+      </p>
+    </div>
     <Footer
       className="Body__footer"
     />

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`renders correctly with all props 1`] = `
 <div
   className="BookCollection"
 >
@@ -51,4 +51,10 @@ exports[`renders correctly 1`] = `
     url="http://example.com/0123456789ABC"
   />
 </div>
+`;
+
+exports[`renders correctly with empty isbns 1`] = `
+<div
+  className="BookCollection"
+/>
 `;

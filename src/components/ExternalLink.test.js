@@ -5,6 +5,10 @@ import ExternalLink from './ExternalLink';
 
 it('renders correctly', () => {
   expect(
-    shallow(<ExternalLink to="http://example.com/">Example</ExternalLink>),
+    shallow(
+      <ExternalLink className="Test__link" to="http://example.com/">
+        Example
+      </ExternalLink>,
+    ),
   ).toMatchSnapshot();
 });
