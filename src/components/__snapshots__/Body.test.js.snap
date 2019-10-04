@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`renders correctly with all props 1`] = `
 <div
   className="Test__body Body"
 >
@@ -31,9 +31,221 @@ exports[`renders correctly 1`] = `
     <div
       className="Body__content"
     >
-      <p>
-        Test content
-      </p>
+      <Switch>
+        <Route
+          exact={true}
+          key="home"
+          path="/"
+        >
+          <withRouter(ScrollToTopOnMount) />
+          <MarkdownPageBundle
+            loadContent={[Function]}
+            placeholder={<LoadingPage />}
+          />
+        </Route>
+        <Route
+          exact={true}
+          key="games"
+          path="/games"
+        >
+          <withRouter(ScrollToTopOnMount) />
+          0
+        </Route>
+        <Route
+          exact={true}
+          key="web"
+          path="/web"
+        >
+          <withRouter(ScrollToTopOnMount) />
+          0
+        </Route>
+        <Route
+          exact={true}
+          key="misc"
+          path="/misc"
+        >
+          <withRouter(ScrollToTopOnMount) />
+          0
+        </Route>
+        <Route
+          exact={true}
+          key="fiction"
+          path="/fiction"
+        >
+          <withRouter(ScrollToTopOnMount) />
+          0
+        </Route>
+        <Route
+          exact={true}
+          key="blog"
+          path="/blog"
+        >
+          <withRouter(ScrollToTopOnMount) />
+          0
+        </Route>
+        <Route
+          exact={true}
+          key="books"
+          path="/books"
+        >
+          <withRouter(ScrollToTopOnMount) />
+          <MarkdownPageBundle
+            loadContent={[Function]}
+            placeholder={<LoadingPage />}
+          />
+        </Route>
+        <Redirect
+          exact={true}
+          key="0"
+          path="/about"
+          to="/"
+        />
+        <Redirect
+          exact={true}
+          key="1"
+          path="/blog/skald"
+          to="/blog"
+        />
+        <Redirect
+          exact={true}
+          key="2"
+          path="/tools/gotwit"
+          to="/misc/gotwit"
+        />
+        <Redirect
+          exact={true}
+          key="3"
+          path="/tools/iris"
+          to="/misc/iris"
+        />
+        <Redirect
+          exact={true}
+          key="4"
+          path="/tools/itchy-electron"
+          to="/misc/itchy-electron"
+        />
+        <Redirect
+          exact={true}
+          key="5"
+          path="/tools/lime-text"
+          to="/misc/limetext"
+        />
+        <Redirect
+          exact={true}
+          key="6"
+          path="/tools/nqr"
+          to="/misc/nqr"
+        />
+        <Route
+          component={[Function]}
+        />
+      </Switch>
+    </div>
+    <Footer
+      className="Body__footer"
+    />
+  </ScrollArea>
+</div>
+`;
+
+exports[`renders correctly without optional props 1`] = `
+<div
+  className="Test__body Body"
+>
+  <Logo
+    className="Body__logo"
+    focused={true}
+  />
+  <ScrollArea
+    autoHeight={false}
+    autoHeightMax={200}
+    autoHeightMin={0}
+    autoHide={false}
+    autoHideDuration={200}
+    autoHideTimeout={1000}
+    className="Body__scrollarea"
+    hideTracksWhenNotNeeded={true}
+    onScrollStart={[Function]}
+    onScrollStop={[Function]}
+    renderThumbHorizontal={[Function]}
+    renderThumbVertical={[Function]}
+    renderTrackHorizontal={[Function]}
+    renderTrackVertical={[Function]}
+    renderView={[Function]}
+    tagName="div"
+    thumbMinSize={30}
+    universal={false}
+  >
+    <div
+      className="Body__content"
+    >
+      <Switch>
+        <Route
+          exact={true}
+          key="home"
+          path="/"
+        >
+          <withRouter(ScrollToTopOnMount) />
+          <MarkdownPageBundle
+            loadContent={[Function]}
+            placeholder={<LoadingPage />}
+          />
+        </Route>
+        <Route
+          exact={true}
+          key="games"
+          path="/games"
+        >
+          <withRouter(ScrollToTopOnMount) />
+          0
+        </Route>
+        <Route
+          exact={true}
+          key="web"
+          path="/web"
+        >
+          <withRouter(ScrollToTopOnMount) />
+          0
+        </Route>
+        <Route
+          exact={true}
+          key="misc"
+          path="/misc"
+        >
+          <withRouter(ScrollToTopOnMount) />
+          0
+        </Route>
+        <Route
+          exact={true}
+          key="fiction"
+          path="/fiction"
+        >
+          <withRouter(ScrollToTopOnMount) />
+          0
+        </Route>
+        <Route
+          exact={true}
+          key="blog"
+          path="/blog"
+        >
+          <withRouter(ScrollToTopOnMount) />
+          0
+        </Route>
+        <Route
+          exact={true}
+          key="books"
+          path="/books"
+        >
+          <withRouter(ScrollToTopOnMount) />
+          <MarkdownPageBundle
+            loadContent={[Function]}
+            placeholder={<LoadingPage />}
+          />
+        </Route>
+        <Route
+          component={[Function]}
+        />
+      </Switch>
     </div>
     <Footer
       className="Body__footer"

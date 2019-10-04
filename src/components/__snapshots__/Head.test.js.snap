@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <Route
+    exact={true}
+    key="home"
+    path="/"
+  >
+    <HelmetWrapper
+      defer={true}
+      encodeSpecialCharacters={true}
+    >
+      <title>
+        erbridge
+      </title>
+    </HelmetWrapper>
+  </Route>,
+  <Route
+    exact={true}
+    key="games"
+    path="/games"
+  >
+    <HelmetWrapper
+      defer={true}
+      encodeSpecialCharacters={true}
+    >
+      <title>
+        Games | 
+        erbridge
+      </title>
+    </HelmetWrapper>
+  </Route>,
+  <Route
+    exact={true}
+    key="web"
+    path="/web"
+  >
+    <HelmetWrapper
+      defer={true}
+      encodeSpecialCharacters={true}
+    >
+      <title>
+        Web | 
+        erbridge
+      </title>
+    </HelmetWrapper>
+  </Route>,
+  <Route
+    exact={true}
+    key="misc"
+    path="/misc"
+  >
+    <HelmetWrapper
+      defer={true}
+      encodeSpecialCharacters={true}
+    >
+      <title>
+        Misc | 
+        erbridge
+      </title>
+    </HelmetWrapper>
+  </Route>,
+  <Route
+    exact={true}
+    key="fiction"
+    path="/fiction"
+  >
+    <HelmetWrapper
+      defer={true}
+      encodeSpecialCharacters={true}
+    >
+      <title>
+        Fiction | 
+        erbridge
+      </title>
+    </HelmetWrapper>
+  </Route>,
+  <Route
+    exact={true}
+    key="blog"
+    path="/blog"
+  >
+    <HelmetWrapper
+      defer={true}
+      encodeSpecialCharacters={true}
+    >
+      <title>
+        Blog | 
+        erbridge
+      </title>
+    </HelmetWrapper>
+  </Route>,
+  <Route
+    exact={true}
+    key="books"
+    path="/books"
+  >
+    <HelmetWrapper
+      defer={true}
+      encodeSpecialCharacters={true}
+    >
+      <title>
+        erbridge
+      </title>
+    </HelmetWrapper>
+  </Route>,
+]
+`;

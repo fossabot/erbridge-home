@@ -2,6 +2,61 @@
 
 exports[`renders correctly 1`] = `
 <BrowserRouter>
+  <Head
+    routes={
+      Array [
+        Object {
+          "link": "Home",
+          "loadContent": [Function],
+          "name": "home",
+          "navExact": true,
+          "path": "/",
+          "styles": undefined,
+          "title": undefined,
+        },
+        Object {
+          "link": "Games",
+          "name": "games",
+          "path": "/games",
+          "routes": Array [],
+          "title": "Games",
+        },
+        Object {
+          "link": "Web",
+          "name": "web",
+          "path": "/web",
+          "routes": Array [],
+          "title": "Web",
+        },
+        Object {
+          "link": "Misc",
+          "name": "misc",
+          "path": "/misc",
+          "routes": Array [],
+          "title": "Misc",
+        },
+        Object {
+          "link": "Fiction",
+          "name": "fiction",
+          "path": "/fiction",
+          "routes": Array [],
+          "title": "Fiction",
+        },
+        Object {
+          "link": "Blog",
+          "name": "blog",
+          "path": "/blog",
+          "routes": Array [],
+          "title": "Blog",
+        },
+        Object {
+          "loadContent": [Function],
+          "name": "books",
+          "path": "/books",
+        },
+      ]
+    }
+  />
   <div
     className="App"
     onMouseMove={[Function]}
@@ -9,48 +64,6 @@ exports[`renders correctly 1`] = `
     <ContextProvider
       value={null}
     >
-      <Route
-        exact={true}
-        key="home"
-        path="/"
-        render={[Function]}
-      />
-      <Route
-        exact={true}
-        key="games"
-        path="/games"
-        render={[Function]}
-      />
-      <Route
-        exact={true}
-        key="web"
-        path="/web"
-        render={[Function]}
-      />
-      <Route
-        exact={true}
-        key="misc"
-        path="/misc"
-        render={[Function]}
-      />
-      <Route
-        exact={true}
-        key="fiction"
-        path="/fiction"
-        render={[Function]}
-      />
-      <Route
-        exact={true}
-        key="blog"
-        path="/blog"
-        render={[Function]}
-      />
-      <Route
-        exact={true}
-        key="books"
-        path="/books"
-        render={[Function]}
-      />
       <Header
         homeRoute={
           Object {
@@ -114,11 +127,92 @@ exports[`renders correctly 1`] = `
       />
       <Body
         className="App__body"
-      >
-        <Route
-          render={[Function]}
-        />
-      </Body>
+        redirectedRoutes={
+          Array [
+            Object {
+              "path": "/about",
+              "to": "/",
+            },
+            Object {
+              "path": "/blog/skald",
+              "to": "/blog",
+            },
+            Object {
+              "path": "/tools/gotwit",
+              "to": "/misc/gotwit",
+            },
+            Object {
+              "path": "/tools/iris",
+              "to": "/misc/iris",
+            },
+            Object {
+              "path": "/tools/itchy-electron",
+              "to": "/misc/itchy-electron",
+            },
+            Object {
+              "path": "/tools/lime-text",
+              "to": "/misc/limetext",
+            },
+            Object {
+              "path": "/tools/nqr",
+              "to": "/misc/nqr",
+            },
+          ]
+        }
+        routes={
+          Array [
+            Object {
+              "link": "Home",
+              "loadContent": [Function],
+              "name": "home",
+              "navExact": true,
+              "path": "/",
+              "styles": undefined,
+              "title": undefined,
+            },
+            Object {
+              "link": "Games",
+              "name": "games",
+              "path": "/games",
+              "routes": Array [],
+              "title": "Games",
+            },
+            Object {
+              "link": "Web",
+              "name": "web",
+              "path": "/web",
+              "routes": Array [],
+              "title": "Web",
+            },
+            Object {
+              "link": "Misc",
+              "name": "misc",
+              "path": "/misc",
+              "routes": Array [],
+              "title": "Misc",
+            },
+            Object {
+              "link": "Fiction",
+              "name": "fiction",
+              "path": "/fiction",
+              "routes": Array [],
+              "title": "Fiction",
+            },
+            Object {
+              "link": "Blog",
+              "name": "blog",
+              "path": "/blog",
+              "routes": Array [],
+              "title": "Blog",
+            },
+            Object {
+              "loadContent": [Function],
+              "name": "books",
+              "path": "/books",
+            },
+          ]
+        }
+      />
     </ContextProvider>
   </div>
 </BrowserRouter>
