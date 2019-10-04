@@ -1,27 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-Array [
+<HelmetProvider
+  context={Object {}}
+>
   <Route
     exact={true}
     key="home"
     path="/"
   >
-    <HelmetWrapper
+    <Helmet
       defer={true}
       encodeSpecialCharacters={true}
     >
       <title>
         erbridge
       </title>
-    </HelmetWrapper>
-  </Route>,
+    </Helmet>
+  </Route>
   <Route
     exact={true}
     key="games"
     path="/games"
   >
-    <HelmetWrapper
+    <Helmet
       defer={true}
       encodeSpecialCharacters={true}
     >
@@ -29,14 +31,14 @@ Array [
         Games | 
         erbridge
       </title>
-    </HelmetWrapper>
-  </Route>,
+    </Helmet>
+  </Route>
   <Route
     exact={true}
     key="web"
     path="/web"
   >
-    <HelmetWrapper
+    <Helmet
       defer={true}
       encodeSpecialCharacters={true}
     >
@@ -44,14 +46,14 @@ Array [
         Web | 
         erbridge
       </title>
-    </HelmetWrapper>
-  </Route>,
+    </Helmet>
+  </Route>
   <Route
     exact={true}
     key="misc"
     path="/misc"
   >
-    <HelmetWrapper
+    <Helmet
       defer={true}
       encodeSpecialCharacters={true}
     >
@@ -59,14 +61,14 @@ Array [
         Misc | 
         erbridge
       </title>
-    </HelmetWrapper>
-  </Route>,
+    </Helmet>
+  </Route>
   <Route
     exact={true}
     key="fiction"
     path="/fiction"
   >
-    <HelmetWrapper
+    <Helmet
       defer={true}
       encodeSpecialCharacters={true}
     >
@@ -74,14 +76,14 @@ Array [
         Fiction | 
         erbridge
       </title>
-    </HelmetWrapper>
-  </Route>,
+    </Helmet>
+  </Route>
   <Route
     exact={true}
     key="blog"
     path="/blog"
   >
-    <HelmetWrapper
+    <Helmet
       defer={true}
       encodeSpecialCharacters={true}
     >
@@ -89,21 +91,21 @@ Array [
         Blog | 
         erbridge
       </title>
-    </HelmetWrapper>
-  </Route>,
+    </Helmet>
+  </Route>
   <Route
     exact={true}
     key="books"
     path="/books"
   >
-    <HelmetWrapper
+    <Helmet
       defer={true}
       encodeSpecialCharacters={true}
     >
       <title>
         erbridge
       </title>
-    </HelmetWrapper>
-  </Route>,
-]
+    </Helmet>
+  </Route>
+</HelmetProvider>
 `;
