@@ -14,24 +14,26 @@ class BookCollection extends Component {
     books: [],
   };
 
-  async fetchBooks(props) {
+  async fetchBooks() {
+    const { isbns } = this.props;
+
     this.setState({ books: [] });
-    this.setState({ books: await OpenLibrary.fetchBooks(props.isbns) });
+    this.setState({ books: await OpenLibrary.fetchBooks(isbns) });
   }
 
   async componentDidMount() {
-    await this.fetchBooks(this.props);
+    await this.fetchBooks();
   }
 
-  async componentWillReceiveProps(nextProps) {
-    const oldIsbns = this.props.isbns;
-    const newIsbns = nextProps.isbns;
+  async componentDidUdpate(prevProps) {
+    const oldIsbns = prevProps.isbns;
+    const newIsbns = this.props.isbns;
 
     if (
       newIsbns.length !== oldIsbns.length ||
       newIsbns.some((isbn, i) => isbn !== oldIsbns[i])
     ) {
-      await this.fetchBooks(nextProps);
+      await this.fetchBooks();
     }
   }
 

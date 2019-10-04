@@ -26,18 +26,20 @@ class MarkdownPageBundle extends Component {
     content: null,
   };
 
-  async loadContent(props) {
+  async loadContent() {
+    const { loadContent } = this.props;
+
     this.setState({ content: null });
-    this.setState({ content: await props.loadContent() });
+    this.setState({ content: await loadContent() });
   }
 
   async componentDidMount() {
-    await this.loadContent(this.props);
+    await this.loadContent();
   }
 
-  async componentWillReceiveProps(nextProps) {
-    if (nextProps.loadContent !== this.props.loadContent) {
-      await this.loadContent(nextProps);
+  async componentDidUpdate(prevProps) {
+    if (this.props.loadContent !== prevProps.loadContent) {
+      await this.loadContent();
     }
   }
 

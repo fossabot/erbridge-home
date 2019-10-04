@@ -39,7 +39,7 @@ class LogoParticleGroup extends Component {
     this.setState({ boundingRect: this.node.getBoundingClientRect() });
   };
 
-  animateFocus(shouldFocus) {
+  animateFocus() {
     this.cancelFocus();
 
     const duration = 250;
@@ -51,7 +51,7 @@ class LogoParticleGroup extends Component {
       // Linear to match the text fade.
       const t = Math.min(1, 1 - (endTime - now) / duration);
 
-      this.setFocus(shouldFocus, t);
+      this.updateFocus(t);
 
       if (t === 1) {
         return;
@@ -65,14 +65,15 @@ class LogoParticleGroup extends Component {
     runAnimation();
   }
 
-  setFocus(shouldFocus, t = 1) {
+  updateFocus(t = 1) {
+    const { focused } = this.props;
     const { scale, translate } = this.state;
 
     // FIXME: Derive this from the viewBox height.
-    const scaleTarget = shouldFocus ? 1.59 : 1;
+    const scaleTarget = focused ? 1.59 : 1;
 
     // FIXME: Derive this from the particle group width (in svg space).
-    const translateTarget = shouldFocus ? -47 : 0;
+    const translateTarget = focused ? -47 : 0;
 
     // Use the current state's value as the start to match css transitions.
     this.setState({
@@ -88,17 +89,15 @@ class LogoParticleGroup extends Component {
   }
 
   componentDidMount() {
-    const { focused } = this.props;
-
     this.saveBoundingRect();
     window.addEventListener('resize', this.saveBoundingRect);
 
-    this.setFocus(focused);
+    this.updateFocus();
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.focused !== this.props.focused) {
-      this.animateFocus(nextProps.focused);
+  componentDidUpdate(prevProps) {
+    if (this.props.focused !== prevProps.focused) {
+      this.animateFocus();
     }
   }
 

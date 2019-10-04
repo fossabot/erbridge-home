@@ -7,7 +7,7 @@ class ScrollToTopOnMount extends Component {
     scrollArea: PropTypes.object,
   };
 
-  componentWillMount() {
+  componentDidMount() {
     const { scrollArea } = this.context;
 
     if (scrollArea) {
