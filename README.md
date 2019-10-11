@@ -2,6 +2,8 @@ This project was bootstrapped with
 [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ferbridge%2Ferbridge-home.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Ferbridge%2Ferbridge-home?ref=badge_shield)
+
 
 In the project directory, you can run:
 
@@ -87,3 +89,7 @@ https://facebook.github.io/create-react-app/docs/deployment
 
 This section has moved here:
 https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ferbridge%2Ferbridge-home.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Ferbridge%2Ferbridge-home?ref=badge_large)
